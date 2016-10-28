@@ -1,1 +1,4 @@
-#TODO: Create OBDMode Enums.
+#Created by kiddo122
+
+class OBDProtocols:
+	SAE_J1850_PWM, SAE_J1850_VPW, ISO_9141_2, ISO_14230_KWP2000, ISO_15765_CAN = range(5)
