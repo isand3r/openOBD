@@ -6,18 +6,18 @@ import os
 
 def IReadGPSStream():
 	#TODO: get I/O stream from firmware and spit out readable data
-	#TODO: Create IOBDPacket class.
+	#TODO: Create IGPSPacket class.
 
 	return IGPSPacket
 
 def IGetGPSInfo(IGPSPacket)
-	#TODO: Determine the inforom the OBD Stream
-	#TODO: Create IOBDInfo Class.
+	#TODO: Determine the inforom the GPS Stream
+	#TODO: Create IGPSInfo Class.
 
 	return IGPSInfo
 
 def ISendGPSMessage(IGPSPacket):
-	#TODO: Send PIDs to request messages from OBD/CANbus
+	#TODO: Send message to GPS
 
 	return IGPSStream
 
@@ -27,6 +27,6 @@ def IGPSCalculation(IGPSPacket)
 	return IGPSCoord
 
 def IGPSAvgCalculation(IGPSPacket)
-	#TODO: Construct AVG GPS long,lat from IGPSPacket
+	#TODO: Construct AVG GPS long,lat from IGPSPacket for set time length
 
 	return IGPSCoord
