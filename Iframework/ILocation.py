@@ -1,16 +1,20 @@
-from abc import ABCMeta
+import abc 
 
-class ILocation(metaclass=ABCMeta):
+class ILocation(metaclass=abc.ABCMeta):
 
-    @abstractmethod
-    def getLatitude() : raise NotImplementedError
+    @abc.abstractmethod
+    def getLatitude() :
+        raise NotImplementedError
 
-    @abstractmethod
-    def getLongitude() : raise NotImplementedError
+    @abc.abstractmethod
+    def getLongitude() :
+         raise NotImplementedError
 
-    @abstractmethod
-    def getTime() : raise NotImplementedError
+    @abc.abstractmethod
+    def getTime() :
+         raise NotImplementedError
 
-    @abstractmethod
-    def getAccuracy() : raise NotImplementedError    
+    @abc.abstractmethod
+    def getAccuracy() :
+        raise NotImplementedError    
 
