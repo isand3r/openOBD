@@ -7,7 +7,7 @@ Python packages (`pip3 install package-name`):
 * `mpu6050` (https://github.com/Tijndagamer/mpu6050)
 * `PySerial` (https://pythonhosted.org/pyserial/)
 
-Contributors:
+## Contributors:
 * Nicholas Mulvenna
 * Isaiah Thiessen
 * Ehsan Ahmadi
