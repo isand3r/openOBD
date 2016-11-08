@@ -6,7 +6,7 @@ class IGPSDevice(metaclass=abc.ABCMeta):
 	def initialize() :
 		raise NotImplementedError
 
-	# check that the device is available, connected, and able to provide location data
+	# check that the device is available and able to provide location data
 	@abc.abstractmethod
 	def getStatus() :
 		raise NotImplementedError
