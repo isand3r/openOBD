@@ -1,25 +1,23 @@
 import abc
 
-class IGPSDevice(metaclass=abc.ABCMeta):
+class IOBDDevice(metaclass=abc.ABCMeta):
+
+@abc.abstractmethon
+    IInitializeOBD(self) :
+    """Retrieve data from the GPS and return altitude."""
+        return
 
     @abc.abstractmethod
-    def IgetAltitude(self) : 
+    def IReadOBDStream(self) : 
     	"""Retrieve data from the GPS and return altitude."""
     	return
 
     @abc.abstractmethod
-    def IgetLatitude(self) : 
+    def IGetMode(self) : 
     	"""Retrieve data from the GPS and return latitude."""
     	return
 
     @abc.abstractmethod
-    def IgetLongtitude(self) :
+    def ISendOBDMessage(self) :
     	"""Retrieve data from the GPS and return longtitude."""
     	return
-
-    @abc.abstractmethod
-    def IgetLocation(self) :
-    	"""Retrieve data from the GPS and return location."""
-    	return
-    
-    

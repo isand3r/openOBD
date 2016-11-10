@@ -4,14 +4,14 @@ class IThermometerDevice(metaclass=abc.ABCMeta):
 
 	@abc.abstractmethod
 	def initialize() :
-		raise NotImplementedError
+		return
 
 	# check that the device is available and able to provide temperature measurements
 	@abc.abstractmethod
 	def getStatus() :
-		raise NotImplementedError
-
+		return
+		
 	# create a new ITemperature
 	@abc.abstractmethod
 	def getTemperature() :
-		raise NotImplementedError
+		return
