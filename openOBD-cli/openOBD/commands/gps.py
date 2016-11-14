@@ -9,54 +9,41 @@ import os
 class GPS(Base):
     def __init__(self, options):
         super(GPS, self).__init__(options)
-        self.location = {}
-        self.longitude =  0
-        self.latitude = 0
-        self.altitude = 0
-        self.gps_socket = gps3.GPSDSocket()
-        self.data_stream = gps3.DataStream()
+        self.location = {'longitude' : 0, 'latitude' : 0, 'altitude' : 0}
+        self.gps_socket = None
+        self.data_stream = None
 
     def init(self):
+        self.gps_socket = gps3.GPSDSocket()
+        self.data_stream = gps3.DataStream()
         self.gps_socket.connect()
         self.gps_socket.watch()
 
     def IgetAltitude(self):
-        for new_data in gps_socket:
-            if new_data:
-                data_stream.unpack(new_data)
-                self.altitude = data_stream.TPV['alt']
+        return self.location['altitude']
 
     def IgetLatitude(self):
-        for new_data in gps_socket:
-            if new_data:
-                data_stream.unpack(new_data)
-                self.latitude =  data_stream.TPV['lat']
+        return self.location['latitude']
 
     def IgetLongitude(self):
-        for new_data in gps_socket:
-            if new_data:
-                data_stream.unpack(new_data)
-                self.longitude = data_stream.TPV['long']
+        return self.location['longitude']
 
     def IgetLocation(self):
-        for new_data in gps_socket:
-            if new_data:
-                data_stream.unpack(new_data)
-                self.longitude = data_stream.TPV['long']
-                self.latitude = data_stream.TPV['lat']
-                self.altitude = data_stream.TPV['alt']
-        location = {'longitude' : self.longitude, 'latitude' : self.latitude, 'altitude' : self.altitude}
-        self.location  = location
+        return self.location
+
+    def IreadGPSStream(self):
+        if new_data in self.gps_socket:
+            self.data_stream.unpack(new_data)
+            location = {'longitude' : self.data_stream.TPV['lon'], 'latitude' : self.data_stream.TPV['lat'], 'altitude' : self.data_stream.TPV['alt']}
+            self.location  = location
+            print "Location:" + str(self.location)   
 
     def run(self):
         print "GPS Running..."
-        self.init()
         while(1):
-            print "Location:" + str(self.IgetLocation())
-            print "Longitude:" + str(self.IgetLongitude())
-            print "Latitude:" + str(self.IgetLatitude())
-            print "Altitude:" + str(self.IgetAltitude())
-            time.sleep(1)
+            self.IreadGPSStream()
+            time.sleep(1) 
+
 
 
         
