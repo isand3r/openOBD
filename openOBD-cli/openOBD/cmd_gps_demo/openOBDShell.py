@@ -5,6 +5,7 @@ from GPS3Device import GPS3Device
 import time
 import os
 from MPUDevice import MPUDevice
+from OBDDevice import OBDDevice
 
 class openOBDShell(Cmd):
 	def __init__(self):
@@ -14,11 +15,13 @@ class openOBDShell(Cmd):
 		super().__init__()
 		self.myGPS3Device = GPS3Device()
 		self.myMPUDevice = MPUDevice()
+		self.myOBDDevice = OBDDevice()
 
 	def do_initDevices(self, args):
 		"""initialize the GPS device"""
 		self.myGPS3Device.initialize()
 		self.myMPUDevice.initialize()
+		self.myOBDDevice.initialize()
 
 	def do_readgps(self, args):
 		"""print the GPS stream"""
@@ -43,10 +46,11 @@ class openOBDShell(Cmd):
 				self.myMPUDevice.printAccelStream()
 				self.myMPUDevice.printTempStream()
 				self.myGPS3Device.printGPSStream()
+				self.myOBDDevice.printOBDStream()
 				time.sleep(1)
 		except KeyboardInterrupt:
-			pass
-
+			pass		
+			
 	def do_quit(self, args):
 		"""quit the shell"""
 		print("Quitting")
