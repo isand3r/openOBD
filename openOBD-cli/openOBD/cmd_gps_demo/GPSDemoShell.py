@@ -37,13 +37,16 @@ class openOBDShell(Cmd):
 		self.myMPUDevice.printGyroStream()
 
 	def do_listen(self, args):
-		while(1):
-			self.myMPUDevice.printGyroStream()
-			self.myMPUDevice.printAccelStream()
-			self.myMPUDevice.printTempStream()
-			self.myGPS3Device.printGPSStream()
-			time.sleep(1)
-			os.system('clear')
+		try:
+			while(1):
+				self.myMPUDevice.printGyroStream()
+				self.myMPUDevice.printAccelStream()
+				self.myMPUDevice.printTempStream()
+				self.myGPS3Device.printGPSStream()
+				time.sleep(1)
+				os.system('clear')
+		except KeyboardInterrupt:
+			pass
 
 	def do_quit(self, args):
 		"""quit the shell"""

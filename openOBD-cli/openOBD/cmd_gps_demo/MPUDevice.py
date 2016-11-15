@@ -25,12 +25,15 @@ class MPUDevice():
         self.accel = mpu6050.get_accel_data(self.init)
 
     def printTempStream(self):
+        self.IgetTemp()
         print("Temperature:", self.temperature)
 
     def printAccelStream(self):
+        self.IgetAccel()
         print("Accelerometer:", self.accel)
 
     def printGyroStream(self):
+        self.IgetGyro()
         print("Gyroscope:", self.gyro)
 
 
