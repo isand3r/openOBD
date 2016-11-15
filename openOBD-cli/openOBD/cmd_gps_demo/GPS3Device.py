@@ -10,7 +10,7 @@ class GPS3Device():
         self.gps_socket = None
         self.data_stream = None
 
-    def initialize(self):
+    def init(self):
         self.gps_socket = gps3.GPSDSocket()
         self.data_stream = gps3.DataStream()
         self.gps_socket.connect()
@@ -29,8 +29,13 @@ class GPS3Device():
         return self.location
 
     def printGPSStream(self):
-        if new_data in self.gps_socket:
-            self.data_stream.unpack(new_data)
-            location = {'longitude' : self.data_stream.TPV['lon'], 'latitude' : self.data_stream.TPV['lat'], 'altitude' : self.data_stream.TPV['alt']}
-            self.location  = location
-            print("Location:" + str(self.location))
+        for new_data in self.gps_socket:
+            if(new_data):
+                self.data_stream.unpack(new_data)
+                location = {'longitude' : self.data_stream.TPV['lon'], 'latitude' : self.data_stream.TPV['lat'], 'altitude' : self.data_stream.TPV['alt']}
+                self.location  = location
+                print("Location:" + str(self.location))
+                return
+            
+            
+

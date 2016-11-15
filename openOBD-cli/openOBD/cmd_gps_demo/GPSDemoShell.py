@@ -2,6 +2,9 @@
 
 from cmd import Cmd
 from GPS3Device import GPS3Device
+import time
+import os
+from MPUDevice import MPUDevice
 
 class GPSDemoShell(Cmd):
 	def __init__(self):
@@ -10,14 +13,37 @@ class GPSDemoShell(Cmd):
 		self.file = None
 		super().__init__()
 		self.myGPS3Device = GPS3Device()
+		self.myMPUDevice = MPUDevice()
 
-	def do_initializeGPSDevice(self, args):
+	def do_initDevices(self, args):
 		"""initialize the GPS device"""
-		self.myGPS3Device.initialize()
+		self.myGPS3Device.init()
+		self.myMPUDevice.init()
 
-	def do_printGPSStream(self, args):
+	def do_readgps(self, args):
 		"""print the GPS stream"""
-		myGPSDevice.printGPSStream()
+		self.myGPS3Device.printGPSStream()
+
+	def do_readtemp(self, args):
+		"""print the GPS stream"""
+		self.myMPUDevice.printTempStream()
+
+	def do_readaccel(self, args):
+		"""print the GPS stream"""
+		self.myMPUDevice.printAccelStream()
+
+	def do_readgyro(self, args):
+		"""print the GPS stream"""
+		self.myMPUDevice.printGyroStream()
+
+	def do_listen(self, args):
+		while(1):
+			self.myMPUDevice.printGyroStream()
+			self.myMPUDevice.printAccelStream()
+			self.myMPUDevice.printTempStream()
+			self.myGPS3Device.printGPSStream()
+			time.sleep(1)
+			os.system('clear')
 
 	def do_quit(self, args):
 		"""quit the shell"""
