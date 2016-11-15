@@ -7,9 +7,9 @@ import os
 
 class MPUDevice():
     def __init__(self):
-        self.temperature = None
-        self.accel  = None
-        self.gyro = None
+        self.temperature = 0
+        self.accel  = 0
+        self.gyro = 0
         self.init = None
 
     def init(self):
