@@ -10,6 +10,7 @@ class MPUDevice():
         self.temperature = 0
         self.accel  = 0
         self.gyro = 0
+        self.velocity = 0
         self.init = None
 
     def initialize(self):
@@ -22,11 +23,11 @@ class MPUDevice():
         self.gyro = mpu6050.get_gyro_data(self.init)
 
     def IgetAccel(self):
-        self.accel = mpu6050.get_accel_data(self.init)
+        self.accel = mpu6050.get_accel_data(self.init) 
 
     def printTempStream(self):
         self.IgetTemp()
-        print("Temperature:", self.temperature)
+        print("Temperature:", self.temperature, " Celsius")
 
     def printAccelStream(self):
         self.IgetAccel()

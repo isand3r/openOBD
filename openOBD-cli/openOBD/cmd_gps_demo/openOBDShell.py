@@ -44,7 +44,6 @@ class openOBDShell(Cmd):
 				self.myMPUDevice.printTempStream()
 				self.myGPS3Device.printGPSStream()
 				time.sleep(1)
-				os.system('clear')
 		except KeyboardInterrupt:
 			pass
 
