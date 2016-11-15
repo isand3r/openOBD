@@ -1,11 +1,13 @@
 """A shell to demo GPS for the Nov 15 meeting"""
 
 from cmd import Cmd
-from GPS3Device import GPS3Device
 import time
 import os
-from MPUDevice import MPUDevice
-from OBDDevice import OBDDevice
+from .devices.GPS3Device import GPS3Device
+from .devices.MPUDevice import MPUDevice
+from .devices.OBDDevice import OBDDevice
+
+from . import __version__ as VERSION
 
 class openOBDShell(Cmd):
 	def __init__(self):
@@ -40,6 +42,7 @@ class openOBDShell(Cmd):
 		self.myMPUDevice.printGyroStream()
 
 	def do_listen(self, args):
+		"""listen to all devices constantly"""
 		try:
 			while(1):
 				self.myMPUDevice.printGyroStream()
@@ -49,7 +52,11 @@ class openOBDShell(Cmd):
 				self.myOBDDevice.printOBDStream()
 				time.sleep(1)
 		except KeyboardInterrupt:
-			pass		
+			pass
+
+	def de_version(self, args):
+		"""Prints the Version of Build"""
+		print (VERSION)		
 			
 	def do_quit(self, args):
 		"""quit the shell"""
