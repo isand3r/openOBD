@@ -12,7 +12,7 @@ class MPUDevice():
         self.gyro = 0
         self.init = None
 
-    def init(self):
+    def initialize(self):
         self.init = mpu6050(0x68)
 
     def IgetTemp(self):

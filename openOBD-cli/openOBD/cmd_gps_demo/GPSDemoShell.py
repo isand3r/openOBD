@@ -6,7 +6,7 @@ import time
 import os
 from MPUDevice import MPUDevice
 
-class GPSDemoShell(Cmd):
+class openOBDShell(Cmd):
 	def __init__(self):
 		self.intro = 'GPS Demo Shell for Nov 15 Meeting. Type help to list commands.\n'
 		self.prompt = '> '
@@ -17,8 +17,8 @@ class GPSDemoShell(Cmd):
 
 	def do_initDevices(self, args):
 		"""initialize the GPS device"""
-		self.myGPS3Device.init()
-		self.myMPUDevice.init()
+		self.myGPS3Device.initialize()
+		self.myMPUDevice.initialize()
 
 	def do_readgps(self, args):
 		"""print the GPS stream"""
@@ -51,5 +51,5 @@ class GPSDemoShell(Cmd):
 		raise SystemExit
 
 if __name__ == '__main__':
-	shell = GPSDemoShell()
+	shell = openOBDShell()
 	shell.cmdloop()
