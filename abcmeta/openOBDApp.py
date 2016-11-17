@@ -12,7 +12,7 @@ class openOBDApp():
 	def __init__(self):
 		self.gpsDevice = GPS3Device()
 		self.obdDevice = OBDDevice()
-		self.shell = openOBDShell(GPS3Device, OBDDevice)
+		self.shell = openOBDShell(self.gpsDevice, self.obdDevice)
 
 if __name__ == '__main__':
 	shell = openOBDShell()
