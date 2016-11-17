@@ -1,6 +1,6 @@
 """TODO Implementation of IOBDDevice"""
 import abc
-from ../Iframework/IOBDDevice import IOBDDevice
+from Iframework.IOBDDevice import IOBDDevice
 import spidev
 import RPi.GPIO as GPIO
 import sys

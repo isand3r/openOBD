@@ -2,6 +2,10 @@
 
 from openOBDShell import OpenOBDShell
 
+from devices.GPS3Device import GPS3Device
+from devices.OBDDevice import OBDDevice
+
+from . import __version__ as VERSION
 
 
 class openOBDApp():

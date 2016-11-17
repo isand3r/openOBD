@@ -1,6 +1,6 @@
 """Concrete GPS device using gps3"""
 import abc
-from ../Iframework/IGPSDevice import IGPSDevice
+from Iframework.IGPSDevice import IGPSDevice
 from gps3 import gps3
 import sys
 import time
