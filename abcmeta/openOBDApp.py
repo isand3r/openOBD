@@ -15,5 +15,4 @@ class openOBDApp():
 		self.shell = openOBDShell(self.gpsDevice, self.obdDevice)
 
 if __name__ == '__main__':
-	shell = openOBDShell()
-	shell.cmdloop()
+	self.shell.cmdloop()
