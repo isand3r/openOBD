@@ -1,2 +1,0 @@
-class UNITS:
-	CELSIUS, FAHRENHEIT= range(2)
