@@ -1,8 +1,7 @@
-"""TODO Abstract GPS device"""
-
 import abc
 
 class IGPSDevice(metaclass=abc.ABCMeta):
+    """Abstract GPS device"""
 
     @abc.abstractmethod
     def initialize(self):

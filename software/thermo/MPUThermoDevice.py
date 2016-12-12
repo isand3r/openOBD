@@ -1,10 +1,10 @@
-"""MPU6050 Thermometer"""
-
 from IThermoDevice import IThermoDevice
 
 from mpu6050 import mpu6050
 
 class MPUThermoDevice(IThermoDevice):
+    """Thermometer using MPU6050"""
+
     def __init__(self):
         self.init = None
 

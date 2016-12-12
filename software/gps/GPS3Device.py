@@ -1,9 +1,10 @@
-"""Concrete GPS device using gps3"""
 import abc
 from IGPSDevice import IGPSDevice
 from gps3 import gps3
 
 class GPS3Device(IGPSDevice):
+    """Concrete GPS device using gps3"""
+
     def __init__(self):
         self.location = {'longitude' : 0, 'latitude' : 0, 'altitude' : 0}
         self.gps_socket = None
