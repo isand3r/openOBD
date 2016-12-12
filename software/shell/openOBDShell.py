@@ -5,36 +5,31 @@ import time
 import os
 
 class OpenOBDShell(Cmd):
-	def __init__(self, gpsDevice, obdDevice):
+	def __init__(self, gpsDevice, thermoDevice):
 		self.intro = 'openOBD shell. Type help to list commands.\n'
 		self.prompt = '> '
 		self.file = None
 		super().__init__()
 		self.gpsDevice = gpsDevice
-		self.obdDevice = obdDevice
+		self.thermoDevice = thermoDevice
 
 	def do_initDevices(self, args):
-		"""initialize the GPS device"""
+		"""initialize the devices"""
 		self.gpsDevice.initialize()
-		self.obdDevice.initialize()
+		self.thermoDevice.initialize()
 
 	def do_readgps(self, args):
 		"""print the GPS stream"""
-		self.gpsDevice.printGPSStream()
+		print("openOBDShell do_readgps not implemented")
 
 	def do_listen(self, args):
 		"""listen to all devices constantly"""
 		try:
 			while(1):
-				self.gpsDevice.printGPSStream()
-				self.obdDevice.printOBDStream()
+				print("openOBDShell do_listen not implemented")
 				time.sleep(1)
 		except KeyboardInterrupt:
 			pass
-
-	def do_version(self, args):
-		"""Prints the Version of Build"""
-		print (VERSION)
 
 	def do_quit(self, args):
 		"""quit the shell"""

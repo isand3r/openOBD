@@ -1,10 +1,9 @@
-"""A concrete GPS device class for the Nov 15 meeting"""
+"""Concrete GPS device using gps3"""
+import abc
+from IGPSDevice import IGPSDevice
 from gps3 import gps3
-import sys
-import time
-import os
 
-class GPS3Device():
+class GPS3Device(IGPSDevice):
     def __init__(self):
         self.location = {'longitude' : 0, 'latitude' : 0, 'altitude' : 0}
         self.gps_socket = None
@@ -16,6 +15,9 @@ class GPS3Device():
         self.gps_socket.connect()
         self.gps_socket.watch()
 
+    def getLocation(self):
+        return self.location
+
     def getAltitude(self):
         return self.location['altitude']
 
@@ -24,9 +26,6 @@ class GPS3Device():
 
     def getLongitude(self):
         return self.location['longitude']
-
-    def getLocation(self):
-        return self.location
 
     def printGPSStream(self):
         for new_data in self.gps_socket:
