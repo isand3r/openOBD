@@ -1,13 +1,13 @@
 """Main app for openOBD"""
 
-from .shell.openOBDShell import OpenOBDShell
+from .shell.Shell import Shell
 
 from .gps.GPS3Device import GPS3Device
 from .thermo.MPUThermoDevice import MPUThermoDevice
 
 from . import __version__ as VERSION
 
-class openOBDApp():
+class App():
 	def __init__(self):
 		self.gpsDevice = GPS3Device()
 		self.thermoDevice = MPUThermoDevice()

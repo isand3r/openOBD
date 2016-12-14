@@ -4,7 +4,7 @@ from cmd import Cmd
 import time
 import os
 
-class OpenOBDShell(Cmd):
+class Shell(Cmd):
 	def __init__(self, gpsDevice, thermoDevice):
 		self.intro = 'openOBD shell. Type help to list commands.\n'
 		self.prompt = '> '
