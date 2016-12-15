@@ -1,6 +1,6 @@
 import abc
 
-class IGPSDevice(metaclass=abc.ABCMeta):
+class IGPSDevice(abc.ABC):
     """Abstract GPS device"""
 
     @abc.abstractmethod

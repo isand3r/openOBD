@@ -1,6 +1,6 @@
 import abc
 
-class IThermometerDevice(metaclass=abc.ABCMeta):
+class IThermometerDevice(abc.ABC):
 
 	@abc.abstractmethod
 	def initialize() :
