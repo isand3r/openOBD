@@ -1,7 +1,11 @@
 import Measure
+import datetime
 
-def test_example():
-	myMeasure = Measure.Measure(1,"metres", 2)
-	assert myMeasure.getValue() == 1
-	assert myMeasure.getUnits() == "metres"
-	assert myMeasure.getTime() == 2
+def test_distance():
+	value = 5
+	units = "metres"
+	time = datetime.datetime.now()
+	distance = Measure.Measure(value, units, time)
+	assert distance.getValue() == value
+	assert distance.getUnits() == units
+	assert distance.getTime() == time
