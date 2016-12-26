@@ -6,6 +6,6 @@ def test_distance():
 	units = "metres"
 	time = datetime.datetime.now()
 	distance = Measure.Measure(value, units, time)
-	assert distance.getValue() == value
-	assert distance.getUnits() == units
-	assert distance.getTime() == time
+	assert distance.value == value
+	assert distance.units == units
+	assert distance.time == time
