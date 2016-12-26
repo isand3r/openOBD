@@ -1,14 +1,17 @@
-class MockThermoDevice(IThermoDevice):
+import IThermoDevice
+import .measure.Measure
+
+class MockThermoDevice(IThermoDevice.IThermoDevice):
 	"""Mock Thermometer"""
 
 	def initialize():
 		"""This mock device does not have anything to initialize"""
 		return
 
-	def getStatus():
+	def ready():
 		"""This mock device is always ready"""
-		print("MockThermoDevice getStatus not implemented")
+		return True
 
-	def getTemperature():
+	def readTemperature():
 		"""This mock thermometer always returns 22"""
-		return 22
+		return 
