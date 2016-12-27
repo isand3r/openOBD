@@ -1,5 +1,5 @@
 import ithermodevice
-import .measure.Measure
+from ..measure import measure
 
 class MockThermoDevice(ithermodevice.IThermoDevice):
 	"""Mock Thermometer that always gives readings with MOCK_VALUE and MOCK_UNITS"""
