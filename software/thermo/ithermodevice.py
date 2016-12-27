@@ -1,6 +1,6 @@
 import abc
 
-class IThermometerDevice(abc.ABC):
+class IThermoDevice(abc.ABC):
 
 	@abc.abstractmethod
 	def initialize(self):
@@ -13,5 +13,5 @@ class IThermometerDevice(abc.ABC):
 		
 	# create a new ITemperature
 	@abc.abstractmethod
-	def readTemperature(self):
+	def read_temperature(self):
 		pass
