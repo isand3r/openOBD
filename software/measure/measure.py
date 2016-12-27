@@ -5,9 +5,9 @@ class Measure():
 	"""Measurement with a numerical value, units, and time"""
 
 	def __init__(self, value, units, time):
-		assert isinstance(value, numbers.Number), "value is not a number"
-		assert isinstance(units, str), "units is not a string"
-		assert isinstance(time, datetime.datetime), "time is not a datetime"
+		assert isinstance(value, numbers.Number)
+		assert isinstance(units, str)
+		assert isinstance(time, datetime.datetime)
 		self._value = value
 		self._units = units
 		self._time = time
