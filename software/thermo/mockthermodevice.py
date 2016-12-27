@@ -1,17 +1,26 @@
-import IThermoDevice
+import ithermodevice
 import .measure.Measure
 
 class MockThermoDevice(IThermoDevice.IThermoDevice):
 	"""Mock Thermometer"""
 
-	def initialize():
+	def __init__(self):
+		self._ready = False
+
+	def initialize(self):
 		"""This mock device does not have anything to initialize"""
-		return
+		self._ready = True
 
-	def ready():
+	@property
+	def ready(self):
 		"""This mock device is always ready"""
-		return True
+		return self._ready
 
-	def readTemperature():
+	def readTemperature(self):
 		"""This mock thermometer always returns 22"""
-		return 
+		assert self._ready
+		value = 22
+		units = "celsius"
+		time = datetime.datetime.now()
+		temperature = measure.Measure(value, units, time)
+		return temperature
