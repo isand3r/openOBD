@@ -23,4 +23,5 @@ Changes:
   * LSM6DS3USTR (digital 3-axis accelerometer)
   * http://www.st.com/content/ccc/resource/technical/document/datasheet/04/46/d6/00/be/d9/46/ae/CD00265057.pdf/files/CD00265057.pdf/jcr:content/translations/en.CD00265057.pdf (SPI 3 axis gyro)
   * TMP36 (analog temp sensor)
-  * DS18B20 (digital temperature sensor) 
+  * DS18B20 (digital temperature sensor)
+  * http://ww1.microchip.com/downloads/en/DeviceDoc/20005282A.pdf (surface mount combination of mcp2561 CAN transceiver and mcp2515 CAN controller)
