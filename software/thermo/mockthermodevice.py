@@ -1,8 +1,8 @@
-import thermo.ithermodevice
-import measure.measure
+from software.thermo.ithermodevice import IThermoDevice
+from software.measure.measure import Measure
 import datetime
 
-class MockThermoDevice(thermo.ithermodevice.IThermoDevice):
+class MockThermoDevice(IThermoDevice):
 	"""Mock Thermometer that always gives readings with MOCK_VALUE and MOCK_UNITS"""
 
 	def __init__(self):
@@ -23,5 +23,5 @@ class MockThermoDevice(thermo.ithermodevice.IThermoDevice):
 		"""This mock thermometer always returns 22"""
 		assert self._ready
 		time = datetime.datetime.now()
-		temperature = measure.measure.Measure(self.MOCK_VALUE, self.MOCK_UNITS, time)
+		temperature = Measure(self.MOCK_VALUE, self.MOCK_UNITS, time)
 		return temperature

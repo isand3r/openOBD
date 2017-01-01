@@ -1,13 +1,12 @@
 """Configuration file parser for openOBD using configparser"""
-
+from software.config.iconfiguration import IConfiguration
 import configparser
 
-class Configuration(config.configuration.IConfiguration):
-	SECTION = 'openOBD'
-	GPS = 'gps'
-	THERMO = 'thermo'
-
+class Configuration(IConfiguration):
 	def __init__(self):
+		self.SECTION = 'openOBD'
+		self.GPS = 'gps'
+		self.THERMO = 'thermo'
 		self._config = configparser.ConfigParser()
 
 	def read(self, filename):
@@ -15,8 +14,8 @@ class Configuration(config.configuration.IConfiguration):
 
 	@property
 	def gps(self):
-		return self._config[SECTION][GPS]
+		return self._config[self.SECTION][self.GPS]
 
 	@property
 	def thermo(self):
-		return self._config[SECTION][THERMO]
+		return self._config[self.SECTION][self.THERMO]

@@ -1,18 +1,21 @@
-from .measure.Measure import Measure
+from software.measure.measure import Measure
 
 class Location():
-	"""3D Location"""
+	"""3D Location with coordinates in degrees and altitude in metres"""
 
 	def __init__(self, latitude, longitude, altitude, time):
-		self.latitude = Measure(latitude, "degrees", time)
-		self.longitude = Measure(longitude, "degrees", time)
-		self.altitude = Measure(altitude, "metres", time)
+		self._latitude = Measure(latitude, "degrees", time)
+		self._longitude = Measure(longitude, "degrees", time)
+		self._altitude = Measure(altitude, "metres", time)
 
-	def getLatitude(self):
-		return self.latitude
+	@property
+	def latitude(self):
+		return self._latitude
 
-	def getLongitude(self):
-		return self.longitude
+	@property
+	def longitude(self):
+		return self._longitude
 
-	def getAltitude(self):
-		return self.altitude
+	@property
+	def altitude(self):
+		return self._altitude
