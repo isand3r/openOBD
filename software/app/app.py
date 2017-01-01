@@ -1,26 +1,32 @@
 """Main app for openOBD"""
 
-import config.configuration
-import shell.shell
-import gps.igpsdevice
-import gps.mockgpsdevice
-import thermo.ithermodevice
-import thermo.mockthermodevice
+import sys
+sys.path.append('../')
+
+from software.config.iconfiguration import IConfiguration
+from software.config.configuration import Configuration
+
+from software.shell.shell import Shell
+
+from software.thermo.ithermodevice import IThermoDevice
+from software.thermo.mockfixedthermodevice import MockFixedThermoDevice
+from software.thermo.mockrisingthermodevice import MockRisingThermoDevice
 
 class App():
-	CONFIG_FILENAME = TODO
-
 	def __init__(self):
-		self._config = config.configuration.Configuration
-		self._gpsDevice = None
+		self.CONFIG_FILENAME = 'config/config.ini'
+		self._config = Configuration()
 		self._thermoDevice = None
-		self.configure_devices()
-		self._shell = openOBDShell(self.gpsDevice, self.thermoDevice)
+		self.configure_thermo()
+		self._shell = Shell(self._thermoDevice)
 
-	def configure_devices(self):
-		self._config.read(CONFIG_FILENAME)
-		self._gpsDevice = TODO
-		self._thermoDevice = TODO
+	def configure_thermo(self):
+		self._config.read(self.CONFIG_FILENAME)
+		if self._config.thermo == 'fixed_mock':
+			self._thermoDevice = MockFixedThermoDevice()
+		elif self._config.thermo == 'rising_mock':
+			self._thermoDevice = MockRisingThermoDevice()
 
 if __name__ == '__main__':
-	self._shell.cmdloop()
+	app = App()
+	app._shell.cmdloop()

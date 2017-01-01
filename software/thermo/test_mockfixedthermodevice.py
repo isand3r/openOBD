@@ -1,17 +1,17 @@
-from software.thermo.mockthermodevice import MockThermoDevice
+from software.thermo.mockfixedthermodevice import MockFixedThermoDevice
 import datetime
 
 def test_ready_before_initialize():
-	device = MockThermoDevice()
+	device = MockFixedThermoDevice()
 	assert not device.ready
 
 def test_ready_after_initialize():
-	device = MockThermoDevice()
+	device = MockFixedThermoDevice()
 	device.initialize()
 	assert device.ready
 
 def test_read_temperature():
-	device = MockThermoDevice()
+	device = MockFixedThermoDevice()
 	device.initialize()
 	temperature = device.read_temperature()
 	assert temperature.value == device.MOCK_VALUE
