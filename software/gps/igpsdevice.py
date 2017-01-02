@@ -1,3 +1,4 @@
+from software.location.location import Location
 import abc
 
 class IGPSDevice(abc.ABC):
@@ -5,15 +6,13 @@ class IGPSDevice(abc.ABC):
 
     @abc.abstractmethod
     def initialize(self):
-    	"""Initialize the device"""
-    	return
+    	pass
+
+    @abc.abstractproperty
+    def status(self):
+        pass
 
     @abc.abstractmethod
-    def getStatus(self):
-        """Return the whether the device is ready"""
-        return
-
-    @abc.abstractmethod
-    def getLocation(self):
+    def read_location(self) -> Location:
     	"""Retrieve data from the GPS and return a Location"""
-    	return
+    	pass
