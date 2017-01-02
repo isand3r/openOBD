@@ -13,22 +13,29 @@ class Shell(Cmd):
 		super().__init__()
 		assert isinstance(thermoDevice, IThermoDevice)
 		self._thermoDevice = thermoDevice
-
-	def do_initDevices(self, args):
-		"""initialize the devices"""
 		self._thermoDevice.initialize()
 
-	def do_listen(self, args):
-		"""listen to all devices constantly"""
+	def do_multiple_readings(self, args):
+		"""Repeatedly read from the device"""
 		try:
 			while(1):
-				temperature = self._thermoDevice.read_temperature()
-				print(temperature.value)
+				self.print_temperature_reading()
 				time.sleep(1)
 		except KeyboardInterrupt:
 			pass
+
+	def do_single_reading(self, args):
+		"""Read from the device once"""
+		self.print_temperature_reading()
 
 	def do_quit(self, args):
 		"""quit the shell"""
 		print("Quitting")
 		raise SystemExit
+
+	def print_temperature_reading(self):
+		"""Print a new temperature reading"""
+		temperature = self._thermoDevice.read_temperature()
+		temperature_string = "Value: {} | Units: {} | Time: {}".format(
+			temperature.value, temperature.units, temperature.time)
+		print(temperature_string)
