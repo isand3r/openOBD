@@ -1,3 +1,4 @@
+from software.measure.measure import Measure
 import abc
 
 class IThermoDevice(abc.ABC):
@@ -6,12 +7,10 @@ class IThermoDevice(abc.ABC):
 	def initialize(self):
 		pass
 
-	# check that the device is available and able to provide temperature measurements
 	@abc.abstractproperty
-	def ready(self):
+	def ready(self) -> bool:
 		pass
-		
-	# create a new ITemperature
+
 	@abc.abstractmethod
-	def read_temperature(self):
+	def read_temperature(self) -> Measure:
 		pass

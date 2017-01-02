@@ -1,5 +1,4 @@
 """Abstract configuration file parser for openOBD"""
-
 import abc
 
 class IConfiguration(abc.ABC):

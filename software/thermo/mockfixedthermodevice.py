@@ -15,10 +15,10 @@ class MockFixedThermoDevice(IThermoDevice):
 		self._ready = True
 
 	@property
-	def ready(self):
+	def ready(self) -> bool:
 		return self._ready
 
-	def read_temperature(self):
+	def read_temperature(self) -> Measure:
 		"""This mock thermometer always returns 22 celsius"""
 		assert self._ready
 		time = datetime.datetime.now()

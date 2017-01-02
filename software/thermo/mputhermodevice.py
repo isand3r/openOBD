@@ -1,4 +1,5 @@
-from IThermoDevice import IThermoDevice
+from software.thermo.ithermodevice import IThermoDevice
+from software.measure.measure import Measure
 
 from mpu6050 import mpu6050
 
@@ -6,13 +7,14 @@ class MPUThermoDevice(IThermoDevice):
     """Thermometer using MPU6050"""
 
     def __init__(self):
-        self.init = None
+        pass
 
     def initialize(self):
-        self.init = mpu6050(0x68)
+        print("MPUThermoDevice initialize() method not implemented")
 
-    def getStatus(self):
-        print("MPUThermoDevice getStatus not implemented")
+    @property
+    def ready(self) -> bool:
+        print("MPUThermoDevice ready property not implemented")
 
-    def getTemperature(self):
-        return mpu6050.get_temp(self.init)
+    def read_temperature(self) -> Measure:
+    	print("MPUThermoDevice read_temperature() method not implemented")

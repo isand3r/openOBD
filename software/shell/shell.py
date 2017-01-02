@@ -1,15 +1,17 @@
 """Command line interface for openOBD"""
 
+from software.thermo.ithermodevice import IThermoDevice
 from cmd import Cmd
 import time
 import os
 
 class Shell(Cmd):
-	def __init__(self, thermoDevice):
+	def __init__(self, thermoDevice: IThermoDevice):
 		self.intro = 'openOBD shell. Type help to list commands.\n'
 		self.prompt = '> '
 		self.file = None
 		super().__init__()
+		assert isinstance(thermoDevice, IThermoDevice)
 		self._thermoDevice = thermoDevice
 
 	def do_initDevices(self, args):
