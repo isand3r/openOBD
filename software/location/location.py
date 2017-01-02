@@ -6,9 +6,9 @@ class Location():
 
 	def __init__(self, latitude: numbers.Number, longitude: numbers.Number,
 		altitude: numbers.Number, time: numbers.Number):
-		self._latitude = Measure(latitude, "degrees", time)
-		self._longitude = Measure(longitude, "degrees", time)
-		self._altitude = Measure(altitude, "metres", time)
+		self._latitude = Measure(latitude, 'degrees', time)
+		self._longitude = Measure(longitude, 'degrees', time)
+		self._altitude = Measure(altitude, 'metres', time)
 
 	@property
 	def latitude(self) -> Measure:

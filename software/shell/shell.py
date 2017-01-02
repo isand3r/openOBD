@@ -29,7 +29,7 @@ class Shell(Cmd):
 		self.print_temperature_reading()
 
 	def do_quit(self, args):
-		"""quit the shell"""
+		"""Quit the shell"""
 		print("Quitting")
 		raise SystemExit
 
