@@ -9,7 +9,7 @@ class IGPSDevice(abc.ABC):
     	pass
 
     @abc.abstractproperty
-    def status(self):
+    def status(self) -> bool:
         pass
 
     @abc.abstractmethod
