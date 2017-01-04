@@ -1,4 +1,4 @@
-from software.measure.measure import Measure
+from measure.measure import Measure
 import numbers
 
 class Location():

@@ -1,6 +1,6 @@
 """Command line interface for openOBD"""
-from software.gps.igpsdevice import IGPSDevice
-from software.thermo.ithermodevice import IThermoDevice
+from gps.igpsdevice import IGPSDevice
+from thermo.ithermodevice import IThermoDevice
 from cmd import Cmd
 import time
 import os

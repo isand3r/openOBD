@@ -1,4 +1,4 @@
-from software.thermo.mockrisingthermodevice import MockRisingThermoDevice
+from thermo.mockrisingthermodevice import MockRisingThermoDevice
 import datetime
 
 def test_ready_before_initialize():

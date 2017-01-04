@@ -1,4 +1,4 @@
-from software.config.configuration import Configuration
+from ..config.configuration import Configuration
 
 def test_read_gps_thermo():
 	config = Configuration()

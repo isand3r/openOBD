@@ -1,5 +1,5 @@
-from software.location.location import Location
-from software.gps.igpsdevice import IGPSDevice
+from location.location import Location
+from gps.igpsdevice import IGPSDevice
 import datetime
 
 class MockFixedGPSDevice(IGPSDevice):

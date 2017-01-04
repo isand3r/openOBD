@@ -1,4 +1,4 @@
-from software.thermo.mockfixedthermodevice import MockFixedThermoDevice
+from thermo.mockfixedthermodevice import MockFixedThermoDevice
 import datetime
 
 def test_ready_before_initialize():

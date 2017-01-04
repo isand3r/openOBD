@@ -1,5 +1,5 @@
 """Configuration file parser for openOBD using configparser"""
-from software.config.iconfiguration import IConfiguration
+from config.iconfiguration import IConfiguration
 import configparser
 
 class Configuration(IConfiguration):

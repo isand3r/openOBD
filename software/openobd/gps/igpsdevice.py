@@ -1,4 +1,4 @@
-from software.location.location import Location
+from location.location import Location
 import abc
 
 class IGPSDevice(abc.ABC):

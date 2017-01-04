@@ -3,17 +3,17 @@
 import sys
 sys.path.append('../')
 
-from software.config.iconfiguration import IConfiguration
-from software.config.configuration import Configuration
+from config.iconfiguration import IConfiguration
+from config.configuration import Configuration
 
-from software.shell.shell import Shell
+from shell.shell import Shell
 
-from software.gps.igpsdevice import IGPSDevice
-from software.gps.mockfixedgpsdevice import MockFixedGPSDevice
+from gps.igpsdevice import IGPSDevice
+from gps.mockfixedgpsdevice import MockFixedGPSDevice
 
-from software.thermo.ithermodevice import IThermoDevice
-from software.thermo.mockfixedthermodevice import MockFixedThermoDevice
-from software.thermo.mockrisingthermodevice import MockRisingThermoDevice
+from thermo.ithermodevice import IThermoDevice
+from thermo.mockfixedthermodevice import MockFixedThermoDevice
+from thermo.mockrisingthermodevice import MockRisingThermoDevice
 
 class App():
 	def __init__(self):

@@ -1,5 +1,5 @@
-from software.thermo.ithermodevice import IThermoDevice
-from software.measure.measure import Measure
+from thermo.ithermodevice import IThermoDevice
+from measure.measure import Measure
 import datetime
 
 class MockRisingThermoDevice(IThermoDevice):
