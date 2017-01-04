@@ -1,4 +1,4 @@
-from ..gps.mockfixedgpsdevice import MockFixedGPSDevice
+from gps.mockfixedgpsdevice import MockFixedGPSDevice
 
 def test_read_fixed_location():
 	device = MockFixedGPSDevice()

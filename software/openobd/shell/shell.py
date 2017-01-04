@@ -1,12 +1,13 @@
 """Command line interface for openOBD"""
 from gps.igpsdevice import IGPSDevice
 from thermo.ithermodevice import IThermoDevice
+from accelerometer.iacceldevice import IAccelDevice
 from cmd import Cmd
 import time
 import os
 
 class Shell(Cmd):
-	def __init__(self, gpsDevice: IGPSDevice, thermoDevice: IThermoDevice):
+	def __init__(self, gpsDevice: IGPSDevice, thermoDevice: IThermoDevice, accelDevice: IAccelDevice):
 		self.intro = 'openOBD shell. Type help to list commands.\n'
 		self.prompt = '> '
 		self.file = None
@@ -17,6 +18,9 @@ class Shell(Cmd):
 		assert isinstance(thermoDevice, IThermoDevice)
 		self._thermoDevice = thermoDevice
 		self._thermoDevice.initialize()
+		assert isinstance(accelDevice, IAccelDevice)
+		self._accelDevice = accelDevice
+		self._accelDevice.initialize()
 
 	def do_multiple_all_readings(self, args):
 		"""Repeatedly read from all devices"""
@@ -24,6 +28,7 @@ class Shell(Cmd):
 			while(1):
 				self.print_temperature_reading()
 				self.print_location_reading()
+				self.print_accelerometer_reading()
 				time.sleep(1)
 		except KeyboardInterrupt:
 			pass
@@ -83,3 +88,10 @@ class Shell(Cmd):
 		print(latitude_string)
 		print(longitude_string)
 		print(altitude_string)
+
+	def print_accelerometer_reading(self):
+		"""Print a new temperature reading"""
+		velocity = self._accelDevice.read_accelerometer()
+		velocity_string = "VELOCITY | Value: {} | Units: {} | Time: {}".format(
+			velocity.value, velocity.units, velocity.time)
+		print(velocity_string)

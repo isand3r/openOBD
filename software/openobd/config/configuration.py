@@ -7,6 +7,7 @@ class Configuration(IConfiguration):
 		self.DEVICE = 'device'
 		self.GPS = 'gps'
 		self.THERMO = 'thermo'
+		self.ACCELEROMETER = 'accel'
 		self._config = configparser.ConfigParser()
 
 	def read(self, filename: str):
@@ -19,3 +20,7 @@ class Configuration(IConfiguration):
 	@property
 	def thermo(self) -> str:
 		return self._config[self.DEVICE][self.THERMO]
+
+	@property
+	def accel(self) -> str:
+		return self._config[self.DEVICE][self.ACCELEROMETER]

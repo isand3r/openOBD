@@ -5,3 +5,4 @@ def test_read_gps_thermo():
 	config.read('config/config.ini')
 	assert config.gps == 'fixed_mock'
 	assert (config.thermo == 'fixed_mock') or (config.thermo == 'rising_mock')
+	assert config.accel == 'fixed_mock'

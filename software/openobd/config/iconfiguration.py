@@ -15,3 +15,7 @@ class IConfiguration(abc.ABC):
 	@abc.abstractproperty
 	def thermo(self) -> str:
 		pass
+
+	@abc.abstractproperty
+	def accel(self) -> str:
+		pass
