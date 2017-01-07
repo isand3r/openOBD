@@ -1,0 +1,7 @@
+#Fri Jan 06 16:48:05 PST 2017
+base.0=/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_1586813120b773976184b6676d4003b012e9652f
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_06d9557b7c97241f8a084ddabf8abf462a7a875c/classes.dex
+base.1=/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_06d9557b7c97241f8a084ddabf8abf462a7a875c
+file.0=/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_1586813120b773976184b6676d4003b012e9652f/classes.dex

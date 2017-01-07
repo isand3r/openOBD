@@ -1,0 +1,1850 @@
+[
+    {
+        "outputFile": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rGB/values-en-rGB.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 105,
+                    "endColumn": 103,
+                    "endOffset": 204
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-en-rGB/values-en-rGB.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 103,
+                        "endOffset": 154
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 209,
+                    "endColumn": 107,
+                    "endOffset": 312
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-en-rGB/values-en-rGB.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 159,
+                        "endColumn": 107,
+                        "endOffset": 262
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 317,
+                    "endColumn": 122,
+                    "endOffset": 435
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-en-rGB/values-en-rGB.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 267,
+                        "endColumn": 122,
+                        "endOffset": 385
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 440,
+                    "endColumn": 99,
+                    "endOffset": 535
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-en-rGB/values-en-rGB.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 390,
+                        "endColumn": 99,
+                        "endOffset": 485
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 540,
+                    "endColumn": 107,
+                    "endOffset": 643
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-en-rGB/values-en-rGB.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 490,
+                        "endColumn": 107,
+                        "endOffset": 593
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 648,
+                    "endColumn": 83,
+                    "endOffset": 727
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-en-rGB/values-en-rGB.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 598,
+                        "endColumn": 83,
+                        "endOffset": 677
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 732,
+                    "endColumn": 99,
+                    "endOffset": 827
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-en-rGB/values-en-rGB.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 682,
+                        "endColumn": 99,
+                        "endOffset": 777
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 832,
+                    "endColumn": 114,
+                    "endOffset": 942
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-en-rGB/values-en-rGB.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 782,
+                        "endColumn": 114,
+                        "endOffset": 892
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 947,
+                    "endColumn": 76,
+                    "endOffset": 1019
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-en-rGB/values-en-rGB.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 897,
+                        "endColumn": 76,
+                        "endOffset": 969
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 1024,
+                    "endColumn": 75,
+                    "endOffset": 1095
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-en-rGB/values-en-rGB.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 974,
+                        "endColumn": 75,
+                        "endOffset": 1045
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 1100,
+                    "endColumn": 81,
+                    "endOffset": 1177
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-en-rGB/values-en-rGB.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1050,
+                        "endColumn": 81,
+                        "endOffset": 1127
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 1182,
+                    "endColumn": 102,
+                    "endOffset": 1280
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-en-rGB/values-en-rGB.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1132,
+                        "endColumn": 102,
+                        "endOffset": 1230
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 1285,
+                    "endColumn": 103,
+                    "endOffset": 1384
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-en-rGB/values-en-rGB.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1235,
+                        "endColumn": 103,
+                        "endOffset": 1334
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 1389,
+                    "endColumn": 98,
+                    "endOffset": 1483
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-en-rGB/values-en-rGB.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1339,
+                        "endColumn": 98,
+                        "endOffset": 1433
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 1488,
+                    "endColumn": 104,
+                    "endOffset": 1588
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-en-rGB/values-en-rGB.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1438,
+                        "endColumn": 104,
+                        "endOffset": 1538
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1593,
+                    "endColumn": 102,
+                    "endOffset": 1691
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-en-rGB/values-en-rGB.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1543,
+                        "endColumn": 102,
+                        "endOffset": 1641
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1696,
+                    "endColumn": 103,
+                    "endOffset": 1795
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-en-rGB/values-en-rGB.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1646,
+                        "endColumn": 103,
+                        "endOffset": 1745
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1800,
+                    "endColumn": 118,
+                    "endOffset": 1914
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-en-rGB/values-en-rGB.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1750,
+                        "endColumn": 118,
+                        "endOffset": 1864
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1919,
+                    "endColumn": 99,
+                    "endOffset": 2014
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-en-rGB/values-en-rGB.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1869,
+                        "endColumn": 99,
+                        "endOffset": 1964
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 2019,
+                    "endColumn": 74,
+                    "endOffset": 2089
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 360,
+                        "endColumn": 74,
+                        "endOffset": 430
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 2094,
+                    "endColumn": 95,
+                    "endOffset": 2185
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 435,
+                        "endColumn": 95,
+                        "endOffset": 526
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 2190,
+                    "endColumn": 94,
+                    "endOffset": 2280
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 531,
+                        "endColumn": 94,
+                        "endOffset": 621
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 2285,
+                    "endColumn": 118,
+                    "endOffset": 2399
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 626,
+                        "endColumn": 118,
+                        "endOffset": 740
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 2404,
+                    "endColumn": 84,
+                    "endOffset": 2484
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 745,
+                        "endColumn": 84,
+                        "endOffset": 825
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 2489,
+                    "endColumn": 113,
+                    "endOffset": 2598
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 830,
+                        "endColumn": 113,
+                        "endOffset": 939
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 2603,
+                    "endColumn": 109,
+                    "endOffset": 2708
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 944,
+                        "endColumn": 109,
+                        "endOffset": 1049
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 2713,
+                    "endColumn": 116,
+                    "endOffset": 2825
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 1054,
+                        "endColumn": 116,
+                        "endOffset": 1166
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 29,
+                    "startColumn": 4,
+                    "startOffset": 2830,
+                    "endColumn": 100,
+                    "endOffset": 2926
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1171,
+                        "endColumn": 100,
+                        "endOffset": 1267
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 30,
+                    "startColumn": 4,
+                    "startOffset": 2931,
+                    "endColumn": 101,
+                    "endOffset": 3028
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1272,
+                        "endColumn": 101,
+                        "endOffset": 1369
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 31,
+                    "startColumn": 4,
+                    "startOffset": 3033,
+                    "endColumn": 78,
+                    "endOffset": 3107
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1374,
+                        "endColumn": 78,
+                        "endOffset": 1448
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 32,
+                    "startColumn": 4,
+                    "startOffset": 3112,
+                    "endColumn": 93,
+                    "endOffset": 3201
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1453,
+                        "endColumn": 93,
+                        "endOffset": 1542
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 33,
+                    "startColumn": 4,
+                    "startOffset": 3206,
+                    "endColumn": 96,
+                    "endOffset": 3298
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1547,
+                        "endColumn": 96,
+                        "endOffset": 1639
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 34,
+                    "startColumn": 4,
+                    "startOffset": 3303,
+                    "endColumn": 107,
+                    "endOffset": 3406
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1644,
+                        "endColumn": 107,
+                        "endOffset": 1747
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 35,
+                    "startColumn": 4,
+                    "startOffset": 3411,
+                    "endColumn": 72,
+                    "endOffset": 3479
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1752,
+                        "endColumn": 72,
+                        "endOffset": 1820
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 36,
+                    "startColumn": 4,
+                    "startOffset": 3484,
+                    "endColumn": 136,
+                    "endOffset": 3616
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 350,
+                        "endColumn": 136,
+                        "endOffset": 482
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 37,
+                    "startColumn": 4,
+                    "startOffset": 3621,
+                    "endColumn": 138,
+                    "endOffset": 3755
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 487,
+                        "endColumn": 138,
+                        "endOffset": 621
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 38,
+                    "startColumn": 4,
+                    "startOffset": 3760,
+                    "endColumn": 97,
+                    "endOffset": 3853
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 626,
+                        "endColumn": 97,
+                        "endOffset": 719
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 39,
+                    "startColumn": 4,
+                    "startOffset": 3858,
+                    "endColumn": 74,
+                    "endOffset": 3928
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1825,
+                        "endColumn": 74,
+                        "endOffset": 1895
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 40,
+                    "startColumn": 4,
+                    "startOffset": 3933,
+                    "endColumn": 72,
+                    "endOffset": 4001
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 1900,
+                        "endColumn": 72,
+                        "endOffset": 1968
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 41,
+                    "startColumn": 4,
+                    "startOffset": 4006,
+                    "endColumn": 76,
+                    "endOffset": 4078
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 1973,
+                        "endColumn": 76,
+                        "endOffset": 2045
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 42,
+                    "startColumn": 4,
+                    "startOffset": 4083,
+                    "endColumn": 91,
+                    "endOffset": 4170
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 2050,
+                        "endColumn": 91,
+                        "endOffset": 2137
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 43,
+                    "startColumn": 4,
+                    "startOffset": 4175,
+                    "endColumn": 94,
+                    "endOffset": 4265
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 2142,
+                        "endColumn": 94,
+                        "endOffset": 2232
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 44,
+                    "startColumn": 4,
+                    "startOffset": 4270,
+                    "endColumn": 93,
+                    "endOffset": 4359
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 2237,
+                        "endColumn": 93,
+                        "endOffset": 2326
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 45,
+                    "startColumn": 4,
+                    "startOffset": 4364,
+                    "endColumn": 90,
+                    "endOffset": 4450
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 25,
+                        "startColumn": 4,
+                        "startOffset": 2331,
+                        "endColumn": 90,
+                        "endOffset": 2417
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 46,
+                    "startColumn": 4,
+                    "startOffset": 4455,
+                    "endColumn": 94,
+                    "endOffset": 4545
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 26,
+                        "startColumn": 4,
+                        "startOffset": 2422,
+                        "endColumn": 94,
+                        "endOffset": 2512
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 47,
+                    "startColumn": 4,
+                    "startOffset": 4550,
+                    "endColumn": 72,
+                    "endOffset": 4618
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 27,
+                        "startColumn": 4,
+                        "startOffset": 2517,
+                        "endColumn": 72,
+                        "endOffset": 2585
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 48,
+                    "startColumn": 4,
+                    "startOffset": 4623,
+                    "endColumn": 96,
+                    "endOffset": 4715
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 28,
+                        "startColumn": 4,
+                        "startOffset": 2590,
+                        "endColumn": 96,
+                        "endOffset": 2682
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 49,
+                    "startColumn": 4,
+                    "startOffset": 4720,
+                    "endColumn": 96,
+                    "endOffset": 4812
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 29,
+                        "startColumn": 4,
+                        "startOffset": 2687,
+                        "endColumn": 96,
+                        "endOffset": 2779
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 50,
+                    "startColumn": 4,
+                    "startOffset": 4817,
+                    "endColumn": 98,
+                    "endOffset": 4911
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 30,
+                        "startColumn": 4,
+                        "startOffset": 2784,
+                        "endColumn": 98,
+                        "endOffset": 2878
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 51,
+                    "startColumn": 4,
+                    "startOffset": 4916,
+                    "endColumn": 143,
+                    "endOffset": 5055
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 31,
+                        "startColumn": 4,
+                        "startOffset": 2883,
+                        "endColumn": 143,
+                        "endOffset": 3022
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 52,
+                    "startColumn": 4,
+                    "startOffset": 5060,
+                    "endColumn": 126,
+                    "endOffset": 5182
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 32,
+                        "startColumn": 4,
+                        "startOffset": 3027,
+                        "endColumn": 126,
+                        "endOffset": 3149
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 53,
+                    "startColumn": 4,
+                    "startOffset": 5187,
+                    "endColumn": 124,
+                    "endOffset": 5307
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 33,
+                        "startColumn": 4,
+                        "startOffset": 3154,
+                        "endColumn": 124,
+                        "endOffset": 3274
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 54,
+                    "startColumn": 4,
+                    "startOffset": 5312,
+                    "endColumn": 94,
+                    "endOffset": 5402
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 34,
+                        "startColumn": 4,
+                        "startOffset": 3279,
+                        "endColumn": 94,
+                        "endOffset": 3369
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 55,
+                    "startColumn": 4,
+                    "startOffset": 5407,
+                    "endColumn": 90,
+                    "endOffset": 5493
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 35,
+                        "startColumn": 4,
+                        "startOffset": 3374,
+                        "endColumn": 90,
+                        "endOffset": 3460
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 56,
+                    "startColumn": 4,
+                    "startOffset": 5498,
+                    "endColumn": 104,
+                    "endOffset": 5598
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 36,
+                        "startColumn": 4,
+                        "startOffset": 3465,
+                        "endColumn": 104,
+                        "endOffset": 3565
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 57,
+                    "startColumn": 4,
+                    "startOffset": 5603,
+                    "endColumn": 76,
+                    "endOffset": 5675
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 37,
+                        "startColumn": 4,
+                        "startOffset": 3570,
+                        "endColumn": 76,
+                        "endOffset": 3642
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 58,
+                    "startColumn": 4,
+                    "startOffset": 5680,
+                    "endColumn": 106,
+                    "endOffset": 5782
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 344,
+                        "endColumn": 106,
+                        "endOffset": 446
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 59,
+                    "startColumn": 4,
+                    "startOffset": 5787,
+                    "endColumn": 183,
+                    "endOffset": 5966
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 451,
+                        "endColumn": 183,
+                        "endOffset": 630
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 60,
+                    "startColumn": 4,
+                    "startOffset": 5971,
+                    "endColumn": 126,
+                    "endOffset": 6093
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 635,
+                        "endColumn": 126,
+                        "endOffset": 757
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 61,
+                    "startColumn": 4,
+                    "startOffset": 6098,
+                    "endColumn": 108,
+                    "endOffset": 6202
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 762,
+                        "endColumn": 108,
+                        "endOffset": 866
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 62,
+                    "startColumn": 4,
+                    "startOffset": 6207,
+                    "endColumn": 214,
+                    "endOffset": 6417
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 871,
+                        "endColumn": 214,
+                        "endOffset": 1081
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 63,
+                    "startColumn": 4,
+                    "startOffset": 6422,
+                    "endColumn": 216,
+                    "endOffset": 6634
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 1086,
+                        "endColumn": 216,
+                        "endOffset": 1298
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 64,
+                    "startColumn": 4,
+                    "startOffset": 6639,
+                    "endColumn": 124,
+                    "endOffset": 6759
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 1303,
+                        "endColumn": 124,
+                        "endOffset": 1423
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 65,
+                    "startColumn": 4,
+                    "startOffset": 6764,
+                    "endColumn": 131,
+                    "endOffset": 6891
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 1428,
+                        "endColumn": 131,
+                        "endOffset": 1555
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 66,
+                    "startColumn": 4,
+                    "startOffset": 6896,
+                    "endColumn": 248,
+                    "endOffset": 7140
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 347,
+                        "endColumn": 248,
+                        "endOffset": 591
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 67,
+                    "startColumn": 4,
+                    "startOffset": 7145,
+                    "endColumn": 248,
+                    "endOffset": 7389
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1560,
+                        "endColumn": 248,
+                        "endOffset": 1804
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 68,
+                    "startColumn": 4,
+                    "startOffset": 7394,
+                    "endColumn": 123,
+                    "endOffset": 7513
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1809,
+                        "endColumn": 123,
+                        "endOffset": 1928
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 69,
+                    "startColumn": 4,
+                    "startOffset": 7518,
+                    "endColumn": 106,
+                    "endOffset": 7620
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1933,
+                        "endColumn": 106,
+                        "endOffset": 2035
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 70,
+                    "startColumn": 4,
+                    "startOffset": 7625,
+                    "endColumn": 182,
+                    "endOffset": 7803
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 2040,
+                        "endColumn": 182,
+                        "endOffset": 2218
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 71,
+                    "startColumn": 4,
+                    "startOffset": 7808,
+                    "endColumn": 126,
+                    "endOffset": 7930
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 2223,
+                        "endColumn": 126,
+                        "endOffset": 2345
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 72,
+                    "startColumn": 4,
+                    "startOffset": 7935,
+                    "endColumn": 204,
+                    "endOffset": 8135
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 2350,
+                        "endColumn": 204,
+                        "endOffset": 2550
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 73,
+                    "startColumn": 4,
+                    "startOffset": 8140,
+                    "endColumn": 134,
+                    "endOffset": 8270
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 2555,
+                        "endColumn": 134,
+                        "endOffset": 2685
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 74,
+                    "startColumn": 4,
+                    "startOffset": 8275,
+                    "endColumn": 177,
+                    "endOffset": 8448
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 2690,
+                        "endColumn": 177,
+                        "endOffset": 2863
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 75,
+                    "startColumn": 4,
+                    "startOffset": 8453,
+                    "endColumn": 92,
+                    "endOffset": 8541
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 2868,
+                        "endColumn": 92,
+                        "endOffset": 2956
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 76,
+                    "startColumn": 4,
+                    "startOffset": 8546,
+                    "endColumn": 91,
+                    "endOffset": 8633
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 2961,
+                        "endColumn": 91,
+                        "endOffset": 3048
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 77,
+                    "startColumn": 4,
+                    "startOffset": 8638,
+                    "endColumn": 107,
+                    "endOffset": 8741
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 3053,
+                        "endColumn": 107,
+                        "endOffset": 3156
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 78,
+                    "startColumn": 4,
+                    "startOffset": 8746,
+                    "endColumn": 99,
+                    "endOffset": 8841
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-en-rGB/values-en-rGB.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 99,
+                        "endOffset": 150
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 79,
+                    "startColumn": 4,
+                    "startOffset": 8846,
+                    "endColumn": 94,
+                    "endOffset": 8936
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-en-rGB/values-en-rGB.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 155,
+                        "endColumn": 94,
+                        "endOffset": 245
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 80,
+                    "startColumn": 4,
+                    "startOffset": 8941,
+                    "endColumn": 81,
+                    "endOffset": 9018
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-en-rGB/values-en-rGB.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 250,
+                        "endColumn": 81,
+                        "endOffset": 327
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 81,
+                    "startColumn": 4,
+                    "startOffset": 9023,
+                    "endColumn": 91,
+                    "endOffset": 9110
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-en-rGB/values-en-rGB.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 332,
+                        "endColumn": 91,
+                        "endOffset": 419
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 82,
+                    "startColumn": 4,
+                    "startOffset": 9115,
+                    "endColumn": 101,
+                    "endOffset": 9212
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-en-rGB/values-en-rGB.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 424,
+                        "endColumn": 101,
+                        "endOffset": 521
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 83,
+                    "startColumn": 4,
+                    "startOffset": 9217,
+                    "endColumn": 95,
+                    "endOffset": 9308
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-en-rGB/values-en-rGB.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 526,
+                        "endColumn": 95,
+                        "endOffset": 617
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 84,
+                    "startColumn": 4,
+                    "startOffset": 9313,
+                    "endColumn": 95,
+                    "endOffset": 9404
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-en-rGB/values-en-rGB.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 622,
+                        "endColumn": 95,
+                        "endOffset": 713
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 85,
+                    "startColumn": 4,
+                    "startOffset": 9409,
+                    "endColumn": 93,
+                    "endOffset": 9498
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-en-rGB/values-en-rGB.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 718,
+                        "endColumn": 93,
+                        "endOffset": 807
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 86,
+                    "startColumn": 4,
+                    "startOffset": 9503,
+                    "endColumn": 91,
+                    "endOffset": 9590
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-en-rGB/values-en-rGB.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 812,
+                        "endColumn": 91,
+                        "endOffset": 899
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 87,
+                    "startColumn": 4,
+                    "startOffset": 9595,
+                    "endColumn": 107,
+                    "endOffset": 9698
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-en-rGB/values-en-rGB.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 904,
+                        "endColumn": 107,
+                        "endOffset": 1007
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 88,
+                    "startColumn": 4,
+                    "startOffset": 9703,
+                    "endColumn": 107,
+                    "endOffset": 9806
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-en-rGB/values-en-rGB.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1012,
+                        "endColumn": 107,
+                        "endOffset": 1115
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 89,
+                    "startColumn": 4,
+                    "startOffset": 9811,
+                    "endColumn": 83,
+                    "endOffset": 9890
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-en-rGB/values-en-rGB.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1120,
+                        "endColumn": 83,
+                        "endOffset": 1199
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 90,
+                    "startColumn": 4,
+                    "startOffset": 9895,
+                    "endColumn": 80,
+                    "endOffset": 9971
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-en-rGB/values-en-rGB.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1204,
+                        "endColumn": 80,
+                        "endOffset": 1280
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 91,
+                    "startColumn": 4,
+                    "startOffset": 9976,
+                    "endColumn": 89,
+                    "endOffset": 10061
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-en-rGB/values-en-rGB.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1285,
+                        "endColumn": 89,
+                        "endOffset": 1370
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 92,
+                    "startColumn": 4,
+                    "startOffset": 10066,
+                    "endColumn": 85,
+                    "endOffset": 10147
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-en-rGB/values-en-rGB.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1375,
+                        "endColumn": 85,
+                        "endOffset": 1456
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 93,
+                    "startColumn": 4,
+                    "startOffset": 10152,
+                    "endColumn": 93,
+                    "endOffset": 10241
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/res/values-en-rGB/values-en-rGB.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1461,
+                        "endColumn": 93,
+                        "endOffset": 1550
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 94,
+                    "startColumn": 4,
+                    "startOffset": 10246,
+                    "endColumn": 102,
+                    "endOffset": 10344
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-places/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 297,
+                        "endColumn": 102,
+                        "endOffset": 395
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 95,
+                    "startColumn": 4,
+                    "startOffset": 10349,
+                    "endColumn": 95,
+                    "endOffset": 10440
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-places/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 400,
+                        "endColumn": 95,
+                        "endOffset": 491
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 96,
+                    "startColumn": 4,
+                    "startOffset": 10445,
+                    "endColumn": 81,
+                    "endOffset": 10522
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-en-rGB/values-en-rGB.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 1969,
+                        "endColumn": 81,
+                        "endOffset": 2046
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 97,
+                    "startColumn": 4,
+                    "startOffset": 10527,
+                    "endColumn": 100,
+                    "endOffset": 10623
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/res/values-en-rGB/values-en-rGB.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 2051,
+                        "endColumn": 100,
+                        "endOffset": 2147
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 98,
+                    "startColumn": 4,
+                    "startOffset": 10628,
+                    "endColumn": 103,
+                    "endOffset": 10727
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/9.6.0/res/values-en-rGB/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 304,
+                        "endColumn": 103,
+                        "endOffset": 403
+                    }
+                }
+            }
+        ]
+    }
+]

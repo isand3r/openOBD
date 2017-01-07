@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From: file:/tmp/aar_gen_tmp6682929371290315669/tmp-deduplicated/blaze-out/gcc-4.X.Y-crosstool-v18-hybrid-grtev4-k8-opt/genfiles/java/com/google/android/gmscore/integ/client/cast/framework/res/values-nb/cast_strings.xml -->
+    <eat-comment/>
+    <string msgid="4778414446709286370" name="cast_ad_label">"Annonse"</string>
+    <string msgid="366047012176970604" name="cast_casting_to_device">"Caster til %1$s"</string>
+    <string msgid="2888745622334830481" name="cast_closed_captions">"Teksting for hørselshemmede"</string>
+    <string msgid="4476421850100851087" name="cast_closed_captions_unavailable">"Teksting for hørselshemmede er ikke tilgjengelig"</string>
+    <string msgid="4431992200264667209" name="cast_disconnect">"Koble fra"</string>
+    <string msgid="9069517964239146855" name="cast_expanded_controller_ad_in_progress">"Annonse pågår …"</string>
+    <string msgid="8886260998635257149" name="cast_expanded_controller_background_image">"Albumgrafikk"</string>
+    <string msgid="1316611227831672183" name="cast_expanded_controller_live_stream_indicator">"Direktesending"</string>
+    <string msgid="7334411994450681286" name="cast_expanded_controller_loading">"Laster inn …"</string>
+    <string msgid="8399595886048969508" name="cast_expanded_controller_skip_ad_label">"Hopp over"</string>
+    <string msgid="7884080323096468593" name="cast_forward">"Spol frem"</string>
+    <string msgid="6424889955881797947" name="cast_forward_10">"Spol 10 sekunder frem"</string>
+    <string msgid="7868672855975238403" name="cast_forward_30">"Spol 30 sekunder frem"</string>
+    <string msgid="6885943100773268783" name="cast_intro_overlay_button_text">"@android:string/ok"</string>
+    <string msgid="5637297909372905371" name="cast_mute">"Slå av lyden"</string>
+    <string msgid="5308503786390460607" name="cast_pause">"Sett på pause"</string>
+    <string msgid="5906987965619702702" name="cast_play">"Spill av"</string>
+    <string msgid="1739665135565985480" name="cast_rewind">"Spol tilbake"</string>
+    <string msgid="6432793028560778843" name="cast_rewind_10">"Spol 10 sekunder tilbake"</string>
+    <string msgid="4677199707225681325" name="cast_rewind_30">"Spol 30 sekunder tilbake"</string>
+    <string msgid="9078075166993780241" name="cast_seek_bar">"Glidebryter for avspilling"</string>
+    <string msgid="3991548379225047363" name="cast_skip_next">"Hopp over til det neste elementet"</string>
+    <string msgid="8369073097776576935" name="cast_skip_prev">"Gå tilbake til det forrige elementet"</string>
+    <string msgid="9191388946729723891" name="cast_stop">"Stopp"</string>
+    <string msgid="1219622777438777099" name="cast_stop_live_stream">"Stopp direktesendingen"</string>
+    <string msgid="4250321332248956563" name="cast_tracks_chooser_dialog_audio">"Lyd"</string>
+    <string msgid="1162380934229249476" name="cast_tracks_chooser_dialog_cancel">"Avbryt"</string>
+    <string msgid="3012268736704635952" name="cast_tracks_chooser_dialog_default_track_name">"Spor <ns1:g id="POSITION">%1$d</ns1:g>"</string>
+    <string msgid="5563446400083425854" name="cast_tracks_chooser_dialog_no_audio_tracks">"Ingen lydspor er tilgjengelig"</string>
+    <string msgid="7413336699113748535" name="cast_tracks_chooser_dialog_no_text_tracks">"Ingen tekstspor er tilgjengelig"</string>
+    <string msgid="1176688358580178396" name="cast_tracks_chooser_dialog_none">"Ingen"</string>
+    <string msgid="3804878371876790270" name="cast_tracks_chooser_dialog_ok">"OK"</string>
+    <string msgid="2454147715032376208" name="cast_tracks_chooser_dialog_subtitles">"Undertekster"</string>
+    <string msgid="2913461521603516868" name="cast_unmute">"Slå på lyden"</string>
+</resources>

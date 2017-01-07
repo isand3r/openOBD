@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From: file:/tmp/aar_gen_tmp6682929371290315669/tmp-deduplicated/blaze-out/gcc-4.X.Y-crosstool-v18-hybrid-grtev4-k8-opt/genfiles/java/com/google/android/gmscore/integ/client/cast/framework/res/values-vi/cast_strings.xml -->
+    <eat-comment/>
+    <string msgid="4778414446709286370" name="cast_ad_label">"Quảng cáo"</string>
+    <string msgid="366047012176970604" name="cast_casting_to_device">"Đang truyền tới %1$s"</string>
+    <string msgid="2888745622334830481" name="cast_closed_captions">"Phụ đề chi tiết"</string>
+    <string msgid="4476421850100851087" name="cast_closed_captions_unavailable">"Không có sẵn phụ đề chi tiết"</string>
+    <string msgid="4431992200264667209" name="cast_disconnect">"Ngắt kết nối"</string>
+    <string msgid="9069517964239146855" name="cast_expanded_controller_ad_in_progress">"Đang trong tiến trình quảng cáo…"</string>
+    <string msgid="8886260998635257149" name="cast_expanded_controller_background_image">"Ảnh bìa album"</string>
+    <string msgid="1316611227831672183" name="cast_expanded_controller_live_stream_indicator">"Phát trực tuyến"</string>
+    <string msgid="7334411994450681286" name="cast_expanded_controller_loading">"Đang tải…"</string>
+    <string msgid="8399595886048969508" name="cast_expanded_controller_skip_ad_label">"Bỏ qua"</string>
+    <string msgid="7884080323096468593" name="cast_forward">"Tua đi"</string>
+    <string msgid="6424889955881797947" name="cast_forward_10">"Tua đi 10 giây"</string>
+    <string msgid="7868672855975238403" name="cast_forward_30">"Tua đi 30 giây"</string>
+    <string msgid="6885943100773268783" name="cast_intro_overlay_button_text">"@android:string/ok"</string>
+    <string msgid="5637297909372905371" name="cast_mute">"Tắt tiếng"</string>
+    <string msgid="5308503786390460607" name="cast_pause">"Tạm dừng"</string>
+    <string msgid="5906987965619702702" name="cast_play">"Phát"</string>
+    <string msgid="1739665135565985480" name="cast_rewind">"Tua lại"</string>
+    <string msgid="6432793028560778843" name="cast_rewind_10">"Tua lại 10 giây"</string>
+    <string msgid="4677199707225681325" name="cast_rewind_30">"Tua lại 30 giây"</string>
+    <string msgid="9078075166993780241" name="cast_seek_bar">"Kiểm soát tìm kiếm phát lại"</string>
+    <string msgid="3991548379225047363" name="cast_skip_next">"Chuyển đến mục tiếp theo"</string>
+    <string msgid="8369073097776576935" name="cast_skip_prev">"Chuyển đến mục trước"</string>
+    <string msgid="9191388946729723891" name="cast_stop">"Dừng"</string>
+    <string msgid="1219622777438777099" name="cast_stop_live_stream">"Dừng luồng trực tiếp"</string>
+    <string msgid="4250321332248956563" name="cast_tracks_chooser_dialog_audio">"Âm thanh"</string>
+    <string msgid="1162380934229249476" name="cast_tracks_chooser_dialog_cancel">"Hủy"</string>
+    <string msgid="3012268736704635952" name="cast_tracks_chooser_dialog_default_track_name">"Bản nhạc <ns1:g id="POSITION">%1$d</ns1:g>"</string>
+    <string msgid="5563446400083425854" name="cast_tracks_chooser_dialog_no_audio_tracks">"Không có bản âm thanh nào"</string>
+    <string msgid="7413336699113748535" name="cast_tracks_chooser_dialog_no_text_tracks">"Không có văn bản nào"</string>
+    <string msgid="1176688358580178396" name="cast_tracks_chooser_dialog_none">"Không có gì"</string>
+    <string msgid="3804878371876790270" name="cast_tracks_chooser_dialog_ok">"OK"</string>
+    <string msgid="2454147715032376208" name="cast_tracks_chooser_dialog_subtitles">"Phụ đề"</string>
+    <string msgid="2913461521603516868" name="cast_unmute">"Bật tiếng"</string>
+</resources>

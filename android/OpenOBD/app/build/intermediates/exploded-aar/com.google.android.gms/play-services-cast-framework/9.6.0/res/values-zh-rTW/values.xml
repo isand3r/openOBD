@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From: file:/tmp/aar_gen_tmp6682929371290315669/tmp-deduplicated/blaze-out/gcc-4.X.Y-crosstool-v18-hybrid-grtev4-k8-opt/genfiles/java/com/google/android/gmscore/integ/client/cast/framework/res/values-zh-rTW/cast_strings.xml -->
+    <eat-comment/>
+    <string msgid="4778414446709286370" name="cast_ad_label">"廣告"</string>
+    <string msgid="366047012176970604" name="cast_casting_to_device">"正在投放到 %s"</string>
+    <string msgid="2888745622334830481" name="cast_closed_captions">"隱藏式輔助字幕"</string>
+    <string msgid="4476421850100851087" name="cast_closed_captions_unavailable">"無法使用隱藏式輔助字幕"</string>
+    <string msgid="4431992200264667209" name="cast_disconnect">"中斷連線"</string>
+    <string msgid="9069517964239146855" name="cast_expanded_controller_ad_in_progress">"廣告進行中…"</string>
+    <string msgid="8886260998635257149" name="cast_expanded_controller_background_image">"專輯封面"</string>
+    <string msgid="1316611227831672183" name="cast_expanded_controller_live_stream_indicator">"即時串流"</string>
+    <string msgid="7334411994450681286" name="cast_expanded_controller_loading">"載入中…"</string>
+    <string msgid="8399595886048969508" name="cast_expanded_controller_skip_ad_label">"略過"</string>
+    <string msgid="7884080323096468593" name="cast_forward">"快轉"</string>
+    <string msgid="6424889955881797947" name="cast_forward_10">"快轉 10 秒"</string>
+    <string msgid="7868672855975238403" name="cast_forward_30">"快轉 30 秒"</string>
+    <string msgid="6885943100773268783" name="cast_intro_overlay_button_text">"@android:string/ok"</string>
+    <string msgid="5637297909372905371" name="cast_mute">"靜音"</string>
+    <string msgid="5308503786390460607" name="cast_pause">"暫停"</string>
+    <string msgid="5906987965619702702" name="cast_play">"播放"</string>
+    <string msgid="1739665135565985480" name="cast_rewind">"倒轉"</string>
+    <string msgid="6432793028560778843" name="cast_rewind_10">"倒轉 10 秒"</string>
+    <string msgid="4677199707225681325" name="cast_rewind_30">"倒轉 30 秒"</string>
+    <string msgid="9078075166993780241" name="cast_seek_bar">"播放搜尋控制介面"</string>
+    <string msgid="3991548379225047363" name="cast_skip_next">"跳到下一個項目"</string>
+    <string msgid="8369073097776576935" name="cast_skip_prev">"跳到上一個項目"</string>
+    <string msgid="9191388946729723891" name="cast_stop">"停止"</string>
+    <string msgid="1219622777438777099" name="cast_stop_live_stream">"停止即時串流"</string>
+    <string msgid="4250321332248956563" name="cast_tracks_chooser_dialog_audio">"音訊"</string>
+    <string msgid="1162380934229249476" name="cast_tracks_chooser_dialog_cancel">"取消"</string>
+    <string msgid="3012268736704635952" name="cast_tracks_chooser_dialog_default_track_name">"第 <ns1:g id="POSITION">%1$d</ns1:g> 軌"</string>
+    <string msgid="5563446400083425854" name="cast_tracks_chooser_dialog_no_audio_tracks">"沒有任何可用的音軌"</string>
+    <string msgid="7413336699113748535" name="cast_tracks_chooser_dialog_no_text_tracks">"沒有任何可用的文字軌"</string>
+    <string msgid="1176688358580178396" name="cast_tracks_chooser_dialog_none">"無"</string>
+    <string msgid="3804878371876790270" name="cast_tracks_chooser_dialog_ok">"確定"</string>
+    <string msgid="2454147715032376208" name="cast_tracks_chooser_dialog_subtitles">"字幕"</string>
+    <string msgid="2913461521603516868" name="cast_unmute">"取消靜音"</string>
+</resources>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <string msgid="4600421777120114993" name="abc_action_bar_home_description">"转到主屏幕"</string>
+    <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s：%2$s"</string>
+    <string msgid="6623331958280229229" name="abc_action_bar_home_subtitle_description_format">"%1$s - %2$s：%3$s"</string>
+    <string msgid="1594238315039666878" name="abc_action_bar_up_description">"转到上一层级"</string>
+    <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"更多选项"</string>
+    <string msgid="4076576682505996667" name="abc_action_mode_done">"完成"</string>
+    <string msgid="7468859129482906941" name="abc_activity_chooser_view_see_all">"查看全部"</string>
+    <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"选择应用"</string>
+    <string msgid="121134116657445385" name="abc_capital_off">"关闭"</string>
+    <string msgid="3405795526292276155" name="abc_capital_on">"开启"</string>
+    <string msgid="7723749260725869598" name="abc_search_hint">"搜索…"</string>
+    <string msgid="3691816814315814921" name="abc_searchview_description_clear">"清除查询"</string>
+    <string msgid="2550479030709304392" name="abc_searchview_description_query">"搜索查询"</string>
+    <string msgid="8264924765203268293" name="abc_searchview_description_search">"搜索"</string>
+    <string msgid="8928215447528550784" name="abc_searchview_description_submit">"提交查询"</string>
+    <string msgid="893419373245838918" name="abc_searchview_description_voice">"语音搜索"</string>
+    <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"分享方式"</string>
+    <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"通过%s分享"</string>
+    <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"收起"</string>
+    <string msgid="4778414446709286370" name="cast_ad_label">"广告"</string>
+    <string msgid="366047012176970604" name="cast_casting_to_device">"正在投射到%1$s"</string>
+    <string msgid="2888745622334830481" name="cast_closed_captions">"字幕"</string>
+    <string msgid="4476421850100851087" name="cast_closed_captions_unavailable">"无可用字幕"</string>
+    <string msgid="4431992200264667209" name="cast_disconnect">"断开连接"</string>
+    <string msgid="9069517964239146855" name="cast_expanded_controller_ad_in_progress">"广告进行中…"</string>
+    <string msgid="8886260998635257149" name="cast_expanded_controller_background_image">"专辑封面"</string>
+    <string msgid="1316611227831672183" name="cast_expanded_controller_live_stream_indicator">"直播"</string>
+    <string msgid="7334411994450681286" name="cast_expanded_controller_loading">"正在加载…"</string>
+    <string msgid="8399595886048969508" name="cast_expanded_controller_skip_ad_label">"跳过"</string>
+    <string msgid="7884080323096468593" name="cast_forward">"快进"</string>
+    <string msgid="6424889955881797947" name="cast_forward_10">"快进 10 秒"</string>
+    <string msgid="7868672855975238403" name="cast_forward_30">"快进 30 秒"</string>
+    <string msgid="6885943100773268783" name="cast_intro_overlay_button_text">"@android:string/ok"</string>
+    <string msgid="5637297909372905371" name="cast_mute">"静音"</string>
+    <string msgid="5319032370587661362" name="cast_notification_connected_message">"已连接到<ns1:g id="NAME">%1$s</ns1:g>"</string>
+    <string msgid="2758865089947797888" name="cast_notification_connecting_message">"正在连接到<ns1:g id="NAME">%1$s</ns1:g>"</string>
+    <string msgid="5232008641593292969" name="cast_notification_disconnect">"断开连接"</string>
+    <string msgid="5308503786390460607" name="cast_pause">"暂停"</string>
+    <string msgid="5906987965619702702" name="cast_play">"播放"</string>
+    <string msgid="1739665135565985480" name="cast_rewind">"快退"</string>
+    <string msgid="6432793028560778843" name="cast_rewind_10">"快退 10 秒"</string>
+    <string msgid="4677199707225681325" name="cast_rewind_30">"快退 30 秒"</string>
+    <string msgid="9078075166993780241" name="cast_seek_bar">"播放进度滑块控件"</string>
+    <string msgid="3991548379225047363" name="cast_skip_next">"跳至下一项"</string>
+    <string msgid="8369073097776576935" name="cast_skip_prev">"跳至上一项"</string>
+    <string msgid="9191388946729723891" name="cast_stop">"停止"</string>
+    <string msgid="1219622777438777099" name="cast_stop_live_stream">"停止直播"</string>
+    <string msgid="4250321332248956563" name="cast_tracks_chooser_dialog_audio">"音频"</string>
+    <string msgid="1162380934229249476" name="cast_tracks_chooser_dialog_cancel">"取消"</string>
+    <string msgid="3012268736704635952" name="cast_tracks_chooser_dialog_default_track_name">"曲目 <ns1:g id="POSITION">%1$d</ns1:g>"</string>
+    <string msgid="5563446400083425854" name="cast_tracks_chooser_dialog_no_audio_tracks">"无可用的音轨"</string>
+    <string msgid="7413336699113748535" name="cast_tracks_chooser_dialog_no_text_tracks">"无可用的文字轨"</string>
+    <string msgid="1176688358580178396" name="cast_tracks_chooser_dialog_none">"无"</string>
+    <string msgid="3804878371876790270" name="cast_tracks_chooser_dialog_ok">"确定"</string>
+    <string msgid="2454147715032376208" name="cast_tracks_chooser_dialog_subtitles">"字幕"</string>
+    <string msgid="2913461521603516868" name="cast_unmute">"取消静音"</string>
+    <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"启用"</string>
+    <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"您必须先启用 Google Play 服务，然后才能运行<ns1:g id="APP_NAME">%1$s</ns1:g>。"</string>
+    <string msgid="3147157405986503375" name="common_google_play_services_enable_title">"启用 Google Play 服务"</string>
+    <string msgid="9115728400623041681" name="common_google_play_services_install_button">"安装"</string>
+    <string msgid="1666261992894286769" name="common_google_play_services_install_text_phone">"您的手机没有安装 Google Play 服务，因此无法运行<ns1:g id="APP_NAME">%1$s</ns1:g>。"</string>
+    <string msgid="1701766622451829291" name="common_google_play_services_install_text_tablet">"您的平板电脑没有安装 Google Play 服务，因此无法运行<ns1:g id="APP_NAME">%1$s</ns1:g>。"</string>
+    <string msgid="7442193194585196676" name="common_google_play_services_install_title">"获取 Google Play 服务"</string>
+    <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"Google Play服务出错"</string>
+    <string msgid="9089562800660647919" name="common_google_play_services_unknown_issue">"<ns1:g id="APP_NAME">%1$s</ns1:g>无法访问 Google Play 服务。如果问题一直存在，请与开发者联系以寻求帮助。"</string>
+    <string msgid="1064791666906610763" name="common_google_play_services_unsupported_text">"<ns1:g id="APP_NAME">%1$s</ns1:g>必须搭配使用 Google Play 服务才能运行，但您的设备不支持该服务。请与设备制造商联系以寻求帮助。"</string>
+    <string msgid="539866123733096737" name="common_google_play_services_unsupported_title">"Google Play服务"</string>
+    <string msgid="8172070149091615356" name="common_google_play_services_update_button">"更新"</string>
+    <string msgid="7773943415006962566" name="common_google_play_services_update_text">"您必须先更新 Google Play 服务，然后才能运行<ns1:g id="APP_NAME">%1$s</ns1:g>。"</string>
+    <string msgid="8706675115216073244" name="common_google_play_services_update_title">"更新 Google Play 服务"</string>
+    <string msgid="7894275749778928941" name="common_google_play_services_updating_text">"Google Play 服务当前正在更新，因此您无法运行<ns1:g id="APP_NAME">%1$s</ns1:g>。"</string>
+    <string msgid="2270671469198016014" name="common_google_play_services_updating_title">"Google Play 服务正在更新"</string>
+    <string msgid="2804989272736383918" name="common_google_play_services_wear_update_text">"必须使用新版 Google Play 服务。该服务很快就会自行更新。"</string>
+    <string msgid="5201977337835724196" name="common_open_on_phone">"在手机上打开"</string>
+    <string msgid="3441753203274453993" name="common_signin_button_text">"登录"</string>
+    <string msgid="669893613918351210" name="common_signin_button_text_long">"使用 Google 帐号登录"</string>
+    <string msgid="3698378085901466129" name="mr_button_content_description">"投射按钮"</string>
+    <string msgid="6349900579507521956" name="mr_chooser_searching">"正在查找设备"</string>
+    <string msgid="414301941546135990" name="mr_chooser_title">"投射到"</string>
+    <string msgid="6422801843540543585" name="mr_controller_album_art">"专辑封面"</string>
+    <string msgid="4868457957151124867" name="mr_controller_casting_screen">"正在投射屏幕"</string>
+    <string msgid="7333862312480583260" name="mr_controller_close_description">"关闭"</string>
+    <string msgid="7924809056904240926" name="mr_controller_collapse_group">"折叠"</string>
+    <string msgid="1227264889412989580" name="mr_controller_disconnect">"断开连接"</string>
+    <string msgid="8062427022744266907" name="mr_controller_expand_group">"展开"</string>
+    <string msgid="5585418471741142924" name="mr_controller_no_info_available">"没有任何相关信息"</string>
+    <string msgid="6547130360349182381" name="mr_controller_no_media_selected">"未选择任何媒体"</string>
+    <string msgid="5451884435510905406" name="mr_controller_pause">"暂停"</string>
+    <string msgid="683634565969987458" name="mr_controller_play">"播放"</string>
+    <string msgid="4570331844078181931" name="mr_controller_stop">"停止投射"</string>
+    <string msgid="5441529851481176817" name="mr_system_route_name">"系统"</string>
+    <string msgid="7498112907524977311" name="mr_user_route_category_name">"设备"</string>
+    <string msgid="1303870564366209730" name="place_autocomplete_clear_button">"清除搜索内容"</string>
+    <string msgid="2809095107724486040" name="place_autocomplete_search_hint">"搜索"</string>
+    <string msgid="146198913615257606" name="search_menu_title">"搜索"</string>
+    <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"999+"</string>
+    <string msgid="363496807345461806" name="wallet_buy_button_place_holder">"通过 Google 购买"</string>
+</resources>

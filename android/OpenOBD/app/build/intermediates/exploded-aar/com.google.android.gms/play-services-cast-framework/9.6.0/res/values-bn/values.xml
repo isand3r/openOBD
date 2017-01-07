@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From: file:/tmp/aar_gen_tmp6682929371290315669/tmp-deduplicated/blaze-out/gcc-4.X.Y-crosstool-v18-hybrid-grtev4-k8-opt/genfiles/java/com/google/android/gmscore/integ/client/cast/framework/res/values-bn/cast_strings.xml -->
+    <eat-comment/>
+    <string msgid="4778414446709286370" name="cast_ad_label">"বিজ্ঞাপন"</string>
+    <string msgid="366047012176970604" name="cast_casting_to_device">"%s-এ কাস্ট করা হচ্ছে"</string>
+    <string msgid="2888745622334830481" name="cast_closed_captions">"সাবটাইটেলগুলি"</string>
+    <string msgid="4476421850100851087" name="cast_closed_captions_unavailable">"সাবটাইটেলগুলি অনুপলব্ধ"</string>
+    <string msgid="4431992200264667209" name="cast_disconnect">"সংযোগ বিচ্ছিন্ন"</string>
+    <string msgid="9069517964239146855" name="cast_expanded_controller_ad_in_progress">"বিজ্ঞাপন প্রগতিতে রয়েছে…"</string>
+    <string msgid="8886260998635257149" name="cast_expanded_controller_background_image">"অ্যালবাম শৈলি"</string>
+    <string msgid="1316611227831672183" name="cast_expanded_controller_live_stream_indicator">"লাইভ স্ট্রিম"</string>
+    <string msgid="7334411994450681286" name="cast_expanded_controller_loading">"লোড হচ্ছে…"</string>
+    <string msgid="8399595886048969508" name="cast_expanded_controller_skip_ad_label">"এড়িয়ে যান"</string>
+    <string msgid="7884080323096468593" name="cast_forward">"ফরওয়ার্ড"</string>
+    <string msgid="6424889955881797947" name="cast_forward_10">"দশ সেকেন্ড ফরওয়ার্ড করুন"</string>
+    <string msgid="7868672855975238403" name="cast_forward_30">"তিরিশ সেকেন্ড ফরওয়ার্ড করুন"</string>
+    <string msgid="6885943100773268783" name="cast_intro_overlay_button_text">"@android:string/ok"</string>
+    <string msgid="5637297909372905371" name="cast_mute">"নিঃশব্দ করুন"</string>
+    <string msgid="5308503786390460607" name="cast_pause">"বিরাম দিন"</string>
+    <string msgid="5906987965619702702" name="cast_play">"চালান"</string>
+    <string msgid="1739665135565985480" name="cast_rewind">"পেছনের দিকে যান"</string>
+    <string msgid="6432793028560778843" name="cast_rewind_10">"দশ সেকেন্ডে পেছনের দিকে যান"</string>
+    <string msgid="4677199707225681325" name="cast_rewind_30">"তিরিশ সেকেন্ডে পেছনের দিকে যান"</string>
+    <string msgid="9078075166993780241" name="cast_seek_bar">"প্লেব্যাকের নিয়ন্ত্রণ"</string>
+    <string msgid="3991548379225047363" name="cast_skip_next">"পরবর্তী আইটেমে এড়িয়ে যান"</string>
+    <string msgid="8369073097776576935" name="cast_skip_prev">"পূর্ববর্তী আইটেমে এড়িয়ে যান"</string>
+    <string msgid="9191388946729723891" name="cast_stop">"থামান"</string>
+    <string msgid="1219622777438777099" name="cast_stop_live_stream">"লাইভ স্ট্রীম বন্ধ করুন"</string>
+    <string msgid="4250321332248956563" name="cast_tracks_chooser_dialog_audio">"অডিও"</string>
+    <string msgid="1162380934229249476" name="cast_tracks_chooser_dialog_cancel">"বাতিল করুন"</string>
+    <string msgid="3012268736704635952" name="cast_tracks_chooser_dialog_default_track_name">"<ns1:g id="POSITION">%1$d</ns1:g> ট্র্যাক করুন"</string>
+    <string msgid="5563446400083425854" name="cast_tracks_chooser_dialog_no_audio_tracks">"কোনো অডিও ট্র্যাক উপলব্ধ নেই"</string>
+    <string msgid="7413336699113748535" name="cast_tracks_chooser_dialog_no_text_tracks">"কোনো পাঠ্যের ট্র্যাক উপলব্ধ নেই"</string>
+    <string msgid="1176688358580178396" name="cast_tracks_chooser_dialog_none">"কোনো কিছুই নয়"</string>
+    <string msgid="3804878371876790270" name="cast_tracks_chooser_dialog_ok">"ঠিক আছে"</string>
+    <string msgid="2454147715032376208" name="cast_tracks_chooser_dialog_subtitles">"সাবটাইটেলগুলি"</string>
+    <string msgid="2913461521603516868" name="cast_unmute">"সশব্দ করুন"</string>
+</resources>

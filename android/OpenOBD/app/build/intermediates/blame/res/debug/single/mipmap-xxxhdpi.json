@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/ic_launcher.png",
+        "source": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/automotive.png",
+        "source": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/src/main/res/mipmap-xxxhdpi/automotive.png"
+    }
+]
