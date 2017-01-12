@@ -11,6 +11,8 @@ from shell.shell import Shell
 from gps.igpsdevice import IGPSDevice
 from gps.mockfixedgpsdevice import MockFixedGPSDevice
 
+from api.api import Api
+
 from accelerometer.iacceldevice import IAccelDevice
 from accelerometer.mockfixedacceldevice import MockFixedAccelDevice
 
@@ -25,11 +27,16 @@ class App():
 		self._gpsDevice = None
 		self._accelDevice = None
 		self._thermoDevice = None
+		self._api = None
 		self.read_configuration_file()
 		self.configure_gps()
 		self.configure_thermo()
 		self.configure_acceleromenter()
+		self.configure_api()
 		self.configure_shell()
+
+	def configure_api(self):
+		self._api = Api()
 
 	def read_configuration_file(self):
 		self._config = Configuration()
@@ -50,7 +57,8 @@ class App():
 			self._thermoDevice = MockRisingThermoDevice()
 
 	def configure_shell(self):
-		self._shell = Shell(self._gpsDevice, self._thermoDevice, self._accelDevice)
+		self._shell = Shell(self._gpsDevice, self._thermoDevice, self._accelDevice, self._api)
+
 
 	def run(self):
 		self._shell.cmdloop()
