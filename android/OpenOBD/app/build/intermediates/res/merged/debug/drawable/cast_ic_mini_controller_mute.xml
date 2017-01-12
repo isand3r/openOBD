@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- not selected -->
+    <item android:state_selected="false"
+          android:drawable="@drawable/quantum_ic_volume_up_grey600_36"/>
+    <!-- selected -->
+    <item android:state_selected="true"
+          android:drawable="@drawable/quantum_ic_volume_off_grey600_36"/>
+    <!-- default -->
+    <item android:drawable="@drawable/quantum_ic_volume_up_grey600_36"/>
+</selector>
+<!-- From: file:/tmp/aar_gen_tmp6682929371290315669/tmp-deduplicated/java/com/google/android/gmscore/integ/client/cast/framework/res/drawable/cast_ic_mini_controller_mute.xml -->

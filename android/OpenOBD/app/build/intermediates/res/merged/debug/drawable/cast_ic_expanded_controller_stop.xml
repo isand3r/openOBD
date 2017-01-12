@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- activated -->
+    <item android:state_enabled="true"
+          android:drawable="@drawable/cast_ic_stop_circle_filled_white" />
+    <!-- deactivated -->
+    <item android:state_enabled="false"
+          android:drawable="@drawable/cast_ic_stop_circle_filled_grey600" />
+    <!-- default -->
+    <item android:drawable="@drawable/cast_ic_stop_circle_filled_white"/>
+</selector>
+<!-- From: file:/tmp/aar_gen_tmp6682929371290315669/tmp-deduplicated/java/com/google/android/gmscore/integ/client/cast/framework/res/drawable/cast_ic_expanded_controller_stop.xml -->

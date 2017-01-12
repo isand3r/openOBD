@@ -1,0 +1,26 @@
+[
+    {
+        "outputFile": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rSG/values-en-rSG.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 103,
+                    "endOffset": 154
+                },
+                "from": {
+                    "file": "/Users/kaiboma/AndroidStudioProjects/OpenOBD/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/9.6.0/res/values-en-rSG/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 304,
+                        "endColumn": 103,
+                        "endOffset": 403
+                    }
+                }
+            }
+        ]
+    }
+]

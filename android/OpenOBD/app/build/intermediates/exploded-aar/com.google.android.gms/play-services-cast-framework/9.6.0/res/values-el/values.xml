@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From: file:/tmp/aar_gen_tmp6682929371290315669/tmp-deduplicated/blaze-out/gcc-4.X.Y-crosstool-v18-hybrid-grtev4-k8-opt/genfiles/java/com/google/android/gmscore/integ/client/cast/framework/res/values-el/cast_strings.xml -->
+    <eat-comment/>
+    <string msgid="4778414446709286370" name="cast_ad_label">"Διαφήμιση"</string>
+    <string msgid="366047012176970604" name="cast_casting_to_device">"Μετάδοση σε %1$s"</string>
+    <string msgid="2888745622334830481" name="cast_closed_captions">"Υπότιτλοι"</string>
+    <string msgid="4476421850100851087" name="cast_closed_captions_unavailable">"Οι υπότιτλοι δεν είναι διαθέσιμοι"</string>
+    <string msgid="4431992200264667209" name="cast_disconnect">"Αποσύνδεση"</string>
+    <string msgid="9069517964239146855" name="cast_expanded_controller_ad_in_progress">"Διαφήμιση σε εξέλιξη…"</string>
+    <string msgid="8886260998635257149" name="cast_expanded_controller_background_image">"Εξώφυλλο άλμπουμ"</string>
+    <string msgid="1316611227831672183" name="cast_expanded_controller_live_stream_indicator">"Ζωντανή ροή"</string>
+    <string msgid="7334411994450681286" name="cast_expanded_controller_loading">"Φόρτωση…"</string>
+    <string msgid="8399595886048969508" name="cast_expanded_controller_skip_ad_label">"Παράβλεψη"</string>
+    <string msgid="7884080323096468593" name="cast_forward">"Προώθηση"</string>
+    <string msgid="6424889955881797947" name="cast_forward_10">"Προώθηση 10 δευτερόλεπτα μπροστά"</string>
+    <string msgid="7868672855975238403" name="cast_forward_30">"Προώθηση 30 δευτερόλεπτα μπροστά"</string>
+    <string msgid="6885943100773268783" name="cast_intro_overlay_button_text">"@android:string/ok"</string>
+    <string msgid="5637297909372905371" name="cast_mute">"Σίγαση"</string>
+    <string msgid="5308503786390460607" name="cast_pause">"Παύση"</string>
+    <string msgid="5906987965619702702" name="cast_play">"Αναπαραγωγή"</string>
+    <string msgid="1739665135565985480" name="cast_rewind">"Επαναφορά"</string>
+    <string msgid="6432793028560778843" name="cast_rewind_10">"Επαναφορά 10 δευτερόλεπτα πίσω"</string>
+    <string msgid="4677199707225681325" name="cast_rewind_30">"Επαναφορά 30 δευτερόλεπτα πίσω"</string>
+    <string msgid="9078075166993780241" name="cast_seek_bar">"Στοιχείο ελέγχου αναζήτησης αναπαραγωγής"</string>
+    <string msgid="3991548379225047363" name="cast_skip_next">"Μετάβαση στο επόμενο στοιχείο"</string>
+    <string msgid="8369073097776576935" name="cast_skip_prev">"Μετάβαση στο προηγούμενο στοιχείο"</string>
+    <string msgid="9191388946729723891" name="cast_stop">"Διακοπή"</string>
+    <string msgid="1219622777438777099" name="cast_stop_live_stream">"Διακοπή ζωντανής ροής"</string>
+    <string msgid="4250321332248956563" name="cast_tracks_chooser_dialog_audio">"Ήχος"</string>
+    <string msgid="1162380934229249476" name="cast_tracks_chooser_dialog_cancel">"Ακύρωση"</string>
+    <string msgid="3012268736704635952" name="cast_tracks_chooser_dialog_default_track_name">"Εντοπισμός <ns1:g id="POSITION">%1$d</ns1:g>"</string>
+    <string msgid="5563446400083425854" name="cast_tracks_chooser_dialog_no_audio_tracks">"Δεν υπάρχουν διαθέσιμα κομμάτια ήχου"</string>
+    <string msgid="7413336699113748535" name="cast_tracks_chooser_dialog_no_text_tracks">"Δεν υπάρχουν διαθέσιμα κομμάτια κειμένου"</string>
+    <string msgid="1176688358580178396" name="cast_tracks_chooser_dialog_none">"Κανένα"</string>
+    <string msgid="3804878371876790270" name="cast_tracks_chooser_dialog_ok">"ΟΚ"</string>
+    <string msgid="2454147715032376208" name="cast_tracks_chooser_dialog_subtitles">"Υπότιτλοι"</string>
+    <string msgid="2913461521603516868" name="cast_unmute">"Κατάργηση σίγασης"</string>
+</resources>

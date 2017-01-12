@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/tmp/aar_gen_tmp5850036480753588905/tmp-deduplicated/blaze-out/gcc-4.X.Y-crosstool-v18-hybrid-grtev4-k8-opt/genfiles/java/com/google/android/gmscore/integ/client/places/res/values-mn/strings.xml -->
+    <eat-comment/>
+    <string msgid="1303870564366209730" name="place_autocomplete_clear_button">"Хайлтыг цэвэрлэх"</string>
+    <string msgid="2809095107724486040" name="place_autocomplete_search_hint">"Хайх"</string>
+</resources>

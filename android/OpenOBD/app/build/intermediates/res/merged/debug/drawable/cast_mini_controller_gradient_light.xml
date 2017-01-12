@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+    <gradient
+        android:angle="-90"
+        android:startColor="#00bbbbbb"
+        android:endColor="#77444444"
+        android:type="linear" />
+
+</shape>
+<!-- From: file:/tmp/aar_gen_tmp6682929371290315669/tmp-deduplicated/java/com/google/android/gmscore/integ/client/cast/framework/res/drawable/cast_mini_controller_gradient_light.xml -->

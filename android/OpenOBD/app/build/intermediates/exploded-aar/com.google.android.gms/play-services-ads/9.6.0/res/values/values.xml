@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/tmp/aar_gen_tmp4921260330968652478/tmp-deduplicated/java/com/google/android/gmscore/integ/client/admob-impl/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="accept">Accept</string>
+    <string name="create_calendar_message">Allow Ad to create a calendar event?</string>
+    <string name="create_calendar_title">Create calendar event</string>
+    <string name="debug_menu_ad_information">Ad Information</string>
+    <string name="debug_menu_creative_preview">Creative Preview</string>
+    <string name="debug_menu_title">Select a Debug Mode</string>
+    <string name="debug_menu_troubleshooting">Troubleshooting</string>
+    <string name="decline">Decline</string>
+    <string name="store_picture_message">"Allow Ad to store image in Picture gallery?"</string>
+    <string name="store_picture_title">Save image</string>
+</resources>
