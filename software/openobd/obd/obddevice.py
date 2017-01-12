@@ -9,14 +9,14 @@ class OBDDevice(IOBDDevice):
 	"""Mock Thermometer that always gives readings with MOCK_VALUE and MOCK_UNITS"""
 
 	def __init__(self):
-		self.MOCK_VALUE = 22
-		self.MOCK_UNITS = "celsius"
 		self._ready = False
 		self.bus = None
+		self.canlistener = None
 
 
 	def initialize(self):
 		self.bus = can.interface.Bus()
+		self.canlistener = can.Listener()
 		self._ready = True
 
 	@property
@@ -29,10 +29,11 @@ class OBDDevice(IOBDDevice):
 		time = datetime.datetime.now()
 
 		try:
-			stream = self.bus.recv()
-			print("Message recieved on {}".format(self.bus.channel_info))
-			print("The Message recieved is:{}".format(stream))
-			return stream
+			stream = self.bus.recv(timeout=2)
+			while(stream is not None):
+				print("Message recieved on {}".format(self.bus.channel_info))
+				print("The Message recieved is:{}".format(stream))
+				return stream
 		except can.CanError:
 			print("Message could not be recieved")
 
