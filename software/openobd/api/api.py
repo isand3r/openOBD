@@ -53,6 +53,7 @@ class Api():
 			print("Bad Request...")
 
 	def get(self, *args, **kargs):
+		return
 
 	def post(self, path, data, header):
 		response = requests.post(path, data=data, headers=headers)
