@@ -37,3 +37,30 @@ class Api():
 
 		print(response.json())
 
+	def get_refresh_token(self):
+		data = {"refresh_token": self.refresh_token, "grant_type": "refresh_token", "client_id" : self.CLIENT_ID, "client_secret" : self.CLIENT_SECRET}
+		headers = {'Content-Type': 'x-www-form-urlencoded'}
+		response = requests.post("https://accounts.moj.io/oauth2/token", data=data, headers=headers)
+
+		if(response.status_code == 200):
+			resp = response.json()
+			self.access_token = resp['access_token']
+			self.refresh_token = resp['refresh_token']
+			self.token_type = resp['token_type']
+			self.expires_in = resp['expires_in']
+			print(resp)
+		else:
+			print("Bad Request...")
+
+	def get(self, *args, **kargs):
+
+	def post(self, path, data, header):
+		response = requests.post(path, data=data, headers=headers)
+		return response.json()
+
+	def put(self, path, data, header):
+		response = requests.put(path, data=data, headers=headers)
+		return response.json()
+	def delete(self, path, data, header):
+		response = requests.delete(path, data=data, headers=headers)
+		return response.json()
