@@ -2,13 +2,14 @@
 from api.api import Api
 from gps.igpsdevice import IGPSDevice
 from thermo.ithermodevice import IThermoDevice
+from obd.iobddevice import IOBDDevice
 from accelerometer.iacceldevice import IAccelDevice
 from cmd import Cmd
 import time
 import os
 
 class Shell(Cmd):
-	def __init__(self, gpsDevice: IGPSDevice, thermoDevice: IThermoDevice, accelDevice: IAccelDevice, api: Api):
+	def __init__(self, gpsDevice: IGPSDevice, thermoDevice: IThermoDevice, accelDevice: IAccelDevice, api: Api, obdDevice: IOBDDevice):
 		self.intro = 'openOBD shell. Type help to list commands.\n'
 		self.prompt = '> '
 		self.file = None
@@ -25,10 +26,21 @@ class Shell(Cmd):
 		assert isinstance(api, Api)
 		self._api = api
 		self._api.get_auth()
+		assert isinstance(obdDevice, IOBDDevice)
+		self._obdDevice = obdDevice
+		self._obdDevice.initialize()
 
 	def do_api_call_test(self, args):
 		"""Calls Moj.io API and returns current user"""
 		self._api.get_me()
+
+	def do_obd_read_test(self, args):
+		"""Reads obd device"""
+		self._obdDevice.read_obd()
+
+	def do_obd_send_test(self, args):
+		"""Sends obd device"""
+		self._obdDevice.send_obd()
 
 	def do_multiple_all_readings(self, args):
 		"""Repeatedly read from all devices"""
