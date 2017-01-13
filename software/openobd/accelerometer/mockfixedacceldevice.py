@@ -1,7 +1,7 @@
 from accelerometer.iacceldevice import IAccelDevice
 from measure.measure import Measure
 import datetime
-import numpy as np
+import math
 
 class MockFixedAccelDevice(IAccelDevice):
 	"""Mock Thermometer that always gives readings with MOCK_VALUE and MOCK_UNITS"""
@@ -33,5 +33,5 @@ class MockFixedAccelDevice(IAccelDevice):
 	def calc_magn(self, X, Y, Z):
 		"""calculates the magnitude of the velocity"""
 		assert self._ready
-		accel_array = np.array([X, Y, Z])
-		return np.linalg.norm(accel_array)
+		accel_array = math.sqrt(X**2 + Y**2 + Z**2)
+		return accel_array
