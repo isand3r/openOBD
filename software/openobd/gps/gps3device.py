@@ -13,24 +13,18 @@ class GPS3Device(IGPSDevice):
         self.altitude = None
         self.gps_socket = None
         self.data_stream = None
+        self._ready = False
 
     def initialize(self):
         self.gps_socket = gps3.GPSDSocket()
         self.data_stream = gps3.DataStream()
         self.gps_socket.connect()
         self.gps_socket.watch()
+        self._ready = True
 
-    def getLocation(self):
-        return self.location
-
-    def getAltitude(self):
-        return self.location['altitude']
-
-    def getLatitude(self):
-        return self.location['latitude']
-
-    def getLongitude(self):
-        return self.location['longitude']
+    @property
+    def status(self) -> bool:
+        return self._ready
 
     def getDataStream(self):
         for new_data in self.gps_socket:
