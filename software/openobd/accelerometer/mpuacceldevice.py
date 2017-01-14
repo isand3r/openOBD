@@ -17,7 +17,7 @@ class MPUAccelDevice(IAccelDevice):
     def initialize(self):
         self._ready = True
         self.init = mpu6050(0x68)
-        #self.velocity = self.calc_magn(self.accel['x'], self.accel['y'], self.accel['z'])
+        self.velocity = self.calc_magn(float(self.accel['x']), float(self.accel['y']), float(self.accel['z']))
 
     @property
     def ready(self) -> bool:
@@ -29,7 +29,8 @@ class MPUAccelDevice(IAccelDevice):
         self.accel = mpu6050.get_accel_data(self.init)
         print(self.accel)
         print(type(self.accel))
-        #self.velocity = self.calc_magn(self.accel['x'], self.accel['y'], self.accel['z'])
+        print(type(self.accel['x']))
+        self.velocity = self.calc_magn(float(self.accel['x']), float(self.accel['y']), float(self.accel['z']))
         vector = Measure(self.velocity,self.units, time)
         return vector
 
