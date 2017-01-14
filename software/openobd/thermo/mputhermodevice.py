@@ -7,14 +7,23 @@ class MPUThermoDevice(IThermoDevice):
     """Thermometer using MPU6050"""
 
     def __init__(self):
-        pass
+        self.temperature = 0
+        self.units = 'Celsius'
+        self._ready = False
+        self.init = None
+
 
     def initialize(self):
-        print("MPUThermoDevice initialize() method not implemented")
+        self.init = mpu6050(0x68)
+        self._ready = True
 
     @property
     def ready(self) -> bool:
-        print("MPUThermoDevice ready property not implemented")
+        return self._ready
 
     def read_temperature(self) -> Measure:
-    	print("MPUThermoDevice read_temperature() method not implemented")
+    	assert self._ready
+        time = datetime.datetime.now()
+        self.temperature = mpu6050.get_temp(self.init)
+        temp = Measure(self.temperature, self.units, time)
+        return temp

@@ -1,8 +1,6 @@
 from obd.iobddevice import IOBDDevice
 from measure.measure import Measure
 import can
-#can.rc['interface'] = 'socketcan'
-#can.rc['channel'] = 'vcan0'
 import datetime
 
 class OBDDevice(IOBDDevice):
