@@ -1,6 +1,7 @@
 from location.location import Location
 from gps.igpsdevice import IGPSDevice
 from gps3 import gps3
+import os
 import datetime
 
 class GPS3Device(IGPSDevice):
@@ -16,6 +17,7 @@ class GPS3Device(IGPSDevice):
         self._ready = False
 
     def initialize(self):
+        os.system('sudo gpsd /dev/ttyAMA0 -F /var/run/gpsd.sock')
         self.gps_socket = gps3.GPSDSocket()
         self.data_stream = gps3.DataStream()
         self.gps_socket.connect()
@@ -37,6 +39,7 @@ class GPS3Device(IGPSDevice):
 
     def read_location(self) -> Location:
         """Return the same location each time"""
+        getDataStream()
         time = datetime.datetime.now()
         self.location = Location(self.latitude, self.longitude, self.altitude, time)
         return self.location
