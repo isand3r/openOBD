@@ -13,6 +13,11 @@ class IGPSDevice(abc.ABC):
         pass
 
     @abc.abstractmethod
+    def getDataStream(self):
+        """Retrieve data from the GPS and return a Location"""
+        pass
+
+    @abc.abstractmethod
     def read_location(self) -> Location:
-    	"""Retrieve data from the GPS and return a Location"""
-    	pass
+        """Retrieve data from the GPS and return a Location"""
+        pass

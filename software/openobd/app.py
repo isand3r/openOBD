@@ -9,7 +9,7 @@ from config.configuration import Configuration
 from shell.shell import Shell
 
 from gps.igpsdevice import IGPSDevice
-from gps.mockfixedgpsdevice import MockFixedGPSDevice
+from gps.gps3device import GPS3Device
 
 from obd.iobddevice import IOBDDevice
 from obd.obddevice import OBDDevice
@@ -52,7 +52,7 @@ class App():
 
 	def configure_gps(self):
 		if self._config.gps == "fixed_mock":
-			self._gpsDevice = MockFixedGPSDevice()
+			self._gpsDevice = GPS3Device()
 
 	def configure_acceleromenter(self):
 		if self._config.accel == "fixed_mock":
