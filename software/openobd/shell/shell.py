@@ -34,9 +34,18 @@ class Shell(Cmd):
 		"""Calls Moj.io API and returns current user"""
 		self._api.get_me()
 
-	def do_obd_read_test(self, args):
-		"""Reads obd device"""
+	def do_single_obd_read(self, args):
+		"""Single read on obd device"""
 		self._obdDevice.read_obd()
+
+	def do_multiple_obd_read(self, args):
+		"""Multiple reads on obd device"""
+		try:
+			while(1):
+				self.print_obd_reading()
+				time.sleep(1)
+		except KeyboardInterrupt:
+			pass
 
 	def do_obd_send_test(self, args):
 		"""Sends obd device"""
@@ -49,6 +58,7 @@ class Shell(Cmd):
 				self.print_temperature_reading()
 				self.print_location_reading()
 				self.print_accelerometer_reading()
+				self.print_obd_reading()
 				time.sleep(1)
 		except KeyboardInterrupt:
 			pass
@@ -57,6 +67,7 @@ class Shell(Cmd):
 		"""Read from all devices once"""
 		self.print_temperature_reading()
 		self.print_location_reading()
+		self.print_obd_reading()
 
 	def do_multiple_temperature_readings(self, args):
 		"""Repeatedly read from the device"""
@@ -88,6 +99,9 @@ class Shell(Cmd):
 		"""Quit the shell"""
 		print("Quitting")
 		raise SystemExit
+
+	def print_obd_reading(self):
+		self._obdDevice.read_obd()
 
 	def print_temperature_reading(self):
 		"""Print a new temperature reading"""
