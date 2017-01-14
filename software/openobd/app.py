@@ -11,6 +11,9 @@ from shell.shell import Shell
 from gps.igpsdevice import IGPSDevice
 from gps.mockfixedgpsdevice import MockFixedGPSDevice
 
+from obd.iobddevice import IOBDDevice
+from obd.obddevice import OBDDevice
+
 from api.api import Api
 
 from accelerometer.iacceldevice import IAccelDevice
@@ -28,15 +31,20 @@ class App():
 		self._accelDevice = None
 		self._thermoDevice = None
 		self._api = None
+		self._obdDevice = None
 		self.read_configuration_file()
 		self.configure_gps()
 		self.configure_thermo()
 		self.configure_acceleromenter()
 		self.configure_api()
+		self.configure_obd()
 		self.configure_shell()
 
 	def configure_api(self):
 		self._api = Api()
+
+	def configure_obd(self):
+		self._obdDevice = OBDDevice()
 
 	def read_configuration_file(self):
 		self._config = Configuration()
@@ -57,7 +65,7 @@ class App():
 			self._thermoDevice = MockRisingThermoDevice()
 
 	def configure_shell(self):
-		self._shell = Shell(self._gpsDevice, self._thermoDevice, self._accelDevice, self._api)
+		self._shell = Shell(self._gpsDevice, self._thermoDevice, self._accelDevice, self._api, self._obdDevice)
 
 
 	def run(self):
