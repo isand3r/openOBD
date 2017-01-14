@@ -32,9 +32,9 @@ class GPS3Device(IGPSDevice):
         for new_data in self.gps_socket:
             if(new_data):
                 self.data_stream.unpack(new_data)
-                self.longitude = self.data_stream.TPV['lon']
-                self.latitude = self.data_stream.TPV['lat']
-                self.altitude = self.data_stream.TPV['alt']
+                self.longitude = float(self.data_stream.TPV['lon'])
+                self.latitude = float(self.data_stream.TPV['lat'])
+                self.altitude = float(self.data_stream.TPV['alt'])
                 return
 
     def read_location(self) -> Location:
