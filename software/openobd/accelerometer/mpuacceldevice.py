@@ -1,6 +1,6 @@
 from accelerometer.iacceldevice import IAccelDevice
 from measure.measure import Measure
-import time
+import datetime
 
 from mpu6050 import mpu6050
 
