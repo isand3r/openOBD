@@ -3,7 +3,7 @@ from measure.measure import Measure
 
 from mpu6050 import mpu6050
 
-class MPUThermoDevice(IThermoDevice):
+class MPUAccelDevice(IThermoDevice):
     """Thermometer using MPU6050"""
     def __init__(self):
         self.accel  = 0

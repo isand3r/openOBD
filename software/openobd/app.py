@@ -17,11 +17,10 @@ from obd.obddevice import OBDDevice
 from api.api import Api
 
 from accelerometer.iacceldevice import IAccelDevice
-from accelerometer.mockfixedacceldevice import MockFixedAccelDevice
+from accelerometer.mpuacceldevice import MPUAccelDevice
 
 from thermo.ithermodevice import IThermoDevice
-from thermo.mockfixedthermodevice import MockFixedThermoDevice
-from thermo.mockrisingthermodevice import MockRisingThermoDevice
+from thermo.mputhermodevice import MPUThermoDevice
 
 class App():
 	def __init__(self):
@@ -56,13 +55,11 @@ class App():
 
 	def configure_acceleromenter(self):
 		if self._config.accel == "fixed_mock":
-			self._accelDevice = MockFixedAccelDevice()
+			self._accelDevice = MPUAccelDevice()
 
 	def configure_thermo(self):
 		if self._config.thermo == 'fixed_mock':
-			self._thermoDevice = MockFixedThermoDevice()
-		elif self._config.thermo == 'rising_mock':
-			self._thermoDevice = MockRisingThermoDevice()
+			self._thermoDevice = MPUThermoDevice()
 
 	def configure_shell(self):
 		self._shell = Shell(self._gpsDevice, self._thermoDevice, self._accelDevice, self._api, self._obdDevice)
