@@ -16,10 +16,10 @@ class OBDDevice(IOBDDevice):
 	def initialize(self):
 		os.system('sudo ip link set can0 type can bitrate 125000 triple-sampling on')
 		os.system('sudo ifconfig can0 up')
-	    can.rc['interface'] = 'socketcan_native'
-	    self.bus = can.interface.Bus('can0')
-	    self._ready = True
-	    
+		can.rc['interface'] = 'socketcan_native'
+		self.bus = can.interface.Bus('can0')
+		self._ready = True
+	
 	@property
 	def ready(self) -> bool:
 		return self._ready

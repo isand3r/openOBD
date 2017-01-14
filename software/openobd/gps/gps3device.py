@@ -39,7 +39,7 @@ class GPS3Device(IGPSDevice):
 
     def read_location(self) -> Location:
         """Return the same location each time"""
-        getDataStream()
+        self.getDataStream()
         time = datetime.datetime.now()
         self.location = Location(self.latitude, self.longitude, self.altitude, time)
         return self.location
