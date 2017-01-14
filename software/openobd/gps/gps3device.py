@@ -32,6 +32,7 @@ class GPS3Device(IGPSDevice):
         for new_data in self.gps_socket:
             if(new_data):
                 self.data_stream.unpack(new_data)
+                print("in here")
                 self.longitude = self.data_stream.TPV['lon']
                 self.latitude = self.data_stream.TPV['lat']
                 self.altitude = self.data_stream.TPV['alt']
@@ -39,14 +40,6 @@ class GPS3Device(IGPSDevice):
     def read_location(self) -> Location:
         """Return the same location each time"""
         self.getDataStream()
-        print(self.longitude)
-        ?*if(self.longitude == 'n/a'):
-    """ self.longitude = 0.0
-        if(self.latitude == 'n/a'):
-            self.latitude = 0.0
-        if(self.altitude == 'n/a'):
-            self.altitude = 0.0
-        print(self.longitude)"""
         time = datetime.datetime.now()
         self.location = Location(float(self.latitude), float(self.longitude), float(self.altitude), time)
         return self.location
