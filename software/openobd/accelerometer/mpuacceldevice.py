@@ -1,5 +1,6 @@
 from accelerometer.iacceldevice import IAccelDevice
 from measure.measure import Measure
+import time
 
 from mpu6050 import mpu6050
 
@@ -16,7 +17,7 @@ class MPUAccelDevice(IAccelDevice):
     def initialize(self):
         self._ready = True
         self.init = mpu6050(0x68)
-        self.velocity = self.calc_magn(self.accel['x'], self.accel['y'], self.accel['z'])
+        #self.velocity = self.calc_magn(self.accel['x'], self.accel['y'], self.accel['z'])
 
     @property
     def ready(self) -> bool:
