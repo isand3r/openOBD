@@ -40,11 +40,11 @@ class GPS3Device(IGPSDevice):
         """Return the same location each time"""
         self.getDataStream()
         if(self.longitude == 'n/a'):
-            self.longitude = '0.0'
+            self.longitude = 0.0
         if(self.latitude == 'n/a'):
-            self.latitude = '0.0'
+            self.latitude = 0.0
         if(self.altitude == 'n/a'):
-            self.altitude = '0.0'
+            self.altitude = 0.0
         time = datetime.datetime.now()
         self.location = Location(float(self.latitude), float(self.longitude), float(self.altitude), time)
         return self.location
