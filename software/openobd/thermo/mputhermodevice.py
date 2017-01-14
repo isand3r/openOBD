@@ -22,7 +22,7 @@ class MPUThermoDevice(IThermoDevice):
         return self._ready
 
     def read_temperature(self) -> Measure:
-    	assert self._ready
+        assert self._ready
         time = datetime.datetime.now()
         self.temperature = mpu6050.get_temp(self.init)
         temp = Measure(self.temperature, self.units, time)
