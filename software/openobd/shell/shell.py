@@ -127,6 +127,6 @@ class Shell(Cmd):
 	def print_accelerometer_reading(self):
 		"""Print a new temperature reading"""
 		velocity = self._accelDevice.read_accelerometer()
-		velocity_string = "ACCERATION | Value: {} | Units: {} | Time: {}".format(
+		velocity_string = "ACCELERATION | Value: {} | Units: {} | Time: {}".format(
 			velocity.value, velocity.units, velocity.time)
 		print(velocity_string)
