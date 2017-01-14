@@ -1,12 +1,16 @@
-import abc
-from IGPSDevice import IGPSDevice
+from location.location import Location
+from gps.igpsdevice import IGPSDevice
 from gps3 import gps3
+import datetime
 
 class GPS3Device(IGPSDevice):
     """Concrete GPS device using gps3"""
 
     def __init__(self):
-        self.location = {'longitude' : 0, 'latitude' : 0, 'altitude' : 0}
+        self.location = None
+        self.longitude = None
+        self.latitude = None
+        self.altitude = None
         self.gps_socket = None
         self.data_stream = None
 
@@ -28,14 +32,21 @@ class GPS3Device(IGPSDevice):
     def getLongitude(self):
         return self.location['longitude']
 
-    def printGPSStream(self):
+    def getDataStream(self):
         for new_data in self.gps_socket:
             if(new_data):
                 self.data_stream.unpack(new_data)
-                location = {'longitude' : self.data_stream.TPV['lon'], 'latitude' : self.data_stream.TPV['lat'], 'altitude' : self.data_stream.TPV['alt']}
-                self.location  = location
-                print("Location:" + str(self.location))
+                self.longitude = self.data_stream.TPV['lon']
+                self.latitude = self.data_stream.TPV['lat']
+                self.altitude = self.data_stream.TPV['alt']
                 return
+
+    def read_location(self) -> Location:
+        """Return the same location each time"""
+        time = datetime.datetime.now()
+        self.location = Location(self.latitude, self.longitude, self.altitude, time)
+        return self.location
+
             
             
 
