@@ -46,7 +46,7 @@ class GPS3Device(IGPSDevice):
         if(self.altitude == 'n/a'):
             self.altitude = 0.0
         time = datetime.datetime.now()
-        self.location = Location(float(self.latitude), float(self.longitude), float(self.altitude), time)
+        self.location = Location(self.latitude, self.longitude, self.altitude, time)
         return self.location
 
             
