@@ -50,15 +50,12 @@ class App():
 		self._config.read(self.CONFIG_FILENAME)
 
 	def configure_gps(self):
-		if self._config.gps == "fixed_mock":
 			self._gpsDevice = GPS3Device()
 
 	def configure_acceleromenter(self):
-		if self._config.accel == "fixed_mock":
 			self._accelDevice = MPUAccelDevice()
 
 	def configure_thermo(self):
-		if self._config.thermo == 'fixed_mock':
 			self._thermoDevice = MPUThermoDevice()
 
 	def configure_shell(self):
