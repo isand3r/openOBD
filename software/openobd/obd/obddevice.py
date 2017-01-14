@@ -1,8 +1,8 @@
 from obd.iobddevice import IOBDDevice
 from measure.measure import Measure
 import can
-can.rc['interface'] = 'socketcan'
-can.rc['channel'] = 'vcan0'
+#can.rc['interface'] = 'socketcan'
+#can.rc['channel'] = 'vcan0'
 import datetime
 
 class OBDDevice(IOBDDevice):
@@ -15,10 +15,10 @@ class OBDDevice(IOBDDevice):
 
 
 	def initialize(self):
-		self.bus = can.interface.Bus()
-		self.canlistener = can.Listener()
-		self._ready = True
-
+	    can.rc['interface'] = 'socketcan_native'
+	    self.bus = can.interface.Bus('can0')
+	    self._ready = True
+	    
 	@property
 	def ready(self) -> bool:
 		return self._ready
