@@ -67,6 +67,7 @@ class Shell(Cmd):
 		"""Read from all devices once"""
 		self.print_temperature_reading()
 		self.print_location_reading()
+		self.print_accelerometer_reading
 		self.print_obd_reading()
 
 	def do_multiple_temperature_readings(self, args):
