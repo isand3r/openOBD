@@ -26,7 +26,8 @@ class MPUAccelDevice(IAccelDevice):
         assert self._ready
         time = datetime.datetime.now()
         self.accel = mpu6050.get_accel_data(self.init)
-        self.velocity = self.calc_magn(self.accel['x'], self.accel['y'], self.accel['z'])
+        print(self.accel)
+        #self.velocity = self.calc_magn(self.accel['x'], self.accel['y'], self.accel['z'])
         vector = Measure(self.velocity,self.units, time)
         return vector
 
