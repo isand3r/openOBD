@@ -11,7 +11,7 @@ Changes:
 
   * ~~Wire up the Mux~~
   * ~~Wire up above components/chips once added~~
-  * ~~Import sch to pcb brd once complete ~~
+  * ~~Import sch to pcb brd once complete~~
 
 ### Documentation
 
