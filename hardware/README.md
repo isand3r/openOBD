@@ -4,18 +4,18 @@
 
 Additions:
 
-  * Add gps chip & necessary power components
-  * Add MEMs Sensor chip & necessary power components
+  * ~~Add gps chip & necessary power components~~
+  * ~~Add MEMs Sensor chip & necessary power components~~
 
 Changes:
 
   * ~~Wire up the Mux~~
-  * Wire up above components/chips once added
-  * Import sch to pcb brd once complete 
+  * ~~Wire up above components/chips once added~~
+  * ~~Import sch to pcb brd once complete~~
 
 ### Documentation
 
-  * Create more documentation!
+  * ~~Create more documentation!~~
 
 ### Parts/Chips to look into for PCB prototype
 
