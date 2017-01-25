@@ -21,3 +21,11 @@ class IOBDDevice(abc.ABC):
 	@abc.abstractmethod
 	def close_bus(self):
 		pass
+
+	@abc.abstractmethod
+	def init_pids(self):
+		pass
+
+	@abc.abstractmethod
+	def get_obd_info(self):
+		pass
