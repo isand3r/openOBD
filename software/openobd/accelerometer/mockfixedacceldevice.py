@@ -11,13 +11,13 @@ class MockFixedAccelDevice(IAccelDevice):
 		self.MOCK_Y = -3.1
 		self.MOCK_Z = -0.2
 		self.MOCK_UNITS = "m/s"
-		self.MOCK_MAG = None
+		self.MOCK_VALUE = None
 		self._ready = False
 
 
 	def initialize(self):
 		self._ready = True
-		self.MOCK_MAG = self.calc_magn(self.MOCK_X, self.MOCK_Y, self.MOCK_Z)
+		self.MOCK_VALUE = self.calc_magn(self.MOCK_X, self.MOCK_Y, self.MOCK_Z)
 
 	@property
 	def ready(self) -> bool:
@@ -27,7 +27,7 @@ class MockFixedAccelDevice(IAccelDevice):
 		"""This mock accelerometer """
 		assert self._ready
 		time = datetime.datetime.now()
-		vector = Measure(self.MOCK_MAG,self.MOCK_UNITS, time)
+		vector = Measure(self.MOCK_VALUE,self.MOCK_UNITS, time)
 		return vector
 
 	def calc_magn(self, X, Y, Z):
