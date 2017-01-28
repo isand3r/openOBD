@@ -3,3 +3,5 @@
 __Previews/
 *.SchDocPreview
 History/
+*.SchDocPreview
+*.PcbDocPreview
