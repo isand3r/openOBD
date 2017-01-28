@@ -2,17 +2,13 @@ TODO:
 ---
 	Item		|		Done?(Y/N)
 ---
-* CAN Controller	|		N
+* CAN Controller	|		Y
 ---
-* MPU6050		|		N
+* MPU6050		|		Y
 ---
 * SIM808		|		N
 ---
-* Level Converter	|		N
----
 * Power Circuit		|		Y
----
-* Merge Schematics	|		N
 ---
 * Import to PCB Layout	|		N
 ---
