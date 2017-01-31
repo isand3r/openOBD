@@ -1,6 +1,9 @@
 # openOBD
 An open source (Hardware+software) OBD reader and sensor device for vehicle data collection.
 
+## Tests
+Tests can be run with `python3 -m pytest`
+
 ## Dependencies
 Python packages (`pip3 install package-name`):
 * `pytest` (doc.pytest.org/en/latest/)
