@@ -5,7 +5,7 @@ import os
 import datetime
 
 class OBDDevice(IOBDDevice):
-	"""Mock Thermometer that always gives readings with MOCK_VALUE and MOCK_UNITS"""
+	"""OBD Device that can send PIDs and read from the CAN bus"""
 
 	def __init__(self):
 		self._ready = False
