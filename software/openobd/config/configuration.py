@@ -5,6 +5,7 @@ import configparser
 class Configuration(IConfiguration):
 	def __init__(self):
 		self.DEVICE = 'device'
+		self.OBD = 'obd'
 		self.GPS = 'gps'
 		self.THERMO = 'thermo'
 		self.ACCELEROMETER = 'accel'
@@ -12,6 +13,10 @@ class Configuration(IConfiguration):
 
 	def read(self, filename: str):
 		self._config.read(filename)
+
+	@property
+	def obd(self) -> str:
+		return self._config[self.DEVICE][self.OBD]
 
 	@property
 	def gps(self) -> str:
