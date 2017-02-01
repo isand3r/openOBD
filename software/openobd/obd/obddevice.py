@@ -50,7 +50,7 @@ class OBDDevice(IOBDDevice):
 				print("The Message recieved is:{}".format(stream))
 
 				"""matches response in the stream with the requesting pids"""
-				if((stream.data[1] - 0x40) == request[1] and stream.data[2] = request[2]):
+				if((stream.data[1] - 0x40) == request[1] and stream.data[2] == request[2]):
 					return stream
 
 		except can.CanError:
@@ -74,305 +74,305 @@ class OBDDevice(IOBDDevice):
 
 	def parse_obd_info(self, message, response):
 		"""Parses byte array from bus stream into readable info according to lookup table"""
-		if(message = 'pidsupport'):
+		if(message == 'pidsupport'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
 
-		elif(message = 'monitor_status'):
+		elif(message == 'monitor_status'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
 
-		elif(message = 'freeze_dtc'):
+		elif(message == 'freeze_dtc'):
 			print("Froze DTC")
 			return
 
-		elif(message = 'fuel_system_status'):
+		elif(message == 'fuel_system_status'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
 
-		elif(message = 'engine_load'):
+		elif(message == 'engine_load'):
 			"""returns %, A*100/255"""
 			return (int(response[3], 16)*100)/255
 
-		elif(message = 'coolant_temp'):
+		elif(message == 'coolant_temp'):
 			"""returns Celcius, A-40"""
 			return int(response[3], 16)-40
 
-		elif(message = 'sterm_fuel1'):
+		elif(message == 'sterm_fuel1'):
 			"""returns %, (A-128) * 100/128"""
 			return (int(response[3], 16)-128) * (100/128)
 
-		elif(message = 'lterm_fuel1'):
+		elif(message == 'lterm_fuel1'):
 			"""returns %, (A-128) * 100/128"""
 			return (int(response[3], 16)-128) * (100/128)
 
-		elif(message = 'sterm_fuel2'):
+		elif(message == 'sterm_fuel2'):
 			"""returns %, (A-128) * 100/128"""
 			return (int(response[3], 16)-128) * (100/128)
 		
-		elif(message = 'lterm_fuel2'):
+		elif(message == 'lterm_fuel2'):
 			"""returns %, (A-128) * 100/128"""
 			return (int(response[3], 16)-128) * (100/128)
 		
-		elif(message = 'fuel_pressure'):
+		elif(message == 'fuel_pressure'):
 			"""returns kPa, A"""
 			return int(response[3], 16)
 		
-		elif(message = 'intake_manifold_pressure'):
+		elif(message == 'intake_manifold_pressure'):
 			"""returns kPa, A*3"""
 			return int(response[3], 16)*3
 		
-		elif(message = 'rpm'):
+		elif(message == 'rpm'):
 			"""returns rpm, ((A*256)+B)/4"""
 			return (int(response[3], 16)*256 + int(response[4], 16))/4
 		
-		elif(message = 'speed'):
+		elif(message == 'speed'):
 			"""returns km/h, A"""
 			return int(response[3], 16)
 		
-		elif(message = 'timing_advance'):
+		elif(message == 'timing_advance'):
 			"""returns degress relative to cylinder 1, A/2 - 64"""
 			return int(response[3], 16)/2 - 64
 		
-		elif(message = 'intake_air_temp'):
+		elif(message == 'intake_air_temp'):
 			"""returns Celcius, A-40"""
 			return int(response[3], 16)-40
 		
-		elif(message = 'MAF_flow'):
+		elif(message == 'MAF_flow'):
 			"""returns g/s, ((256*A)+B) / 100"""
 			return ((256*int(response[3], 16)) + int(response[4], 16))/100
 
-		elif(message = 'throttle_position'):
+		elif(message == 'throttle_position'):
 			"""returns %, A*100/255"""
 			return int(response[3], 16)*100/255
 
-		elif(message = 'secondary_air_status'):
+		elif(message == 'secondary_air_status'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
 			return int(response[3], 16)
 
-		elif(message = 'oxygen_present'):
+		elif(message == 'oxygen_present'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
 			return int(response[3], 16)
 
-		elif(message = 'oxy_b1_s1'):
+		elif(message == 'oxy_b1_s1'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
 			return int(response[3], 16)
 
-		elif(message = 'oxy_b1_s2'):
+		elif(message == 'oxy_b1_s2'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
 			return int(response[3], 16)
 
-		elif(message = 'oxy_b1_s3'):
+		elif(message == 'oxy_b1_s3'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
 			return int(response[3], 16)
 
-		elif(message = 'oxy_b1_s4'):
+		elif(message == 'oxy_b1_s4'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
 			return int(response[3], 16)
 
-		elif(message = 'oxy_b2_s1'):
+		elif(message == 'oxy_b2_s1'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
 			return int(response[3], 16)
 
-		elif(message = 'oxy_b2_s3'):
+		elif(message == 'oxy_b2_s3'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
 			return int(response[3], 16)
 
-		elif(message = 'oxy_b2_s3'):
+		elif(message == 'oxy_b2_s3'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
 			return int(response[3], 16)
 
-		elif(message = 'oxy_b2_s4'):
+		elif(message == 'oxy_b2_s4'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
 			return int(response[3], 16)
 
-		elif(message = 'obd_standard_id'):
+		elif(message == 'obd_standard_id'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
 			return int(response[3], 16)
 
-		elif(message = 'oxygen_sensor_present'):
+		elif(message == 'oxygen_sensor_present'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
 			return int(response[3], 16)
 
-		elif(message = 'aux_input_status'):
+		elif(message == 'aux_input_status'):
 			"""returns kPa, A&4"""
 			return int(response[3], 16)&4
 
-		elif(message = 'engine_run_time'):
+		elif(message == 'engine_run_time'):
 			"""returns seconds, (A*256)+B"""
 			return (int(response[3], 16)*256) + int(response[4], 16)
 
-		elif(message = 'pids_suport_21_40'):
+		elif(message == 'pids_suport_21_40'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
 			return int(response[3], 16)
 
-		elif(message = 'distance_traveled_MIL'):
+		elif(message == 'distance_traveled_MIL'):
 			"""returns seconds, (A*256)+B"""
 			return (int(response[3], 16)*256) + int(response[4], 16)
 
-		elif(message = 'fuel_rail_pressure'):
+		elif(message == 'fuel_rail_pressure'):
 			"""returns kPA, ((A*256)+B)*0.079"""
 			return ((int(response[3], 16)*256) + int(response[4], 16))*0.079
 
-		elif(message = 'fuel_rail_pressure_diesel'):
+		elif(message == 'fuel_rail_pressure_diesel'):
 			"""returns kPa, ((A*256)+B)*10"""
 			return ((int(response[3], 16)*256) + int(response[4], 16))*10
 
-		elif(message = 'VO2S1_WR_lambda'):
+		elif(message == 'VO2S1_WR_lambda'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
 			return int(response[3], 16)
 
-		elif(message = 'VO2S2_WR_lambda'):
+		elif(message == 'VO2S2_WR_lambda'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
 			return int(response[3], 16)
 
-		elif(message = 'VO2S3_WR_lambda'):
+		elif(message == 'VO2S3_WR_lambda'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
 			return int(response[3], 16)
 
-		elif(message = 'VO2S4_WR_lambda'):
+		elif(message == 'VO2S4_WR_lambda'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
 			return int(response[3], 16)
 
-		elif(message = 'VO2S5_WR_lambda'):
+		elif(message == 'VO2S5_WR_lambda'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
 			return int(response[3], 16)
-		elif(message = 'VO2S6_WR_lambda'):
-			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
-			return int(response[3], 16)
-
-		elif(message = 'VO2S7_WR_lambda'):
+		elif(message == 'VO2S6_WR_lambda'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
 			return int(response[3], 16)
 
-		elif(message = 'VO2S8_WR_lambda'):
+		elif(message == 'VO2S7_WR_lambda'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
 			return int(response[3], 16)
 
-		elif(message = 'ERG'):
+		elif(message == 'VO2S8_WR_lambda'):
+			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
+			return int(response[3], 16)
+
+		elif(message == 'ERG'):
 			"""returns %, 100*A/255"""
 			return 100 * int(response[3], 16) / 255
 
-		elif(message = 'ERG_error'):
+		elif(message == 'ERG_error'):
 			"""returns %, A*0.78125 - 100"""
 			return int(response[3], 16) * 0.78125 - 100
 
-		elif(message = 'evaporative_purge'):
+		elif(message == 'evaporative_purge'):
 			"""returns %, 100*A/255"""
 			return 100* int(response[3], 16) / 255
 
-		elif(message = 'fuel_level'):
+		elif(message == 'fuel_level'):
 			"""returns %, 100*A/255"""
 			return 100* int(response[3], 16) / 255
 
-		elif(message = 'warm_up_attemps_since_clear'):
+		elif(message == 'warm_up_attemps_since_clear'):
 			"""returns N/A, A"""
 			return int(response[3], 16)
 
-		elif(message = 'distance_traveled_since_clear'):
+		elif(message == 'distance_traveled_since_clear'):
 			"""returns km, (A*256)+B"""
 			return (int(response[3], 16) * 256) + int(response[4], 16)
-		elif(message = 'evap_vapour_pressure'):
+		elif(message == 'evap_vapour_pressure'):
 			"""returns kPa, (A*256)+B)/4 - 8,192"""
 			return ((int(response[3], 16) * 256) + int(response[3],16))/4 - 8192
 
-		elif(message = 'baromatic_pressure'):
+		elif(message == 'baromatic_pressure'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
 			return int(response[3], 16)
-		elif(message = 'CO2S1_WR_lambda'):
-			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
-			return int(response[3], 16)
-
-		elif(message = 'CO2S2_WR_lambda'):
-			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
-			return int(response[3], 16)
-		elif(message = 'CO2S3_WR_lambda'):
+		elif(message == 'CO2S1_WR_lambda'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
 			return int(response[3], 16)
 
-		elif(message = 'CO2S4_WR_lambda'):
+		elif(message == 'CO2S2_WR_lambda'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
 			return int(response[3], 16)
-		elif(message = 'CO2S5_WR_lambda'):
-			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
-			return int(response[3], 16)
-
-		elif(message = 'CO2S6_WR_lambda'):
-			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
-			return int(response[3], 16)
-		elif(message = 'CO2S7_WR_lambda'):
+		elif(message == 'CO2S3_WR_lambda'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
 			return int(response[3], 16)
 
-		elif(message = 'CO2S8_WR_lambda'):
+		elif(message == 'CO2S4_WR_lambda'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
 			return int(response[3], 16)
-		elif(message = 'catalyst_temp_B1S1'):
+		elif(message == 'CO2S5_WR_lambda'):
+			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
+			return int(response[3], 16)
+
+		elif(message == 'CO2S6_WR_lambda'):
+			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
+			return int(response[3], 16)
+		elif(message == 'CO2S7_WR_lambda'):
+			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
+			return int(response[3], 16)
+
+		elif(message == 'CO2S8_WR_lambda'):
+			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
+			return int(response[3], 16)
+		elif(message == 'catalyst_temp_B1S1'):
 			"""returns Celsius, ((A*256)+B)/10 - 40"""
 			return ((int(response[3], 16)*256)+ int(response[4], 16))/10 - 40
-		elif(message = 'catalyst_temp_B2S1'):
-			"""returns Celsius, ((A*256)+B)/10 - 40"""
-			return ((int(response[3], 16)*256)+ int(response[4], 16))/10 - 40
-
-		elif(message = 'catalyst_temp_B1S2'):
+		elif(message == 'catalyst_temp_B2S1'):
 			"""returns Celsius, ((A*256)+B)/10 - 40"""
 			return ((int(response[3], 16)*256)+ int(response[4], 16))/10 - 40
 
-		elif(message = 'catalyst_temp_B2S2'):
+		elif(message == 'catalyst_temp_B1S2'):
 			"""returns Celsius, ((A*256)+B)/10 - 40"""
 			return ((int(response[3], 16)*256)+ int(response[4], 16))/10 - 40
 
-		elif(message = 'pids_support_41_60'):
+		elif(message == 'catalyst_temp_B2S2'):
+			"""returns Celsius, ((A*256)+B)/10 - 40"""
+			return ((int(response[3], 16)*256)+ int(response[4], 16))/10 - 40
+
+		elif(message == 'pids_support_41_60'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
 			return int(response[3], 16)
-		elif(message = 'monitor_status_drive_cycle'):
+		elif(message == 'monitor_status_drive_cycle'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
 			return int(response[3], 16)
-		elif(message = 'control_module_voltage'):
+		elif(message == 'control_module_voltage'):
 			"""returns Voltage, ((A*256)+B)/1000"""
 			return ((int(response[3], 16)*256)+ int(response[4], 16))/1000
 
-		elif(message = 'absolute_load'):
+		elif(message == 'absolute_load'):
 			"""returns %, ((A*256)+B)*100/255"""
 			return ((int(response[3], 16)*256)+ int(response[4], 16)) * 100/255
 
-		elif(message = 'command_equivalence_ratio'):
+		elif(message == 'command_equivalence_ratio'):
 			"""returns N/A, ((A*256)+B)*0.0000305"""
 			return ((int(response[3], 16)*256)+ int(response[4], 16)) * 0.0000305
-		elif(message = 'relative_throttle_position'):
+		elif(message == 'relative_throttle_position'):
 			"""returns %, A*100/255"""
 			return int(response[3], 16) * 100/255
-		elif(message = 'ambient_air_temp'):
+		elif(message == 'ambient_air_temp'):
 			"""returns Celsius, A-40"""
 			return int(response[3], 16) - 40
-		elif(message = 'absolute_throttle_position_B'):
+		elif(message == 'absolute_throttle_position_B'):
 			"""returns %, A*100/255"""
 			return int(response[3], 16)*100/255
-		elif(message = 'absolute_throttle_position_C'):
+		elif(message == 'absolute_throttle_position_C'):
 			"""returns %, A*100/255"""
 			return int(response[3], 16)*100/255
-		elif(message = 'absolute_throttle_position_D'):
+		elif(message == 'absolute_throttle_position_D'):
 			"""returns %, A*100/255"""
 			return int(response[3], 16)*100/255
-		elif(message = 'absolute_throttle_position_E'):
+		elif(message == 'absolute_throttle_position_E'):
 			"""returns %, A*100/255"""
 			return int(response[3], 16)*100/255
-		elif(message = 'absolute_throttle_position_F'):
+		elif(message == 'absolute_throttle_position_F'):
 			"""returns %, A*100/255"""
 			return int(response[3], 16)*100/255
-		elif(message = 'command_throttle_actuator'):
+		elif(message == 'command_throttle_actuator'):
 			"""returns %, A*100/255"""
 			return int(response[3], 16)*100/255
-		elif(message = 'time_run_with_MIL'):
+		elif(message == 'time_run_with_MIL'):
 			"""returns minutes, (A*256)+B"""
 			return ((int(response[3], 16)*256)+ int(response[4], 16))
-		elif(message = 'time_since_MIL_clear'):
+		elif(message == 'time_since_MIL_clear'):
 			"""returns minutes, (A*256)+B"""
 			return ((int(response[3], 16)*256)+ int(response[4], 16))
-		elif(message = 'fuel_type'):
+		elif(message == 'fuel_type'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
 			return int(response[3], 16)
-		elif(message = 'ethanol_fuel_percent'):
+		elif(message == 'ethanol_fuel_percent'):
 			"""returns %, A*100/255"""
 			return int(response[3], 16)*100/255
-		elif(message = 'VIN'):
+		elif(message == 'VIN'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
 			A = response[3]
 			B = response[4]
@@ -398,7 +398,7 @@ class OBDDevice(IOBDDevice):
 
 	def init_pids(self, mode):
 		PID_dict = {}
-		PID_dict['pidsupport'] = [mode, , 0x00, 0x00, 0x00, 0x00, 0x00]
+		PID_dict['pidsupport'] = [mode, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]
 		PID_dict['monitor_status'] = [mode, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00]
 		PID_dict['freeze_dtc'] = [mode, 0x02, 0x00, 0x00, 0x00, 0x00, 0x00]
 		PID_dict['fuel_system_status'] = [mode, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00]
