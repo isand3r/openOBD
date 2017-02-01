@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=GND Pin=GPSANT-0
+Removed Pin From Net: NetName=GPS_RF Pin=GPSANT-1
+Removed Pin From Net: NetName=GND Pin=GSMANT-0
+Removed Member From Class: ClassName=SIM808 Member=GPSANT
+Removed Member From Class: ClassName=SIM808 Member=GSMANT
+Change Net Name : Old Net Name=Net_5 New Net Name=NetLD39100PUR_5
+Added Member To Class: ClassName=CanNode Member=Component U1 TCAN332
