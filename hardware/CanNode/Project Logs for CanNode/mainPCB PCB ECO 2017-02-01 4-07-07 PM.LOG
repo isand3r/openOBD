@@ -1,0 +1,4 @@
+Added Component: Designator=D2(Diode Zener)
+Added Pin To Net: NetName=+4V Pin=D2-1
+Added Pin To Net: NetName=GND Pin=D2-2
+Added Member To Class: ClassName=SIM808 Member=Component D2 Diode Zener

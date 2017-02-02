@@ -1,0 +1,25 @@
+Added Component: Designator=PCB0(Rasberry PI)
+Added Pin To Net: NetName=+3.3V Pin=PCB0-1
+Added Pin To Net: NetName=+5V Pin=PCB0-2
+Added Pin To Net: NetName=6050_SDA Pin=PCB0-3
+Added Pin To Net: NetName=+5V Pin=PCB0-4
+Added Pin To Net: NetName=6050_SCL Pin=PCB0-5
+Added Pin To Net: NetName=GND Pin=PCB0-6
+Added Pin To Net: NetName=808_RXD Pin=PCB0-8
+Added Pin To Net: NetName=GND Pin=PCB0-9
+Added Pin To Net: NetName=808_TXD Pin=PCB0-10
+Added Pin To Net: NetName=GND Pin=PCB0-14
+Added Pin To Net: NetName=808_RESET Pin=PCB0-15
+Added Pin To Net: NetName=808_PWR Pin=PCB0-16
+Added Pin To Net: NetName=+3.3V Pin=PCB0-17
+Added Pin To Net: NetName=SI Pin=PCB0-19
+Added Pin To Net: NetName=GND Pin=PCB0-20
+Added Pin To Net: NetName=SO Pin=PCB0-21
+Added Pin To Net: NetName=SCK Pin=PCB0-23
+Added Pin To Net: NetName=CS Pin=PCB0-24
+Added Pin To Net: NetName=GND Pin=PCB0-25
+Added Pin To Net: NetName=GND Pin=PCB0-30
+Added Pin To Net: NetName=MCP_INT Pin=PCB0-32
+Added Pin To Net: NetName=GND Pin=PCB0-34
+Added Pin To Net: NetName=GND Pin=PCB0-39
+Added Member To Class: ClassName=CanNode Member=Component PCB0 Rasberry Pi footprint

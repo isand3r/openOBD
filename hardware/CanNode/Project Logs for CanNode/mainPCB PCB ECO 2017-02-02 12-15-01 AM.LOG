@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=+5V Pin=C10-1
+Removed Pin From Net: NetName=GND Pin=C10-2
+Removed Member From Class: ClassName=PowerCircuit Member=C10
+Added Member To Class: ClassName=SIM808 Member=Component SIM808
