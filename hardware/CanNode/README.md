@@ -6,9 +6,11 @@ TODO:
 ---
 * MPU6050		|		Y
 ---
-* SIM808		|		N
+* SIM808		|		Y
 ---
 * Power Circuit		|		Y
 ---
-* Import to PCB Layout	|		N
+* Import to PCB Layout	|		Y
+---
+* PCB Routing		|		N
 ---
