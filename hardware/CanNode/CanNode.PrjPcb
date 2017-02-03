@@ -293,6 +293,10 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=LSMCICHN
 
+[GeneratedDocument1]
+DocumentPath=Project Outputs for CanNode\Design Rule Check - mainPCB.html
+DItemRevisionGUID=
+
 [Configuration1]
 Name=Default Configuration
 ParameterCount=0
