@@ -1,0 +1,12 @@
+Added Component: Designator=U5(MPU-6050)
+Added Pin To Net: NetName=GND Pin=U5-1
+Added Pin To Net: NetName=+3.3V Pin=U5-8
+Added Pin To Net: NetName=NetC1_2 Pin=U5-10
+Added Pin To Net: NetName=GND Pin=U5-11
+Added Pin To Net: NetName=6050_INT Pin=U5-12
+Added Pin To Net: NetName=+3.3V Pin=U5-13
+Added Pin To Net: NetName=GND Pin=U5-18
+Added Pin To Net: NetName=NetC2_2 Pin=U5-20
+Added Pin To Net: NetName=6050_SCL Pin=U5-23
+Added Pin To Net: NetName=6050_SDA Pin=U5-24
+Added Member To Class: ClassName=MPU6050 Member=Component U5 MPU6050
