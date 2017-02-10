@@ -4,6 +4,7 @@ from gps.igpsdevice import IGPSDevice
 from thermo.ithermodevice import IThermoDevice
 from obd.iobddevice import IOBDDevice
 from accelerometer.iacceldevice import IAccelDevice
+from manager.manager import Manager
 from cmd import Cmd
 import time
 import os
@@ -29,6 +30,10 @@ class Shell(Cmd):
 		assert isinstance(obdDevice, IOBDDevice)
 		self._obdDevice = obdDevice
 		self._obdDevice.initialize()
+		self._manager = Manager(thermoDevice)
+
+	def do_manager_print_moving_averages(self, args):
+		self._manager.print_moving_averages()
 
 	def do_api_call_test(self, args):
 		"""Calls Moj.io API and returns current user"""

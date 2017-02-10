@@ -49,7 +49,3 @@ class GPS3Device(IGPSDevice):
         time = datetime.datetime.now()
         self.location = Location(float(self.latitude), float(self.longitude), float(self.altitude), time)
         return self.location
-
-            
-            
-
