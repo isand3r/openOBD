@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <!-- From: file:/tmp/aar_gen_tmp6682929371290315669/tmp-deduplicated/java/com/google/android/gmscore/integ/client/cast/framework/res/values-land/cast_dimens.xml -->
-    <eat-comment/>
-    <dimen name="cast_expanded_controller_ad_in_progress_label_layout_height">118dp</dimen>
-    <dimen name="cast_expanded_controller_ad_in_progress_label_layout_width">210dp</dimen>
-    <dimen name="cast_expanded_controller_margin_between_seek_bar_and_control_buttons">8dp</dimen>
-    <dimen name="cast_expanded_controller_margin_between_status_text_and_seek_bar">8dp</dimen>
-</resources>

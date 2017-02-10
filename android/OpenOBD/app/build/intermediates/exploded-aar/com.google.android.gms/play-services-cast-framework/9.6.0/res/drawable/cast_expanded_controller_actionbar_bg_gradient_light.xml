@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android" >
-    <gradient
-        android:angle="90"
-        android:startColor="@android:color/transparent"
-        android:endColor="@android:color/black"
-        android:type="linear" />
-</shape>
-<!-- From: file:/tmp/aar_gen_tmp6682929371290315669/tmp-deduplicated/java/com/google/android/gmscore/integ/client/cast/framework/res/drawable/cast_expanded_controller_actionbar_bg_gradient_light.xml -->
