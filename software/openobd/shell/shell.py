@@ -49,7 +49,7 @@ class Shell(Cmd):
 
 	def do_obd_send_test(self, args):
 		"""Sends obd device"""
-		self._obdDevice.get_obd_info()
+		self._obdDevice.get_obd_info('catalyst_temp_B1S1', 0x01)
 
 	def do_multiple_all_readings(self, args):
 		"""Repeatedly read from all devices"""

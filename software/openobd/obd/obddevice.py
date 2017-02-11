@@ -391,7 +391,7 @@ class OBDDevice(IOBDDevice):
 		hex_value = self.read_obd(message, mode)
 		parsed_value =  self.parse_obd_info(hex_value)
 
-		print (parsed_value)
+		print (parsed_value)	
 
 	def close_bus(self):
 		self.bus.shutdown()
