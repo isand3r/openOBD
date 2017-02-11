@@ -11,6 +11,7 @@ class OBDDevice(IOBDDevice):
 		self._ready = False
 		self.bus = None
 		self.canlistener = None
+		self.PID_dict
 
 	def initialize(self):
 		os.system('sudo ip link set can0 type can bitrate 125000 triple-sampling on')
@@ -40,7 +41,7 @@ class OBDDevice(IOBDDevice):
 		"""to read CAN frames after a request. message = <string>, mode = <1,2> (1:current obd, 2: info at last diagnostic error code flag"""
 		assert self._ready
 
-		PID_dict = self.init_pids(mode)
+		self.PID_dict = init_pids(mode)
 
 		try:
 			stream = self.bus.recv(timeout=2)
