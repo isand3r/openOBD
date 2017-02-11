@@ -1,5 +1,7 @@
 ## Hardware Documentation
 
+![Alt text](IMG_20170211_123442.jpg?raw=true "PCB's")
+
 ### Datasheets List
 
 Parts listed here are simply what we used and had available. These are not prescriptive.
