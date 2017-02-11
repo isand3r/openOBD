@@ -37,10 +37,10 @@ class OBDDevice(IOBDDevice):
 			print("Message could not be recieved")
 
 	def read_obd(self, message, mode):
-		"""to read CAN frames after a request"""
+		"""to read CAN frames after a request. message = <string>, mode = <1,2> (1:current obd, 2: info at last diagnostic error code flag"""
 		assert self._ready
 
-		PID_dict = init_pids(mode)
+		PID_dict = self.init_pids(mode)
 
 		try:
 			stream = self.bus.recv(timeout=2)
