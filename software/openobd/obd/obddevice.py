@@ -40,7 +40,7 @@ class OBDDevice(IOBDDevice):
 		"""to read CAN frames after a request. message = <string>, mode = <1,2> (1:current obd, 2: info at last diagnostic error code flag"""
 		assert self._ready
 
-		PID_dict = init_pids(mode)
+		PID_dict = self.init_pids(mode)
 
 		try:
 			stream = self.bus.recv(timeout=2)
@@ -387,16 +387,16 @@ class OBDDevice(IOBDDevice):
 	def get_obd_info(self, message, mode) -> Measure:
 		"""function handles sends and recieved messages and returns readable information"""
 		time = datetime.datetime.now()
-		send_obd(message, mode)
-		hex_value = read_obd(message, mode)
-		parsed_value =  parse_obd_info(hex_value)
+		self.send_obd(message, mode)
+		hex_value = self.read_obd(message, mode)
+		parsed_value =  self.parse_obd_info(hex_value)
 
-		return parsed_value
+		print parsed_value
 
 	def close_bus(self):
 		self.bus.shutdown()
 
-	def init_pids(mode):
+	def init_pids(self, mode):
 		PID_dict = {}
 		PID_dict['pidsupport'] = [mode, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]
 		PID_dict['monitor_status'] = [mode, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00]
