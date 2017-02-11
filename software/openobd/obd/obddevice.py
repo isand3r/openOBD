@@ -475,7 +475,7 @@ class OBDDevice(IOBDDevice):
 		time = datetime.datetime.now()
 		self.send_obd(message, mode)
 		hex_value = self.read_obd(message, mode)
-		parsed_value =  self.parse_obd_info(hex_value)
+		parsed_value =  self.parse_obd_info(message, hex_value )
 
 		print (parsed_value)	
 
