@@ -208,11 +208,11 @@ class OBDDevice(IOBDDevice):
 		
 		elif(message == 'rpm'):
 			"""returns rpm, ((A*256)+B)/4"""
-			return (int(response[3], 16)*256 + int(response[4], 16))/4
+			return (int(response[3])*256 + int(response[4], 16))/4
 		
 		elif(message == 'speed'):
 			"""returns km/h, A"""
-			return int(response[3], 16)
+			return int(response[3])
 		
 		elif(message == 'timing_advance'):
 			"""returns degress relative to cylinder 1, A/2 - 64"""
