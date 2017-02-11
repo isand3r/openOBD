@@ -1,6 +1,8 @@
 """Automates reading from devices"""
 from thermo.ithermodevice import IThermoDevice
+from gps.igpsdevice import IGPSDevice
 from measure.measure import Measure
+from location.location import Location
 import time
 import os
 
@@ -38,6 +40,7 @@ class Manager():
 		print(temperature_string)
 
 	def print_moving_average_location(self):
+		location = Location.average_location(self._locations)
 		latitude_string = "LATITUDE | Value: {} | Units: {} | Time: {}".format(
 			location.latitude.value, location.latitude.units, location.latitude.time)
 		longitude_string = "LONGITUDE | Value: {} | Units: {} | Time: {}".format(
