@@ -393,18 +393,18 @@ class OBDDevice(IOBDDevice):
 			return int(response[3], 16)
 		elif(message == 'catalyst_temp_B1S1'):
 			"""returns Celsius, ((A*256)+B)/10 - 40"""
-			return ((int(response[3], 16)*256)+ int(response[4], 16))/10 - 40
+			return ((int(response[3])*256)+ int(response[4]))/10 - 40
 		elif(message == 'catalyst_temp_B2S1'):
 			"""returns Celsius, ((A*256)+B)/10 - 40"""
-			return ((int(response[3], 16)*256)+ int(response[4], 16))/10 - 40
+			return ((int(response[3])*256)+ int(response[4]))/10 - 40
 
 		elif(message == 'catalyst_temp_B1S2'):
 			"""returns Celsius, ((A*256)+B)/10 - 40"""
-			return ((int(response[3], 16)*256)+ int(response[4], 16))/10 - 40
+			return ((int(response[3])*256)+ int(response[4]))/10 - 40
 
 		elif(message == 'catalyst_temp_B2S2'):
 			"""returns Celsius, ((A*256)+B)/10 - 40"""
-			return ((int(response[3], 16)*256)+ int(response[4], 16))/10 - 40
+			return ((int(response[3])*256)+ int(response[4]))/10 - 40
 
 		elif(message == 'pids_support_41_60'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
