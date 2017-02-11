@@ -27,14 +27,13 @@ class Measure():
 		"""Return the time that the measurement was taken"""
 		return self._time
 
-	def average_measure(list):
-		"""Return a Measure with the mean value and the units & time from the 0th entry"""
+	def average_measure(measures):
+		"""Given a non-empty list of Measures,
+		Return a Measure with the mean value and the units & time from the 0th entry"""
 		sum_value = 0
 		count = 0
-		for measure in list:
+		for measure in measures:
 			sum_value += measure.value
 			count += 1
 		average_value = sum_value / count
-		# assumes all measures have the same units
-		# uses time from the oldest reading
-		return Measure(average_value, list[0].units, list[0].time)
+		return Measure(average_value, measures[0].units, measures[0].time)
