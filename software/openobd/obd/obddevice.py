@@ -1,5 +1,6 @@
 from obd.iobddevice import IOBDDevice
 from measure.measure import Measure
+import time
 import can
 import os
 import datetime
@@ -208,11 +209,15 @@ class OBDDevice(IOBDDevice):
 		
 		elif(message == 'rpm'):
 			"""returns rpm, ((A*256)+B)/4"""
-			return (int(response[3])*256 + int(response[4] ))/4
+			time = datetime.datetime.now()
+			result = Measure((int(response[3])*256 + int(response[4] ))/4, "rpm", time )
+			return result
 		
 		elif(message == 'speed'):
 			"""returns km/h, A"""
-			return int(response[3])
+			time = datetime.datetime.now()
+			result = Measure(int(response[3]), "km/h", time )
+			return result
 		
 		elif(message == 'timing_advance'):
 			"""returns degress relative to cylinder 1, A/2 - 64"""
@@ -477,9 +482,9 @@ class OBDDevice(IOBDDevice):
 		self.send_obd(message, mode)
 		hex_value = self.read_obd(message, mode)
 		print (type(hex_value))
-		parsed_value =  self.parse_obd_info(message, hex_value.data )
+		result =  self.parse_obd_info(message, hex_value.data )
 
-		print (parsed_value)	
+		print ("message Received:" + str(result))	
 
 	def close_bus(self):
 		self.bus.shutdown()
