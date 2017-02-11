@@ -22,7 +22,7 @@ class OBDDevice(IOBDDevice):
 	@property
 	def ready(self) -> bool:
 		return self._ready
-		
+
 	def init_pids(self, mode):
 		PID_dict = {}
 		PID_dict['pidsupport'] = [mode, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]
@@ -146,7 +146,7 @@ class OBDDevice(IOBDDevice):
 		"""This obd device to send CAN frames"""
 		assert self._ready
 
-		PID_dict = init_pids(mode)
+		PID_dict = self.init_pids(mode)
 
 		msg = can.Message(arbitration_id=0xc0ffee,
 			data=[PID_dict[message]],
