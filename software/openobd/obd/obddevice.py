@@ -136,7 +136,7 @@ class OBDDevice(IOBDDevice):
 				print("The Message recieved is:{}".format(stream))
 
 				"""matches response in the stream with the requesting pids"""
-				if((stream.data[1] - 0x40) == request[1] and stream.data[2] == request[2]):
+				#if((stream.data[1] - 0x40) == request[1] and stream.data[2] == request[2]):
 					return stream
 
 		except can.CanError:
@@ -475,6 +475,7 @@ class OBDDevice(IOBDDevice):
 		time = datetime.datetime.now()
 		self.send_obd(message, mode)
 		hex_value = self.read_obd(message, mode)
+		print (hex_value)
 		parsed_value =  self.parse_obd_info(message, hex_value )
 
 		print (parsed_value)	
