@@ -21,7 +21,7 @@ class Manager():
 			try:
 				while(1):
 					self.collect_readings()
-					moving_average = self.moving_average_temperature(self._temperatures)
+					moving_average = Measure.average_measure(self._temperatures)
 					print(moving_average.value)
 					time.sleep(self.SLEEP_TIME)
 			except KeyboardInterrupt:
@@ -35,13 +35,3 @@ class Manager():
 		self._temperatures.append(self._thermoDevice.read_temperature())
 		if (len(self._temperatures) > self.MAX_LIST_LENGTH):
 			self._temperatures.pop(0)
-
-	def moving_average_temperature(self, list) -> Measure:
-		sum_value = 0
-		count = 0
-		for temperature in list:
-			sum_value += temperature.value
-			count += 1
-		average_value = sum_value / count
-		# uses time from oldest reading
-		return Measure(average_value, list[0].units, list[0].time)
