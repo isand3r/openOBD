@@ -49,7 +49,7 @@ class Shell(Cmd):
 
 	def do_obd_send_test(self, args):
 		"""Sends obd device"""
-		self._obdDevice.send_obd()
+		self._obdDevice.get_obd_info()
 
 	def do_multiple_all_readings(self, args):
 		"""Repeatedly read from all devices"""
