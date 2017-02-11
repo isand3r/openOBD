@@ -39,5 +39,3 @@ class Location():
 		average_altitude_value = sum_altitude_value / count
 		return Location(average_latitude_value, average_longitude_value,
 			average_altitude_value, locations[0].latitude.time)
-
-
