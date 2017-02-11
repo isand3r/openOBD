@@ -149,7 +149,7 @@ class OBDDevice(IOBDDevice):
 		PID_dict = self.init_pids(mode)
 
 		msg = can.Message(arbitration_id=0xc0ffee,
-			data=[PID_dict[message]],
+			data=PID_dict[message],
 			extended_id=False)
 		try:
 			self.bus.send(msg)
