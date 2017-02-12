@@ -138,7 +138,7 @@ class OBDDevice(IOBDDevice):
 				print("The Message recieved is:{}".format(stream))
 
 				"""matches response in the stream with the requesting pids"""
-				if((stream.data[1] - 0x40) == request[1] and stream.data[2] == request[2]):
+				#if((stream.data[1] - 0x40) == request[1] and stream.data[2] == request[2]):
 					return stream
 
 		except can.CanError:
