@@ -16,7 +16,7 @@ class OBDDevice(IOBDDevice):
 	def initialize(self):
 		os.system('sudo ip link set can0 type can bitrate 125000 triple-sampling on')
 		os.system('sudo ifconfig can0 up')
-		can.rc['interface'] = 'socketcan_ctypes'
+		can.rc['interface'] = 'socketcan_native'
 		self.bus = can.interface.Bus('can0')
 		self._ready = True
 	
@@ -150,7 +150,7 @@ class OBDDevice(IOBDDevice):
 
 		PID_dict = self.init_pids(mode)
 
-		msg = can.Message(arbitration_id=0x07DF,
+		msg = can.Message(arbitration_id=0x7DF,
 			data=PID_dict[message],
 			extended_id=False)
 		try:
