@@ -139,8 +139,7 @@ class OBDDevice(IOBDDevice):
 
 				"""matches response in the stream with the requesting pids"""
 				if((stream.data[1] - 0x40) == request[1] and stream.data[2] == request[2]):
-					break
-			return stream
+					return stream
 
 		except can.CanError:
 			print("Message could not be recieved")
@@ -151,7 +150,7 @@ class OBDDevice(IOBDDevice):
 
 		PID_dict = self.init_pids(mode)
 
-		msg = can.Message(arbitration_id=0xc0ffee,
+		msg = can.Message(arbitration_id=0x07DF,
 			data=PID_dict[message],
 			extended_id=False)
 		try:
