@@ -16,7 +16,7 @@ class OBDDevice(IOBDDevice):
 	def initialize(self):
 		os.system('sudo ip link set can0 type can bitrate 125000 triple-sampling on')
 		os.system('sudo ifconfig can0 up')
-		can.rc['interface'] = 'socketcan_native'
+		can.rc['interface'] = 'socketcan_ctypes'
 		self.bus = can.interface.Bus('can0')
 		self._ready = True
 	
@@ -39,7 +39,7 @@ class OBDDevice(IOBDDevice):
 		PID_dict['lterm_fuel2'] = [msg_length, mode, 0x09, 0x00, 0x00, 0x00, 0x00, 0x00]
 		PID_dict['fuel_pressure'] = [msg_length, mode, 0x0A, 0x00, 0x00, 0x00, 0x00, 0x00]
 		PID_dict['intake_manifold_pressure'] = [msg_length, mode, 0x0B, 0x00, 0x00, 0x00, 0x00, 0x00]
-		PID_dict['rpm'] = [msg_length, mode, 0x0C, 0x55, 0x55, 0x55, 0x55, 0x55]
+		PID_dict['rpm'] = [msg_length, mode, 0x0C, 0x00, 0x00, 0x00, 0x00, 0x00]
 		PID_dict['speed'] = [msg_length, mode, 0x0D, 0x00, 0x00, 0x00, 0x00, 0x00]
 		PID_dict['timing_advance'] = [msg_length, mode, 0x0E, 0x00, 0x00, 0x00, 0x00, 0x00]
 		PID_dict['intake_air_temp'] = [msg_length, mode, 0x0F, 0x00, 0x00, 0x00, 0x00, 0x00]
