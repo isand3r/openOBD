@@ -41,20 +41,20 @@ class Shell(Cmd):
 
 	def do_single_obd_read(self, args):
 		"""Single read on obd device"""
-		self._obdDevice.read_obd()
+		self._obdDevice.listen_obd()
 
 	def do_multiple_obd_read(self, args):
-		"""Multiple reads on obd device"""
+		"""Multiple reads once obd device"""
 		try:
 			while(1):
-				self.print_obd_reading()
+				self._obdDevice.get_obd_info('rpm', 0x01)
 				time.sleep(1)
 		except KeyboardInterrupt:
 			pass
 
 	def do_obd_send_test(self, args):
 		"""Sends obd device"""
-		self._obdDevice.get_obd_info('catalyst_temp_B1S1', 0x01)
+		self._obdDevice.get_obd_info('rpm', 0x01)
 
 	def do_multiple_all_readings(self, args):
 		"""Repeatedly read from all devices"""
@@ -107,7 +107,7 @@ class Shell(Cmd):
 		raise SystemExit
 
 	def print_obd_reading(self):
-		self._obdDevice.read_obd()
+		self._obdDevice.listen_obd()
 
 	def print_temperature_reading(self):
 		"""Print a new temperature reading"""
