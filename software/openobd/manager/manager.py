@@ -1,6 +1,7 @@
 """Automates reading from devices"""
 from thermo.ithermodevice import IThermoDevice
 from gps.igpsdevice import IGPSDevice
+from accelerometer.iacceldevice import IAccelDevice
 from measure.measure import Measure
 from location.location import Location
 import time
@@ -8,17 +9,22 @@ import os
 
 # only handles temperature for now
 class Manager():
-	def __init__(self, thermoDevice: IThermoDevice, gpsDevice: IGPSDevice):
+	def __init__(self, thermoDevice: IThermoDevice, gpsDevice: IGPSDevice,
+		accelDevice: IAccelDevice):
 		assert isinstance(thermoDevice, IThermoDevice)
 		self._thermoDevice = thermoDevice
 		self._thermoDevice.initialize()
 		assert isinstance(gpsDevice, IGPSDevice)
 		self._gpsDevice = gpsDevice
 		self._gpsDevice.initialize()
+		assert isinstance(accelDevice, IAccelDevice)
+		self._accelDevice = accelDevice
+		self._accelDevice.initialize()
 
 		# lists for calculating moving averages
 		self._temperatures = list()
 		self._locations = list()
+		self._accelerations = list()
 
 		self.SLEEP_TIME = 1
 		self.MAX_LIST_LENGTH = 3
@@ -27,7 +33,10 @@ class Manager():
 			try:
 				while(1):
 					self.collect_readings()
+					os.system('clear')
+					print("MEASURE      | VALUE | UNITS | TIME")
 					self.print_moving_average_temperature()
+					self.print_moving_average_acceleration()
 					self.print_moving_average_location()
 					time.sleep(self.SLEEP_TIME)
 			except KeyboardInterrupt:
@@ -35,18 +44,29 @@ class Manager():
 
 	def print_moving_average_temperature(self):
 		temperature = Measure.average_measure(self._temperatures)
-		temperature_string = "TEMPERATURE | Value: {} | Units: {} | Time: {}".format(
-			round(temperature.value,2), temperature.units, temperature.time)
+		temperature_string = "Temperature     {}  {}  {}".format(
+			round(temperature.value,2), temperature.units,
+			temperature.time.time())
 		print(temperature_string)
+
+	def print_moving_average_acceleration(self):
+		acceleration = Measure.average_measure(self._accelerations)
+		acceleration_string = "Acceleration    {}  {}  {}".format(
+			round(acceleration.value,2), acceleration.units,
+			acceleration.time.time())
+		print(acceleration_string)
 
 	def print_moving_average_location(self):
 		location = Location.average_location(self._locations)
-		latitude_string = "LATITUDE | Value: {} | Units: {} | Time: {}".format(
-			round(location.latitude.value, 4), location.latitude.units, location.latitude.time)
-		longitude_string = "LONGITUDE | Value: {} | Units: {} | Time: {}".format(
-			round(location.longitude.value,4), location.longitude.units, location.longitude.time)
-		altitude_string = "ALTITUDE | Value: {} | Units: {} | Time: {}".format(
-			round(location.altitude.value,2), location.altitude.units, location.altitude.time)
+		latitude_string = "Latitude        {}  {}  {}".format(
+			round(location.latitude.value, 4), location.latitude.units,
+			location.latitude.time.time())
+		longitude_string = "Longitude     {}  {}  {}".format(
+			round(location.longitude.value,4), location.longitude.units,
+			location.longitude.time.time())
+		altitude_string = "Altitude        {}  {}  {}".format(
+			round(location.altitude.value,2), location.altitude.units,
+			location.altitude.time.time())
 		print(latitude_string)
 		print(longitude_string)
 		print(altitude_string)
@@ -54,12 +74,18 @@ class Manager():
 	def collect_readings(self):
 		"""Collect all readings and update lists"""
 		self.read_temperature()
+		self.read_acceleration()
 		self.read_location()
 
 	def read_temperature(self):
 		self._temperatures.append(self._thermoDevice.read_temperature())
 		if (len(self._temperatures) > self.MAX_LIST_LENGTH):
 			self._temperatures.pop(0)
+
+	def read_acceleration(self):
+		self._accelerations.append(self._accelDevice.read_acceleration())
+		if (len(self._accelerations) > self.MAX_LIST_LENGTH):
+			self._accelerations.pop(0)
 
 	def read_location(self):
 		self._locations.append(self._gpsDevice.read_location())
