@@ -27,8 +27,8 @@ class MockFixedAccelDevice(IAccelDevice):
 		"""This mock accelerometer """
 		assert self._ready
 		time = datetime.datetime.now()
-		vector = Measure(self.MOCK_VALUE,self.MOCK_UNITS, time)
-		return vector
+		magnitude_measure = Measure(self.MOCK_VALUE,self.MOCK_UNITS, time)
+		return magnitude_measure
 
 	def calculate_magnitude(X, Y, Z):
 		"""Calculates the magnitude of the velocity"""
