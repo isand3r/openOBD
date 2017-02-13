@@ -137,13 +137,15 @@ class OBDDevice(IOBDDevice):
 			stream = self.bus.recv(timeout=2)
 			self.bus.set_filters(can_filters = [{"can_id": 0x7E8, "can_mask": 0x1FFFFFF8}])
 			request = PID_dict[message]
-			for msg in stream:
+			while(stream is not None):
 				print("Message recieved on {}".format(self.bus.channel_info))
-				print("The Message recieved is:{}".format(msg))
+				print("The Message recieved is:{}".format(stream))
 
 				"""matches response in the stream with the requesting pids"""
-				if((msg.data[1] - 0x40) == request[1] and msg.data[2] == request[2]):
+				if((stream.data[1] - 0x40) == request[1] and stream.data[2] == request[2]):
 					return stream
+				else:
+					stream = self.bus.recv(timeout=2)
 
 		except can.CanError:
 			print("Message could not be recieved")
