@@ -33,6 +33,8 @@ class Manager():
 			try:
 				while(1):
 					self.collect_readings()
+					os.system('clear')
+					print("MEASURE      | VALUE | UNITS | TIME")
 					self.print_moving_average_temperature()
 					self.print_moving_average_acceleration()
 					self.print_moving_average_location()
@@ -42,24 +44,29 @@ class Manager():
 
 	def print_moving_average_temperature(self):
 		temperature = Measure.average_measure(self._temperatures)
-		temperature_string = "TEMPERATURE | Value: {} | Units: {} | Time: {}".format(
-			round(temperature.value,2), temperature.units, temperature.time)
+		temperature_string = "Temperature     {}  {}  {}".format(
+			round(temperature.value,2), temperature.units,
+			temperature.time.time())
 		print(temperature_string)
 
 	def print_moving_average_acceleration(self):
 		acceleration = Measure.average_measure(self._accelerations)
-		acceleration_string = "ACCELERATION | Value: {} | Units: {} | Time: {}".format(
-			round(acceleration.value,2), acceleration.units, acceleration.time)
+		acceleration_string = "Acceleration    {}  {}  {}".format(
+			round(acceleration.value,2), acceleration.units,
+			acceleration.time.time())
 		print(acceleration_string)
 
 	def print_moving_average_location(self):
 		location = Location.average_location(self._locations)
-		latitude_string = "LATITUDE | Value: {} | Units: {} | Time: {}".format(
-			round(location.latitude.value, 4), location.latitude.units, location.latitude.time)
-		longitude_string = "LONGITUDE | Value: {} | Units: {} | Time: {}".format(
-			round(location.longitude.value,4), location.longitude.units, location.longitude.time)
-		altitude_string = "ALTITUDE | Value: {} | Units: {} | Time: {}".format(
-			round(location.altitude.value,2), location.altitude.units, location.altitude.time)
+		latitude_string = "Latitude        {}  {}  {}".format(
+			round(location.latitude.value, 4), location.latitude.units,
+			location.latitude.time.time())
+		longitude_string = "Longitude     {}  {}  {}".format(
+			round(location.longitude.value,4), location.longitude.units,
+			location.longitude.time.time())
+		altitude_string = "Altitude        {}  {}  {}".format(
+			round(location.altitude.value,2), location.altitude.units,
+			location.altitude.time.time())
 		print(latitude_string)
 		print(longitude_string)
 		print(altitude_string)
