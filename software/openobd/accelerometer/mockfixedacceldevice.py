@@ -4,7 +4,7 @@ import datetime
 import math
 
 class MockFixedAccelDevice(IAccelDevice):
-	"""Mock Thermometer that always gives readings with MOCK_VALUE and MOCK_UNITS"""
+	"""Mock Thermometer that always gives the same reading"""
 
 	def __init__(self):
 		self.MOCK_X = 2.2
@@ -14,10 +14,10 @@ class MockFixedAccelDevice(IAccelDevice):
 		self.MOCK_VALUE = None
 		self._ready = False
 
-
 	def initialize(self):
 		self._ready = True
-		self.MOCK_VALUE = self.calc_magn(self.MOCK_X, self.MOCK_Y, self.MOCK_Z)
+		self.MOCK_VALUE = calculate_magnitude(self.MOCK_X, self.MOCK_Y,
+			self.MOCK_Z)
 
 	@property
 	def ready(self) -> bool:
@@ -30,8 +30,7 @@ class MockFixedAccelDevice(IAccelDevice):
 		vector = Measure(self.MOCK_VALUE,self.MOCK_UNITS, time)
 		return vector
 
-	def calc_magn(self, X, Y, Z):
-		"""calculates the magnitude of the velocity"""
-		assert self._ready
+	def calculate_magnitude(X, Y, Z):
+		"""Calculates the magnitude of the velocity"""
 		accel_array = math.sqrt(X**2 + Y**2 + Z**2)
 		return accel_array

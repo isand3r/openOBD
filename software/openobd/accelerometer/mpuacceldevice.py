@@ -6,7 +6,7 @@ import datetime
 from mpu6050 import mpu6050
 
 class MPUAccelDevice(IAccelDevice):
-    """Thermometer using MPU6050"""
+    """Accelerometer using MPU6050"""
     def __init__(self):
         self.accel  = 0
         self.gyro = 0
@@ -30,12 +30,11 @@ class MPUAccelDevice(IAccelDevice):
         x = self.accel['x']
         y = self.accel['y']
         z = self.accel['z']
-        self.accel_mag = self.calc_magn(x, y, z)
-        vector = Measure(self.accel_mag,self.units, time)
-        return vector
+        self.accel_magnitude = calculate_magnitude(x, y, z)
+        magnitude_measure = Measure(self.accel_mag,self.units, time)
+        return magnitude_measure
 
-    def calc_magn(self, X, Y, Z):
-        """calculates the magnitude of the accel"""
-        assert self._ready
+    def calculate_magnitude(X, Y, Z):
+        """Calculates the magnitude of the accel"""
         accel_array = math.sqrt(X**2 + Y**2 + Z**2)
         return accel_array
