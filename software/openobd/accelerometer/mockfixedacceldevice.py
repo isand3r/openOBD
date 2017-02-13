@@ -10,7 +10,7 @@ class MockFixedAccelDevice(IAccelDevice):
 		self.MOCK_X = 2.2
 		self.MOCK_Y = -3.1
 		self.MOCK_Z = -0.2
-		self.MOCK_UNITS = "m/s"
+		self.MOCK_UNITS = "m/s^2"
 		self.MOCK_VALUE = None
 		self._ready = False
 
