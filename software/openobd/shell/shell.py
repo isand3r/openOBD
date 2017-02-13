@@ -30,7 +30,7 @@ class Shell(Cmd):
 		assert isinstance(obdDevice, IOBDDevice)
 		self._obdDevice = obdDevice
 		self._obdDevice.initialize()
-		self._manager = Manager(thermoDevice, gpsDevice)
+		self._manager = Manager(thermoDevice, gpsDevice, accelDevice)
 
 	def do_manager_print_moving_averages(self, args):
 		self._manager.print_moving_averages()
