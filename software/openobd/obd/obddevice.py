@@ -15,7 +15,7 @@ class OBDDevice(IOBDDevice):
 
 	def initialize(self):
 		os.system('sudo ip link set can0 type can bitrate 500000 triple-sampling on')
-		os.system('	')
+		os.system('sudo ifconfig can0 up')
 		can.rc['interface'] = 'socketcan_native'
 		self.bus = can.interface.Bus('can0')
 		self._ready = True
@@ -118,6 +118,7 @@ class OBDDevice(IOBDDevice):
 		try:
 			self.bus.set_filters(can_filters = [{"can_id": 0x7E8, "can_mask": 0x1FFFFFF8}])
 			stream = self.bus.recv(timeout=2)
+			self.bus.set_filters(can_filters = [{"can_id": 0x7E8, "can_mask": 0x1FFFFFF8}])
 			while(stream is not None):
 				print("Message recieved on {}".format(self.bus.channel_info))
 				print("The Message recieved is:{}".format(stream))
@@ -134,6 +135,7 @@ class OBDDevice(IOBDDevice):
 		try:
 			self.bus.set_filters(can_filters = [{"can_id": 0x7E8, "can_mask": 0x1FFFFFF8}])
 			stream = self.bus.recv(timeout=2)
+			self.bus.set_filters(can_filters = [{"can_id": 0x7E8, "can_mask": 0x1FFFFFF8}])
 			request = PID_dict[message]
 			while(stream is not None):
 				print("Message recieved on {}".format(self.bus.channel_info))
