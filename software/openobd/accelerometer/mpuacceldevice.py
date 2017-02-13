@@ -30,11 +30,11 @@ class MPUAccelDevice(IAccelDevice):
         x = self.accel['x']
         y = self.accel['y']
         z = self.accel['z']
-        self.accel_magnitude = calculate_magnitude(x, y, z)
+        self.accel_magnitude = self.calculate_magnitude(x, y, z)
         magnitude_measure = Measure(self.accel_mag,self.units, time)
         return magnitude_measure
 
-    def calculate_magnitude(X, Y, Z):
-        """Calculates the magnitude of the accel"""
+    def calculate_magnitude(self, X, Y, Z):
+        """Calculates the magnitude of a vector with 3 dimensions"""
         accel_array = math.sqrt(X**2 + Y**2 + Z**2)
         return accel_array

@@ -16,7 +16,7 @@ class MockFixedAccelDevice(IAccelDevice):
 
 	def initialize(self):
 		self._ready = True
-		self.MOCK_VALUE = calculate_magnitude(self.MOCK_X, self.MOCK_Y,
+		self.MOCK_VALUE = self.calculate_magnitude(self.MOCK_X, self.MOCK_Y,
 			self.MOCK_Z)
 
 	@property
@@ -30,7 +30,7 @@ class MockFixedAccelDevice(IAccelDevice):
 		magnitude_measure = Measure(self.MOCK_VALUE,self.MOCK_UNITS, time)
 		return magnitude_measure
 
-	def calculate_magnitude(X, Y, Z):
-		"""Calculates the magnitude of the velocity"""
+	def calculate_magnitude(self, X, Y, Z):
+		"""Calculates the magnitude of a vector with 3 dimensions"""
 		accel_array = math.sqrt(X**2 + Y**2 + Z**2)
 		return accel_array
