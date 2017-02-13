@@ -145,7 +145,8 @@ class OBDDevice(IOBDDevice):
 				
 				if(len(stream.data)>2 and (stream.data[1] - 0x40) == request[1] and stream.data[2] == request[2]):
 					print ("the response" + str(stream))
-					return stream
+					result =  self.parse_obd_info(message, stream.data )
+					return result
 				
 				stream = self.bus.recv(timeout=2)
 
@@ -487,10 +488,7 @@ class OBDDevice(IOBDDevice):
 		"""function handles sends and recieved messages and returns readable information"""
 		time = datetime.datetime.now()
 		self.send_obd(message, mode)
-		hex_value = self.read_obd(message, mode)
-		while (hex_value is not None)	:
-			hex_value = self.read_obd(message, mode)
-		result =  self.parse_obd_info(message, hex_value.data )
+		result = self.read_obd(message, mode)
 
 		print ("message Received:" + str(result.value) + str(result.units))	
 
