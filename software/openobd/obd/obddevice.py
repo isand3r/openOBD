@@ -151,7 +151,7 @@ class OBDDevice(IOBDDevice):
 
 		PID_dict = self.init_pids(mode)
 
-		msg = can.Message(arbitration_id=0x7DE,
+		msg = can.Message(arbitration_id=0x7DF,
 			data=PID_dict[message],
 			extended_id=False)
 		try:
