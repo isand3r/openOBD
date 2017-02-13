@@ -1,6 +1,7 @@
 """Automates reading from devices"""
 from thermo.ithermodevice import IThermoDevice
 from gps.igpsdevice import IGPSDevice
+from accelerometer.iacceldevice import IAccelDevice
 from measure.measure import Measure
 from location.location import Location
 import time
