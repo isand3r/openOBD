@@ -146,8 +146,8 @@ class OBDDevice(IOBDDevice):
 				if(len(stream.data)>2 and (stream.data[1] - 0x40) == request[1] and stream.data[2] == request[2]):
 					print ("the response" + str(stream))
 					return stream
-				else:
-					stream = self.bus.recv(timeout=2)
+				
+				stream = self.bus.recv(timeout=2)
 
 		except can.CanError:
 			print("Message could not be recieved")
