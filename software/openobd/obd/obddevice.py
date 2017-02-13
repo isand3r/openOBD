@@ -488,7 +488,7 @@ class OBDDevice(IOBDDevice):
 		time = datetime.datetime.now()
 		self.send_obd(message, mode)
 		hex_value = self.read_obd(message, mode)
-		while (hex_value is not None):
+		while (hex_value is not None)	:
 			hex_value = self.read_obd(message, mode)
 		result =  self.parse_obd_info(message, hex_value.data )
 
