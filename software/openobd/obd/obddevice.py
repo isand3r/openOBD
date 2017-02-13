@@ -144,7 +144,7 @@ class OBDDevice(IOBDDevice):
 				"""matches response in the stream with the requesting pids"""
 				if(len(stream.data)>2):
 					if((stream.data[1] - 0x40) == request[1] and stream.data[2] == request[2]):
-						print stream
+						print (stream)
 						return stream
 
 				stream = self.bus.recv(timeout=2)
