@@ -23,7 +23,7 @@ class MockFixedAccelDevice(IAccelDevice):
 	def ready(self) -> bool:
 		return self._ready
 
-	def read_accelerometer(self) -> Measure:
+	def read_acceleration(self) -> Measure:
 		"""This mock accelerometer """
 		assert self._ready
 		time = datetime.datetime.now()

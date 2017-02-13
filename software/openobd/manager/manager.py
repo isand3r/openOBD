@@ -8,17 +8,22 @@ import os
 
 # only handles temperature for now
 class Manager():
-	def __init__(self, thermoDevice: IThermoDevice, gpsDevice: IGPSDevice):
+	def __init__(self, thermoDevice: IThermoDevice, gpsDevice: IGPSDevice,
+		accelDevice: IAccelDevice):
 		assert isinstance(thermoDevice, IThermoDevice)
 		self._thermoDevice = thermoDevice
 		self._thermoDevice.initialize()
 		assert isinstance(gpsDevice, IGPSDevice)
 		self._gpsDevice = gpsDevice
 		self._gpsDevice.initialize()
+		assert isinstance(accelDevice, IAccelDevice)
+		self._accelDevice = accelDevice
+		self._accelDevice.initialize()
 
 		# lists for calculating moving averages
 		self._temperatures = list()
 		self._locations = list()
+		self._accelerations = list()
 
 		self.SLEEP_TIME = 1
 		self.MAX_LIST_LENGTH = 3
@@ -28,6 +33,7 @@ class Manager():
 				while(1):
 					self.collect_readings()
 					self.print_moving_average_temperature()
+					self.print_moving_average_acceleration()
 					self.print_moving_average_location()
 					time.sleep(self.SLEEP_TIME)
 			except KeyboardInterrupt:
@@ -38,6 +44,12 @@ class Manager():
 		temperature_string = "TEMPERATURE | Value: {} | Units: {} | Time: {}".format(
 			round(temperature.value,2), temperature.units, temperature.time)
 		print(temperature_string)
+
+	def print_moving_average_acceleration(self):
+		acceleration = Measure.average_measure(self._accelerations)
+		acceleration_string = "ACCELERATION | Value: {} | Units: {} | Time: {}".format(
+			round(acceleration.value,2), acceleration.units, acceleration.time)
+		print(acceleration_string)
 
 	def print_moving_average_location(self):
 		location = Location.average_location(self._locations)
@@ -54,12 +66,18 @@ class Manager():
 	def collect_readings(self):
 		"""Collect all readings and update lists"""
 		self.read_temperature()
+		self.read_acceleration()
 		self.read_location()
 
 	def read_temperature(self):
 		self._temperatures.append(self._thermoDevice.read_temperature())
 		if (len(self._temperatures) > self.MAX_LIST_LENGTH):
 			self._temperatures.pop(0)
+
+	def read_acceleration(self):
+		self._accelerations.append(self._accelDevice.read_acceleration())
+		if (len(self._accelerations) > self.MAX_LIST_LENGTH):
+			self._accelerations.pop(0)
 
 	def read_location(self):
 		self._locations.append(self._gpsDevice.read_location())

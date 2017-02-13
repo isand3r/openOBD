@@ -23,7 +23,7 @@ class MPUAccelDevice(IAccelDevice):
     def ready(self) -> bool:
         return self._ready
 
-    def read_accelerometer(self) -> Measure:
+    def read_acceleration(self) -> Measure:
         assert self._ready
         time = datetime.datetime.now()
         self.accel = mpu6050.get_accel_data(self.init)
