@@ -44,13 +44,19 @@ class Shell(Cmd):
 		self._obdDevice.listen_obd()
 
 	def do_multiple_obd_read(self, args):
-		"""Multiple reads once obd device"""
-		try:
-			while(1):
-				self._obdDevice.get_obd_info('speed', 0x01)
-				time.sleep(1)
-		except KeyboardInterrupt:
-			pass
+		"""Multiple reads once obd device, Usage: <pid request> <mode of pid>"""
+		arguements = args.split()
+		length = len(arguements)
+		if( length < 2):
+			print("Usage: list:<pid request> <mode of pid>")
+		else:
+			try:	
+				while(1):
+					for each in range(length-1):
+						self._obdDevice.get_obd_info(arguements[each], arguements[length-1])
+					time.sleep(1)
+			except KeyboardInterrupt:
+				pass
 
 	def do_obd_send_test(self, args):
 		"""Sends obd device"""
