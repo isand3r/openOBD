@@ -186,35 +186,51 @@ class OBDDevice(IOBDDevice):
 
 		elif(message == 'engine_load'):
 			"""returns %, A*100/255"""
-			return (int(response[3] )*100)/255
+			time = datetime.datetime.now()
+			result = Measure((int(response[3] )*100)/255, "%", time)
+			return result
 
 		elif(message == 'coolant_temp'):
 			"""returns Celcius, A-40"""
-			return int(response[3] )-40
+			time = datetime.datetime.now()
+			result = Measure(int(response[3] )-40, "Celcius", time)
+			return result
 
 		elif(message == 'sterm_fuel1'):
 			"""returns %, (A-128) * 100/128"""
-			return (int(response[3] )-128) * (100/128)
+			time = datetime.datetime.now()
+			result = Measure((int(response[3] )-128) * (100/128), "%", time)
+			return result
 
 		elif(message == 'lterm_fuel1'):
 			"""returns %, (A-128) * 100/128"""
-			return (int(response[3] )-128) * (100/128)
+			time = datetime.datetime.now()
+			result = Measure((int(response[3] )-128) * (100/128), "%", time)
+			return result
 
 		elif(message == 'sterm_fuel2'):
 			"""returns %, (A-128) * 100/128"""
-			return (int(response[3] )-128) * (100/128)
+			time = datetime.datetime.now()
+			result = Measure((int(response[3] )-128) * (100/128), "%", time)
+			return result
 		
 		elif(message == 'lterm_fuel2'):
 			"""returns %, (A-128) * 100/128"""
-			return (int(response[3] )-128) * (100/128)
-		
+			time = datetime.datetime.now()
+			result = Measure((int(response[3] )-128) * (100/128), "%", time)
+			return result
+
 		elif(message == 'fuel_pressure'):
 			"""returns kPa, A"""
-			return int(response[3] )
+			time = datetime.datetime.now()
+			result = Measure(int(response[3] ), "kPa", time)
+			return result
 		
 		elif(message == 'intake_manifold_pressure'):
 			"""returns kPa, A*3"""
-			return int(response[3] )*3
+			time = datetime.datetime.now()
+			result = Measure(int(response[3] )*3, "kPa", time)
+			return result
 		
 		elif(message == 'rpm'):
 			"""returns rpm, ((A*256)+B)/4"""
@@ -230,19 +246,27 @@ class OBDDevice(IOBDDevice):
 		
 		elif(message == 'timing_advance'):
 			"""returns degress relative to cylinder 1, A/2 - 64"""
-			return int(response[3] )/2 - 64
+			time = datetime.datetime.now()
+			result = Measure(int(response[3] )/2 - 64, "degree", time )
+			return result
 		
 		elif(message == 'intake_air_temp'):
 			"""returns Celcius, A-40"""
-			return int(response[3] )-40
+			time = datetime.datetime.now()
+			result = Measure(int(response[3] )-40, "Celcius", time )
+			return result
 		
 		elif(message == 'MAF_flow'):
 			"""returns g/s, ((256*A)+B) / 100"""
-			return ((256*int(response[3] )) + int(response[4] ))/100
+			time = datetime.datetime.now()
+			result = Measure(((256*int(response[3] )) + int(response[4] ))/100, "g/s", time )
+			return result
 
 		elif(message == 'throttle_position'):
 			"""returns %, A*100/255"""
-			return int(response[3] )*100/255
+			time = datetime.datetime.now()
+			result = Measure(int(response[3] )*100/255, "%", time )
+			return result
 
 		elif(message == 'secondary_air_status'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
@@ -293,12 +317,16 @@ class OBDDevice(IOBDDevice):
 			return int(response[3] )
 
 		elif(message == 'aux_input_status'):
-			"""returns kPa, A&4"""
-			return int(response[3] )&4
+			"""returns T/F, A&4"""
+			time = datetime.datetime.now()
+			result = Measure(int(response[3] )&4, "T/F", time )
+			return result
 
 		elif(message == 'engine_run_time'):
 			"""returns seconds, (A*256)+B"""
-			return (int(response[3] )*256) + int(response[4] )
+			time = datetime.datetime.now()
+			result = Measure((int(response[3] )*256) + int(response[4] ), "seconds", time )
+			return result	
 
 		elif(message == 'pids_suport_21_40'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
@@ -306,15 +334,21 @@ class OBDDevice(IOBDDevice):
 
 		elif(message == 'distance_traveled_MIL'):
 			"""returns seconds, (A*256)+B"""
-			return (int(response[3] )*256) + int(response[4] )
+			time = datetime.datetime.now()
+			result = Measure((int(response[3] )*256) + int(response[4] ), "seconds", time )
+			return result	
 
 		elif(message == 'fuel_rail_pressure'):
 			"""returns kPA, ((A*256)+B)*0.079"""
-			return ((int(response[3] )*256) + int(response[4] ))*0.079
+			time = datetime.datetime.now()
+			result = Measure(((int(response[3] )*256) + int(response[4] ))*0.079, "kPa", time )
+			return result
 
 		elif(message == 'fuel_rail_pressure_diesel'):
 			"""returns kPa, ((A*256)+B)*10"""
-			return ((int(response[3] )*256) + int(response[4] ))*10
+			time = datetime.datetime.now()
+			result = Measure(((int(response[3] )*256) + int(response[4] ))*10, "kPa", time )
+			return result
 
 		elif(message == 'VO2S1_WR_lambda'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
@@ -349,30 +383,45 @@ class OBDDevice(IOBDDevice):
 
 		elif(message == 'ERG'):
 			"""returns %, 100*A/255"""
-			return 100 * int(response[3] ) / 255
+			time = datetime.datetime.now()
+			result = Measure(100 * int(response[3] ) / 255, "%", time )
+			return result
 
 		elif(message == 'ERG_error'):
 			"""returns %, A*0.78125 - 100"""
-			return int(response[3] ) * 0.78125 - 100
+			time = datetime.datetime.now()
+			result = Measure(int(response[3] ) * 0.78125 - 100, "%", time )
+			return result
 
 		elif(message == 'evaporative_purge'):
 			"""returns %, 100*A/255"""
-			return 100* int(response[3] ) / 255
+			time = datetime.datetime.now()
+			result = Measure(100* int(response[3] ) / 255, "%", time )
+			return result
 
 		elif(message == 'fuel_level'):
 			"""returns %, 100*A/255"""
-			return 100* int(response[3] ) / 255
+			time = datetime.datetime.now()
+			result = Measure(100* int(response[3] ) / 255, "%", time )
+			return result
 
 		elif(message == 'warm_up_attemps_since_clear'):
 			"""returns N/A, A"""
-			return int(response[3] )
+			time = datetime.datetime.now()
+			result = Measure(int(response[3] ), "N/A", time )
+			return result
 
 		elif(message == 'distance_traveled_since_clear'):
 			"""returns km, (A*256)+B"""
-			return (int(response[3] ) * 256) + int(response[4] )
+			time = datetime.datetime.now()
+			result = Measure((int(response[3] ) * 256) + int(response[4] ), "km", time )
+			return result
+
 		elif(message == 'evap_vapour_pressure'):
 			"""returns kPa, (A*256)+B)/4 - 8,192"""
-			return ((int(response[3] ) * 256) + int(response[3],16))/4 - 8192
+			time = datetime.datetime.now()
+			result = Measure(((int(response[3] ) * 256) + int(response[3],16))/4 - 8192, "kPa", time )
+			return result
 
 		elif(message == 'baromatic_pressure'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
@@ -406,19 +455,28 @@ class OBDDevice(IOBDDevice):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
 			return int(response[3] )
 		elif(message == 'catalyst_temp_B1S1'):
-			"""returns Celsius, ((A*256)+B)/10 - 40"""
-			return ((int(response[3])*256)+ int(response[4]))/10 - 40
+			"""returns Celcius, ((A*256)+B)/10 - 40"""
+			time = datetime.datetime.now()
+			result = Measure(((int(response[3])*256)+ int(response[4]))/10 - 40, "Celcius", time )
+			return result
+
 		elif(message == 'catalyst_temp_B2S1'):
 			"""returns Celsius, ((A*256)+B)/10 - 40"""
-			return ((int(response[3])*256)+ int(response[4]))/10 - 40
+			time = datetime.datetime.now()
+			result = Measure(((int(response[3])*256)+ int(response[4]))/10 - 40, "Celcius", time )
+			return result
 
 		elif(message == 'catalyst_temp_B1S2'):
 			"""returns Celsius, ((A*256)+B)/10 - 40"""
-			return ((int(response[3])*256)+ int(response[4]))/10 - 40
+			time = datetime.datetime.now()
+			result = Measure(((int(response[3])*256)+ int(response[4]))/10 - 40, "Celcius", time )
+			return result
 
 		elif(message == 'catalyst_temp_B2S2'):
 			"""returns Celsius, ((A*256)+B)/10 - 40"""
-			return ((int(response[3])*256)+ int(response[4]))/10 - 40
+			time = datetime.datetime.now()
+			result = Measure(((int(response[3])*256)+ int(response[4]))/10 - 40, "Celcius", time )
+			return result
 
 		elif(message == 'pids_support_41_60'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
@@ -428,51 +486,91 @@ class OBDDevice(IOBDDevice):
 			return int(response[3] )
 		elif(message == 'control_module_voltage'):
 			"""returns Voltage, ((A*256)+B)/1000"""
-			return ((int(response[3] )*256)+ int(response[4] ))/1000
+			time = datetime.datetime.now()
+			result = Measure(((int(response[3] )*256)+ int(response[4] ))/1000, "Voltage", time )
+			return result
 
 		elif(message == 'absolute_load'):
 			"""returns %, ((A*256)+B)*100/255"""
-			return ((int(response[3] )*256)+ int(response[4] )) * 100/255
+			time = datetime.datetime.now()
+			result = Measure(((int(response[3] )*256)+ int(response[4] )) * 100/255, "%", time )
+			return result
 
 		elif(message == 'command_equivalence_ratio'):
 			"""returns N/A, ((A*256)+B)*0.0000305"""
-			return ((int(response[3] )*256)+ int(response[4] )) * 0.0000305
+			time = datetime.datetime.now()
+			result = Measure((((int(response[3] )*256)+ int(response[4] )) * 0.0000305) * 100/255, "N/A", time )
+			return result
+
 		elif(message == 'relative_throttle_position'):
 			"""returns %, A*100/255"""
-			return int(response[3] ) * 100/255
+			time = datetime.datetime.now()
+			result = Measure(int(response[3] ) * 100/255, "%", time )
+			return result
+
 		elif(message == 'ambient_air_temp'):
-			"""returns Celsius, A-40"""
-			return int(response[3] ) - 40
+			"""returns Celcius, A-40"""
+			time = datetime.datetime.now()
+			result = Measure(int(response[3] ) - 40, "Celcius", time )
+			return result
+
 		elif(message == 'absolute_throttle_position_B'):
 			"""returns %, A*100/255"""
-			return int(response[3] )*100/255
+			time = datetime.datetime.now()
+			result = Measure(int(response[3] ) * 100/255, "%", time )
+			return result
+
 		elif(message == 'absolute_throttle_position_C'):
 			"""returns %, A*100/255"""
-			return int(response[3] )*100/255
+			time = datetime.datetime.now()
+			result = Measure(int(response[3] ) * 100/255, "%", time )
+			return result
+
 		elif(message == 'absolute_throttle_position_D'):
 			"""returns %, A*100/255"""
-			return int(response[3] )*100/255
+			time = datetime.datetime.now()
+			result = Measure(int(response[3] ) * 100/255, "%", time )
+			return result
+
 		elif(message == 'absolute_throttle_position_E'):
 			"""returns %, A*100/255"""
-			return int(response[3] )*100/255
+			time = datetime.datetime.now()
+			result = Measure(int(response[3] ) * 100/255, "%", time )
+			return result
+
 		elif(message == 'absolute_throttle_position_F'):
 			"""returns %, A*100/255"""
-			return int(response[3] )*100/255
+			time = datetime.datetime.now()
+			result = Measure(int(response[3] ) * 100/255, "%", time )
+			return result
+
 		elif(message == 'command_throttle_actuator'):
 			"""returns %, A*100/255"""
-			return int(response[3] )*100/255
+			time = datetime.datetime.now()
+			result = Measure(int(response[3] ) * 100/255, "%", time )
+			return result
+
 		elif(message == 'time_run_with_MIL'):
 			"""returns minutes, (A*256)+B"""
-			return ((int(response[3] )*256)+ int(response[4] ))
+			time = datetime.datetime.now()
+			result = Measure(((int(response[3] )*256)+ int(response[4] )),"Minutes", time )
+			return result
+
 		elif(message == 'time_since_MIL_clear'):
 			"""returns minutes, (A*256)+B"""
-			return ((int(response[3] )*256)+ int(response[4] ))
+			time = datetime.datetime.now()
+			result = Measure(((int(response[3] )*256)+ int(response[4] )),"Minutes", time )
+			return result
+
 		elif(message == 'fuel_type'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
 			return int(response[3] )
 		elif(message == 'ethanol_fuel_percent'):
 			"""returns %, A*100/255"""
-			return int(response[3] )*100/255
+			time = datetime.datetime.now()
+			result = Measure(int(response[3] ) * 100/255, "%", time )
+			return result
+			
 		elif(message == 'VIN'):
 			"""TODO: http://www.geekmyride.org/wiki/index.php/OBD-II_PIDs#Bitwise_encoded_PIDs"""
 			A = response[3]
