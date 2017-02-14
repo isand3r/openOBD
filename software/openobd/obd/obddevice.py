@@ -137,14 +137,14 @@ class OBDDevice(IOBDDevice):
 			self.bus.set_filters(can_filters = [{"can_id": 0x7E8, "can_mask": 0x1FFFFFF8}])
 			request = PID_dict[message]
 			while(stream is not None):
-				print("Message recieved on {}".format(self.bus.channel_info))
-				print("The Message recieved is:{}".format(stream))
+				#print("Message recieved on {}".format(self.bus.channel_info))
+				#print("The Message recieved is:{}".format(stream))
 
 				"""matches response in the stream with the requesting pids"""
 				
 				if(len(stream.data)>2 and (stream.data[1] - 0x40) == request[1] and stream.data[2] == request[2]):
 					if stream is not None:
-						print ("the response" + str(stream))
+						#print ("the response" + str(stream))
 						result =  self.parse_obd_info(message, stream.data )
 						return result
 				
@@ -163,8 +163,8 @@ class OBDDevice(IOBDDevice):
 			data=PID_dict[message])
 		try:
 			self.bus.send(msg)
-			print("The Message sent is:{}".format(msg))
-			print("Message sent on {}".format(self.bus.channel_info))
+			#print("The Message sent is:{}".format(msg))
+			#print("Message sent on {}".format(self.bus.channel_info))
 		except can.CanError:
 			print("Message NOT sent")
 
@@ -492,8 +492,8 @@ class OBDDevice(IOBDDevice):
 		result = self.read_obd(message, mode)
 		if result is None:
 			print("Error, no response, trying again.")
-		else:
-			print ("message Received:" + str(result.value) + str(result.units))	
+		#else:
+			#print ("message Received:" + str(result.value) + str(result.units))	
 
 	def close_bus(self):
 		self.bus.shutdown()
