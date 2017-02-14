@@ -1,5 +1,4 @@
 """Command line interface for openOBD"""
-from api.api import Api
 from gps.igpsdevice import IGPSDevice
 from thermo.ithermodevice import IThermoDevice
 from obd.iobddevice import IOBDDevice
@@ -10,7 +9,7 @@ import time
 import os
 
 class Shell(Cmd):
-	def __init__(self, gpsDevice: IGPSDevice, thermoDevice: IThermoDevice, accelDevice: IAccelDevice, api: Api, obdDevice: IOBDDevice):
+	def __init__(self, gpsDevice: IGPSDevice, thermoDevice: IThermoDevice, accelDevice: IAccelDevice, obdDevice: IOBDDevice):
 		self.intro = 'openOBD shell. Type help to list commands.\n'
 		self.prompt = '> '
 		self.file = None
@@ -24,9 +23,6 @@ class Shell(Cmd):
 		assert isinstance(accelDevice, IAccelDevice)
 		self._accelDevice = accelDevice
 		self._accelDevice.initialize()
-		assert isinstance(api, Api)
-		self._api = api
-		self._api.get_auth()
 		assert isinstance(obdDevice, IOBDDevice)
 		self._obdDevice = obdDevice
 		self._obdDevice.initialize()
@@ -34,10 +30,6 @@ class Shell(Cmd):
 
 	def do_manager_print_moving_averages(self, args):
 		self._manager.print_moving_averages()
-
-	def do_api_call_test(self, args):
-		"""Calls Moj.io API and returns current user"""
-		self._api.get_me()
 
 	def do_single_obd_read(self, args):
 		"""Single read on obd device"""
