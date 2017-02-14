@@ -492,8 +492,9 @@ class OBDDevice(IOBDDevice):
 		result = self.read_obd(message, mode)
 		if result is None:
 			print("Error, no response, trying again.")
-		#else:
+		else:
 			#print ("message Received:" + str(result.value) + str(result.units))	
+			return result
 
 	def close_bus(self):
 		self.bus.shutdown()
