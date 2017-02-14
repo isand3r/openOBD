@@ -9,6 +9,10 @@ class IConfiguration(abc.ABC):
 		pass
 
 	@abc.abstractproperty
+	def obd(self) -> str:
+		pass
+
+	@abc.abstractproperty
 	def gps(self) -> str:
 		pass
 
