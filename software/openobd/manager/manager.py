@@ -10,7 +10,7 @@ import os
 # only handles temperature for now
 class Manager():
 	def __init__(self, thermoDevice: IThermoDevice, gpsDevice: IGPSDevice,
-		accelDevice: IAccelDevice):
+		accelDevice: IAccelDevice, obdDevice: IOBDDevice):
 		assert isinstance(thermoDevice, IThermoDevice)
 		self._thermoDevice = thermoDevice
 		self._thermoDevice.initialize()
@@ -20,11 +20,15 @@ class Manager():
 		assert isinstance(accelDevice, IAccelDevice)
 		self._accelDevice = accelDevice
 		self._accelDevice.initialize()
+		assert isinstance(obdDevice, IOBDDevice)
+		self._obdDevice = obdDevice
+		self._obdDevice.initialize()
 
 		# lists for calculating moving averages
 		self._temperatures = list()
 		self._locations = list()
 		self._accelerations = list()
+		self._rpms = list()
 
 		self.SLEEP_TIME = 1
 		self.MAX_LIST_LENGTH = 3
@@ -38,6 +42,8 @@ class Manager():
 					self.print_moving_average_temperature()
 					self.print_moving_average_acceleration()
 					self.print_moving_average_location()
+					self.print_moving_average_rpm()
+					self.print_moving_average_speeed()
 					time.sleep(self.SLEEP_TIME)
 			except KeyboardInterrupt:
 				pass
@@ -71,11 +77,27 @@ class Manager():
 		print(longitude_string)
 		print(altitude_string)
 
+	def print_moving_average_rpm(self):
+		rpm = Measure.average_measure(self._rpms)
+		rpm_string = "RPM     {}  {}  {}".format(
+			round(rpm.value,2), rpm.units,
+			rpm.time.time())
+		print(rpm_string)
+
+	def print_moving_average_speed(self):
+		speed = Measure.average_measure(self._speeds)
+		speed_string = "Speed     {}  {}  {}".format(
+			round(speed.value,2), speed.units,
+			speed.time.time())
+		print(speed_string)
+
 	def collect_readings(self):
 		"""Collect all readings and update lists"""
 		self.read_temperature()
 		self.read_acceleration()
 		self.read_location()
+		self.read_rpm()
+		self.read_speed()
 
 	def read_temperature(self):
 		self._temperatures.append(self._thermoDevice.read_temperature())
@@ -91,3 +113,13 @@ class Manager():
 		self._locations.append(self._gpsDevice.read_location())
 		if (len(self._locations) > self.MAX_LIST_LENGTH):
 			self._locations.pop(0)
+
+	def read_rpm(self):
+		self._rpms.append(self._obdDevice.get_obd_info('rpm', 0x01))
+		if (len(self._rpms) > self.MAX_LIST_LENGTH):
+			self._rpms.pop(0)
+
+	def read_speed(self):
+		self._speeds.append(self._obdDevice.get_obd_info('speed', 0x01))
+		if (len(self._speeds) > self.MAX_LIST_LENGTH):
+			self._speeds.pop(0)
