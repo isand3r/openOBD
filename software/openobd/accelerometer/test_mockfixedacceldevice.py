@@ -13,7 +13,7 @@ def test_ready_after_initialize():
 def test_read_accelerometer():
 	device = MockFixedAccelDevice()
 	device.initialize()
-	velocity = device.read_accelerometer()
+	velocity = device.read_acceleration()
 	assert velocity.value == device.MOCK_VALUE
 	assert velocity.units == device.MOCK_UNITS
 	assert isinstance(velocity.time, datetime.datetime)
