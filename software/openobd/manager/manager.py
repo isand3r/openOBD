@@ -2,6 +2,7 @@
 from thermo.ithermodevice import IThermoDevice
 from gps.igpsdevice import IGPSDevice
 from accelerometer.iacceldevice import IAccelDevice
+from obd.iobddevice import IOBDDevice
 from measure.measure import Measure
 from location.location import Location
 import time
@@ -29,6 +30,7 @@ class Manager():
 		self._locations = list()
 		self._accelerations = list()
 		self._rpms = list()
+		self._speeds = list()
 
 		self.SLEEP_TIME = 1
 		self.MAX_LIST_LENGTH = 3

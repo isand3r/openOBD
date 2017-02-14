@@ -6,7 +6,7 @@ sys.path.append('../')
 from config.iconfiguration import IConfiguration
 from config.configuration import Configuration
 
-from api.api import Api
+#from api.api import Api
 
 from obd.iobddevice import IOBDDevice
 from obd.obddevice import OBDDevice
@@ -37,7 +37,7 @@ class App():
 		self._obdDevice = None
 		self._shell = None
 		self.read_configuration_file()
-		self.configure_api()
+#		self.configure_api()
 		self.configure_obd()
 		self.configure_gps()
 		self.configure_thermo()
@@ -48,8 +48,8 @@ class App():
 		self._config = Configuration()
 		self._config.read(self.CONFIG_FILENAME)
 
-	def configure_api(self):
-		self._api = Api()
+#	def configure_api(self):
+#		self._api = Api()
 
 	def configure_obd(self):
 		if self._config.obd == "obd":
@@ -85,7 +85,7 @@ class App():
 
 	def configure_shell(self):
 		self._shell = Shell(self._gpsDevice, self._thermoDevice,
-			self._accelDevice, self._api, self._obdDevice)
+			self._accelDevice, self._obdDevice)
 
 	def run(self):
 		self._shell.cmdloop()
