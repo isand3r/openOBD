@@ -14,7 +14,7 @@ class OBDDevice(IOBDDevice):
 		self.canlistener = None
 
 	def initialize(self):
-		os.system('sudo ip link set can0 type can bitrate 500000 triple-sampling on')
+		os.system('sudo ip link set can0 type can bitrate 125000 triple-sampling on')
 		os.system('sudo ifconfig can0 up')
 		can.rc['interface'] = 'socketcan_native'
 		self.bus = can.interface.Bus('can0')

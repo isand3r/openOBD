@@ -45,7 +45,7 @@ class Manager():
 					self.print_moving_average_acceleration()
 					self.print_moving_average_location()
 					self.print_moving_average_rpm()
-					self.print_moving_average_speeed()
+					self.print_moving_average_speed()
 					time.sleep(self.SLEEP_TIME)
 			except KeyboardInterrupt:
 				pass

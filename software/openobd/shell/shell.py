@@ -45,14 +45,25 @@ class Shell(Cmd):
 			try:	
 				while(1):
 					for each in range(length-1):
-						self._obdDevice.get_obd_info(arguements[each], arguements[length-1])
+						self._obdDevice.get_obd_info(arguements[each], int(arguements[length-1]))
 					time.sleep(1)
 			except KeyboardInterrupt:
 				pass
 
 	def do_obd_send_test(self, args):
 		"""Sends obd device"""
-		self._obdDevice.get_obd_info('speed', 0x01)
+		arguements = args.split()
+		length = len(arguements)
+		if( length < 2):
+			print("Usage: list:<pid request> <mode of pid>")
+		else:
+			for each in range(length-1):
+				data = self._obdDevice.get_obd_info(arguements[each], int(arguements[length-1]))
+				data_string = "Message Recieved:     {}  {}  {}".format(
+				round(data.value,2), data.units,
+				data.time.time())
+				print(data_string)
+
 
 	def do_multiple_all_readings(self, args):
 		"""Repeatedly read from all devices"""
@@ -129,7 +140,7 @@ class Shell(Cmd):
 
 	def print_accelerometer_reading(self):
 		"""Print a new temperature reading"""
-		velocity = self._accelDevice.read_accelerometer()
+		velocity = self._accelDevice.read_acceleration()
 		velocity_string = "ACCELERATION | Value: {} | Units: {} | Time: {}".format(
 			velocity.value, velocity.units, velocity.time)
 		print(velocity_string)
