@@ -12,5 +12,5 @@ TODO:
 ---
 * Import to PCB Layout	|		Y
 ---
-* PCB Routing		|		N
+* PCB Routing		|		Y
 ---

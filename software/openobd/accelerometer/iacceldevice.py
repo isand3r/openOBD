@@ -12,9 +12,5 @@ class IAccelDevice(abc.ABC):
 		pass
 
 	@abc.abstractmethod
-	def read_accelerometer(self) -> Measure:
-		pass
-
-	@abc.abstractmethod
-	def calc_magn(self, X, Y, Z):
+	def read_acceleration(self) -> Measure:
 		pass
