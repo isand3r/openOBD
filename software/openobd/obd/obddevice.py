@@ -583,10 +583,10 @@ class OBDDevice(IOBDDevice):
 
 		return result
 
-	def get_obd_info(self, message, mode) -> Measure:
+	def read_current_data(self, message: str) -> Measure:
 		"""function handles sends and recieved messages and returns readable information"""
 		time = datetime.datetime.now()
-		self.send_obd(message, mode)
+		self.send_obd(message, 0x01)
 		result = self.read_obd(message, mode)
 		if result is None:
 			print("Error, no response, trying again.")

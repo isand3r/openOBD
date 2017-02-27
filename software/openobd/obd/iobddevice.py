@@ -12,20 +12,5 @@ class IOBDDevice(abc.ABC):
 		pass
 
 	@abc.abstractmethod
-	def read_obd(self):
-		pass
-
-	@abc.abstractmethod
-	def send_obd(self):
-		pass
-	@abc.abstractmethod
-	def close_bus(self):
-		pass
-
-	@abc.abstractmethod
-	def init_pids(self):
-		pass
-
-	@abc.abstractmethod
-	def get_obd_info(self):
+	def read_current_data(self, message: str) -> Measure:
 		pass

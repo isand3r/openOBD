@@ -1,4 +1,3 @@
-"""Automates reading from devices"""
 from thermo.ithermodevice import IThermoDevice
 from gps.igpsdevice import IGPSDevice
 from accelerometer.iacceldevice import IAccelDevice
@@ -8,8 +7,9 @@ from location.location import Location
 import time
 import os
 
-# only handles temperature for now
 class Manager():
+	"""Automates reading from devices"""
+	
 	def __init__(self, thermoDevice: IThermoDevice, gpsDevice: IGPSDevice,
 		accelDevice: IAccelDevice, obdDevice: IOBDDevice):
 		assert isinstance(thermoDevice, IThermoDevice)
@@ -32,7 +32,7 @@ class Manager():
 		self._rpms = list()
 		self._speeds = list()
 
-		self.SLEEP_TIME = 1
+		self.SLEEP_TIME = 0.5
 		self.MAX_LIST_LENGTH = 3
 
 	def print_moving_averages(self):
@@ -117,11 +117,11 @@ class Manager():
 			self._locations.pop(0)
 
 	def read_rpm(self):
-		self._rpms.append(self._obdDevice.get_obd_info('rpm', 0x01))
+		self._rpms.append(self._obdDevice.read_current_data('rpm'))
 		if (len(self._rpms) > self.MAX_LIST_LENGTH):
 			self._rpms.pop(0)
 
 	def read_speed(self):
-		self._speeds.append(self._obdDevice.get_obd_info('speed', 0x01))
+		self._speeds.append(self._obdDevice.read_current_data('speed'))
 		if (len(self._speeds) > self.MAX_LIST_LENGTH):
 			self._speeds.pop(0)

@@ -10,6 +10,7 @@ from config.configuration import Configuration
 
 from obd.iobddevice import IOBDDevice
 from obd.obddevice import OBDDevice
+from obd.mockobddevice import MockOBDDevice
 
 from gps.igpsdevice import IGPSDevice
 from gps.mockfixedgpsdevice import MockFixedGPSDevice
@@ -54,6 +55,8 @@ class App():
 	def configure_obd(self):
 		if self._config.obd == "obd":
 			self._obdDevice = OBDDevice()
+		elif self._config.obd == "mock":
+			self._obdDevice == MockOBDDevice()
 		else:
 			print("incorrect obd config")
 
