@@ -10,7 +10,6 @@ class MockFixedThermoDevice(IThermoDevice):
 		self.MOCK_UNITS = "celsius"
 		self._ready = False
 
-
 	def initialize(self):
 		self._ready = True
 

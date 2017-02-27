@@ -56,7 +56,7 @@ class App():
 		if self._config.obd == "obd":
 			self._obdDevice = OBDDevice()
 		elif self._config.obd == "mock":
-			self._obdDevice == MockOBDDevice()
+			self._obdDevice = MockOBDDevice()
 		else:
 			print("incorrect obd config")
 

@@ -1,7 +1,5 @@
 from obd.iobddevice import IOBDDevice
 from measure.measure import Measure
-import time
-import os
 import datetime
 
 class MockOBDDevice(IOBDDevice):
