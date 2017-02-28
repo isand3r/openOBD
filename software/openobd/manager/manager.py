@@ -4,6 +4,7 @@ from accelerometer.iacceldevice import IAccelDevice
 from obd.iobddevice import IOBDDevice
 from measure.measure import Measure
 from location.location import Location
+import threading
 import time
 import os
 
@@ -12,6 +13,14 @@ class Manager():
 	
 	def __init__(self, thermoDevice: IThermoDevice, gpsDevice: IGPSDevice,
 		accelDevice: IAccelDevice, obdDevice: IOBDDevice):
+		self.THERMO_SLEEP_TIME = 0.5
+		self.ACCEL_SLEEP_TIME  = 0.1
+		self.GPS_SLEEP_TIME    = 2
+		self.RPM_SLEEP_TIME    = 0.2
+		self.SPEED_SLEEP_TIME  = 0.3
+		self.PRINT_SLEEP_TIME  = 1
+		self.MAX_LIST_LENGTH   = 3
+
 		assert isinstance(thermoDevice, IThermoDevice)
 		self._thermoDevice = thermoDevice
 		self._thermoDevice.initialize()
@@ -32,13 +41,11 @@ class Manager():
 		self._rpms = list()
 		self._speeds = list()
 
-		self.SLEEP_TIME = 0.5
-		self.MAX_LIST_LENGTH = 3
+		self.start_workers()
 
 	def print_moving_averages(self):
 			try:
-				while(1):
-					self.collect_readings()
+				while(True):
 					os.system('clear')
 					print("MEASURE      | VALUE | UNITS | TIME")
 					self.print_moving_average_temperature()
@@ -46,7 +53,7 @@ class Manager():
 					self.print_moving_average_location()
 					self.print_moving_average_rpm()
 					self.print_moving_average_speed()
-					time.sleep(self.SLEEP_TIME)
+					time.sleep(self.PRINT_SLEEP_TIME)
 			except KeyboardInterrupt:
 				pass
 
@@ -93,13 +100,42 @@ class Manager():
 			speed.time.time())
 		print(speed_string)
 
-	def collect_readings(self):
-		"""Collect all readings and update lists"""
-		self.read_temperature()
-		self.read_acceleration()
-		self.read_location()
-		self.read_rpm()
-		self.read_speed()
+	def start_workers(self):
+		thermo_thread = threading.Thread(target=self.thermo_worker, daemon=True)
+		accel_thread = threading.Thread(target=self.accel_worker, daemon=True)
+		gps_thread = threading.Thread(target=self.gps_worker, daemon=True)
+		rpm_thread = threading.Thread(target=self.rpm_worker, daemon=True)
+		speed_thread = threading.Thread(target=self.speed_worker, daemon=True)
+		thermo_thread.start()
+		accel_thread.start()
+		gps_thread.start()
+		rpm_thread.start()
+		speed_thread.start()
+
+	def thermo_worker(self):
+		while(True):
+			self.read_temperature()
+			time.sleep(self.THERMO_SLEEP_TIME)
+
+	def accel_worker(self):
+		while(True):
+			self.read_acceleration()
+			time.sleep(self.ACCEL_SLEEP_TIME)
+
+	def gps_worker(self):
+		while(True):
+			self.read_location()
+			time.sleep(self.GPS_SLEEP_TIME)
+
+	def rpm_worker(self):
+		while(True):
+			self.read_rpm()
+			time.sleep(self.RPM_SLEEP_TIME)
+
+	def speed_worker(self):
+		while(True):
+			self.read_speed()
+			time.sleep(self.SPEED_SLEEP_TIME)
 
 	def read_temperature(self):
 		self._temperatures.append(self._thermoDevice.read_temperature())
