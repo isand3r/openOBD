@@ -4,7 +4,7 @@ def test_manager():
 	config = Configuration()
 	config.read('config/test_config.ini')
 	assert config.manager_moving_average_items == 3
-	assert config.manager_print_interval == 1
+	assert config.manager_print_interval == 0.7
 
 def test_obd():
 	config = Configuration()

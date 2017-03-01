@@ -6,8 +6,6 @@ sys.path.append('../')
 from config.iconfiguration import IConfiguration
 from config.configuration import Configuration
 
-#from api.api import Api
-
 from obd.iobddevice import IOBDDevice
 from obd.obddevice import OBDDevice
 from obd.mockobddevice import MockOBDDevice
@@ -18,12 +16,12 @@ from gps.gps3device import GPS3Device
 
 from accelerometer.iacceldevice import IAccelDevice
 from accelerometer.mockfixedacceldevice import MockFixedAccelDevice
-#from accelerometer.mpuacceldevice import MPUAccelDevice
+from accelerometer.mpuacceldevice import MPUAccelDevice
 
 from thermo.ithermodevice import IThermoDevice
 from thermo.mockfixedthermodevice import MockFixedThermoDevice
 from thermo.mockrisingthermodevice import MockRisingThermoDevice
-#from thermo.mputhermodevice import MPUThermoDevice
+from thermo.mputhermodevice import MPUThermoDevice
 
 from shell.shell import Shell
 
@@ -38,7 +36,6 @@ class App():
 		self._obdDevice = None
 		self._shell = None
 		self.read_configuration_file()
-#		self.configure_api()
 		self.configure_obd()
 		self.configure_gps()
 		self.configure_thermo()
@@ -48,9 +45,6 @@ class App():
 	def read_configuration_file(self):
 		self._config = Configuration()
 		self._config.read(self.CONFIG_FILENAME)
-
-#	def configure_api(self):
-#		self._api = Api()
 
 	def configure_obd(self):
 		if self._config.obd_device == "obd":
@@ -73,21 +67,21 @@ class App():
 			self._thermoDevice = MockFixedThermoDevice()
 		elif self._config.thermo_device == 'rising_mock':
 			self._thermoDevice = MockRisingThermoDevice()
-		#elif self._config.thermo_device == "mpu":
-		#	self._thermoDevice = MPUThermoDevice()
+		elif self._config.thermo_device == "mpu":
+			self._thermoDevice = MPUThermoDevice()
 		else:
 			print("incorrect thermo config")
 
 	def configure_acceleromenter(self):
 		if self._config.accel_device == "fixed_mock":
 			self._accelDevice = MockFixedAccelDevice()
-		#elif self._config.accel_device == "mpu":
-		#	self._accelDevice = MPUAccelDevice()
+		elif self._config.accel_device == "mpu":
+			self._accelDevice = MPUAccelDevice()
 		else:
 			print("incorrect accel config")
 
 	def configure_shell(self):
-		self._shell = Shell(self._gpsDevice, self._thermoDevice,
+		self._shell = Shell(self._config, self._gpsDevice, self._thermoDevice,
 			self._accelDevice, self._obdDevice)
 
 	def run(self):

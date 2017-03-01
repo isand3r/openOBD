@@ -1,4 +1,4 @@
-"""Command line interface for openOBD"""
+from config.iconfiguration import IConfiguration
 from gps.igpsdevice import IGPSDevice
 from thermo.ithermodevice import IThermoDevice
 from obd.iobddevice import IOBDDevice
@@ -9,11 +9,15 @@ import time
 import os
 
 class Shell(Cmd):
-	def __init__(self, gpsDevice: IGPSDevice, thermoDevice: IThermoDevice, accelDevice: IAccelDevice, obdDevice: IOBDDevice):
+	"""Command line interface for openOBD"""
+	def __init__(self, config: IConfiguration, gpsDevice: IGPSDevice,
+		thermoDevice: IThermoDevice, accelDevice: IAccelDevice, obdDevice: IOBDDevice):
 		self.intro = 'openOBD shell. Type help to list commands.\n'
 		self.prompt = '> '
 		self.file = None
 		super().__init__()
+		assert isinstance(config, IConfiguration)
+		self._config = config
 		assert isinstance(gpsDevice, IGPSDevice)
 		self._gpsDevice = gpsDevice
 		self._gpsDevice.initialize()
@@ -26,63 +30,62 @@ class Shell(Cmd):
 		assert isinstance(obdDevice, IOBDDevice)
 		self._obdDevice = obdDevice
 		self._obdDevice.initialize()
-		self._manager = Manager(thermoDevice, gpsDevice, accelDevice, obdDevice)
 
 	def do_manager_print_moving_averages(self, args):
-		self._manager.print_moving_averages()
-
-	def do_single_obd_read(self, args):
-		"""Single read on obd device"""
-		self._obdDevice.listen_obd()
+		manager = Manager(self._config, self._thermoDevice,
+			self._gpsDevice, self._accelDevice, self._obdDevice)
+		manager.print_moving_averages()
 
 	def do_multiple_obd_read(self, args):
 		"""Multiple reads once obd device, Usage: <pid request> <mode of pid>"""
-		arguements = args.split()
-		length = len(arguements)
-		if( length < 2):
-			print("Usage: list:<pid request> <mode of pid>")
+		arguments = args.split()
+		length = len(arguments)
+		if( length != 1):
+			print("Usage: multiple_obd_reading <pid request> (eg 'rpm' or 'speed')")
 		else:
+			message = arguments[0]
 			try:	
 				while(1):
-					for each in range(length-1):
-						self._obdDevice.get_obd_info(arguements[each], int(arguements[length-1]))
+					self.print_obd_data(message)
 					time.sleep(1)
 			except KeyboardInterrupt:
 				pass
 
-	def do_obd_send_test(self, args):
+	def do_single_obd_reading(self, args):
 		"""Sends obd device"""
-		arguements = args.split()
-		length = len(arguements)
-		if( length < 2):
-			print("Usage: list:<pid request> <mode of pid>")
+		arguments = args.split()
+		length = len(arguments)
+		if( length != 1):
+			print("Usage: single_obd_reading <pid request> (eg 'rpm' or 'speed')")
 		else:
-			for each in range(length-1):
-				data = self._obdDevice.get_obd_info(arguements[each], int(arguements[length-1]))
-				data_string = "Message Recieved:     {}  {}  {}".format(
-				round(data.value,2), data.units,
-				data.time.time())
-				print(data_string)
+			message = arguments[0]
+			self.print_obd_data(message)
 
+	def print_obd_data(self, message):
+		obd_data = self._obdDevice.read_current_data(message)
+		obd_data_string = "OBD Data {} {} {}".format(
+		round(obd_data.value,2), obd_data.units, obd_data.time.time())
+		print(obd_data_string)
 
 	def do_multiple_all_readings(self, args):
 		"""Repeatedly read from all devices"""
 		try:
 			while(1):
-				self.print_temperature_reading()
-				self.print_location_reading()
-				self.print_accelerometer_reading()
-				self.print_obd_reading()
+				self.single_all_readings()
 				time.sleep(1)
 		except KeyboardInterrupt:
 			pass
 
 	def do_single_all_readings(self, args):
 		"""Read from all devices once"""
+		self.single_all_readings()
+
+	def single_all_readings(self):
 		self.print_temperature_reading()
 		self.print_location_reading()
-		self.print_accelerometer_reading
-		self.print_obd_reading()
+		self.print_accelerometer_reading()
+		self.print_obd_data('rpm')
+		self.print_obd_data('speed')
 
 	def do_multiple_temperature_readings(self, args):
 		"""Repeatedly read from the device"""
@@ -114,9 +117,6 @@ class Shell(Cmd):
 		"""Quit the shell"""
 		print("Quitting")
 		raise SystemExit
-
-	def print_obd_reading(self):
-		self._obdDevice.listen_obd()
 
 	def print_temperature_reading(self):
 		"""Print a new temperature reading"""

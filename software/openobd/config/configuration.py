@@ -26,7 +26,7 @@ class Configuration(IConfiguration):
 
 	@property
 	def manager_print_interval(self) -> str:
-		return int(self._config[self.MANAGER][self.PRINT_INTERVAL])
+		return float(self._config[self.MANAGER][self.PRINT_INTERVAL])
 
 	@property
 	def obd_device(self) -> str:

@@ -1,3 +1,4 @@
+from config.iconfiguration import IConfiguration
 from thermo.ithermodevice import IThermoDevice
 from gps.igpsdevice import IGPSDevice
 from accelerometer.iacceldevice import IAccelDevice
@@ -11,16 +12,10 @@ import os
 class Manager():
 	"""Automates reading from devices"""
 	
-	def __init__(self, thermoDevice: IThermoDevice, gpsDevice: IGPSDevice,
-		accelDevice: IAccelDevice, obdDevice: IOBDDevice):
-		self.THERMO_SLEEP_TIME = TODO
-		self.ACCEL_SLEEP_TIME  = TODO
-		self.GPS_SLEEP_TIME    = TODO
-		self.RPM_SLEEP_TIME    = TODO
-		self.SPEED_SLEEP_TIME  = TODO
-		self.PRINT_SLEEP_TIME  = TODO
-		self.MAX_LIST_LENGTH   = TODO
-
+	def __init__(self, config: IConfiguration, thermoDevice: IThermoDevice,
+		gpsDevice: IGPSDevice, accelDevice: IAccelDevice, obdDevice: IOBDDevice):
+		assert isinstance(config, IConfiguration)
+		self._config = config
 		assert isinstance(thermoDevice, IThermoDevice)
 		self._thermoDevice = thermoDevice
 		self._thermoDevice.initialize()
@@ -33,6 +28,14 @@ class Manager():
 		assert isinstance(obdDevice, IOBDDevice)
 		self._obdDevice = obdDevice
 		self._obdDevice.initialize()
+
+		self.THERMO_INTERVAL = self._config.thermo_interval
+		self.ACCEL_INTERVAL = self._config.accel_interval
+		self.GPS_INTERVAL = self._config.gps_interval
+		self.RPM_INTERVAL = self._config.rpm_interval
+		self.SPEED_INTERVAL = self._config.speed_interval
+		self.PRINT_INTERVAL = self._config.manager_print_interval
+		self.MOVING_AVERAGE_ITEMS = self._config.manager_moving_average_items
 
 		# lists for calculating moving averages
 		self._temperatures = list()
@@ -53,7 +56,7 @@ class Manager():
 					self.print_moving_average_location()
 					self.print_moving_average_rpm()
 					self.print_moving_average_speed()
-					time.sleep(self.PRINT_SLEEP_TIME)
+					time.sleep(self.PRINT_INTERVAL)
 			except KeyboardInterrupt:
 				pass
 
@@ -115,49 +118,49 @@ class Manager():
 	def thermo_worker(self):
 		while(True):
 			self.read_temperature()
-			time.sleep(self.THERMO_SLEEP_TIME)
+			time.sleep(self.THERMO_INTERVAL)
 
 	def accel_worker(self):
 		while(True):
 			self.read_acceleration()
-			time.sleep(self.ACCEL_SLEEP_TIME)
+			time.sleep(self.ACCEL_INTERVAL)
 
 	def gps_worker(self):
 		while(True):
 			self.read_location()
-			time.sleep(self.GPS_SLEEP_TIME)
+			time.sleep(self.GPS_INTERVAL)
 
 	def rpm_worker(self):
 		while(True):
 			self.read_rpm()
-			time.sleep(self.RPM_SLEEP_TIME)
+			time.sleep(self.RPM_INTERVAL)
 
 	def speed_worker(self):
 		while(True):
 			self.read_speed()
-			time.sleep(self.SPEED_SLEEP_TIME)
+			time.sleep(self.SPEED_INTERVAL)
 
 	def read_temperature(self):
 		self._temperatures.append(self._thermoDevice.read_temperature())
-		if (len(self._temperatures) > self.MAX_LIST_LENGTH):
+		if (len(self._temperatures) > self.MOVING_AVERAGE_ITEMS):
 			self._temperatures.pop(0)
 
 	def read_acceleration(self):
 		self._accelerations.append(self._accelDevice.read_acceleration())
-		if (len(self._accelerations) > self.MAX_LIST_LENGTH):
+		if (len(self._accelerations) > self.MOVING_AVERAGE_ITEMS):
 			self._accelerations.pop(0)
 
 	def read_location(self):
 		self._locations.append(self._gpsDevice.read_location())
-		if (len(self._locations) > self.MAX_LIST_LENGTH):
+		if (len(self._locations) > self.MOVING_AVERAGE_ITEMS):
 			self._locations.pop(0)
 
 	def read_rpm(self):
 		self._rpms.append(self._obdDevice.read_current_data('rpm'))
-		if (len(self._rpms) > self.MAX_LIST_LENGTH):
+		if (len(self._rpms) > self.MOVING_AVERAGE_ITEMS):
 			self._rpms.pop(0)
 
 	def read_speed(self):
 		self._speeds.append(self._obdDevice.read_current_data('speed'))
-		if (len(self._speeds) > self.MAX_LIST_LENGTH):
+		if (len(self._speeds) > self.MOVING_AVERAGE_ITEMS):
 			self._speeds.pop(0)
