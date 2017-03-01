@@ -9,17 +9,45 @@ class IConfiguration(abc.ABC):
 		pass
 
 	@abc.abstractproperty
-	def obd(self) -> str:
+	def manager_moving_average_items(self) -> int:
 		pass
 
 	@abc.abstractproperty
-	def gps(self) -> str:
+	def manager_print_interval(self) -> int:
 		pass
 
 	@abc.abstractproperty
-	def thermo(self) -> str:
+	def obd_device(self) -> str:
 		pass
 
 	@abc.abstractproperty
-	def accel(self) -> str:
+	def rpm_interval(self) -> str:
+		pass
+
+	@abc.abstractproperty
+	def speed_interval(self) -> str:
+		pass
+
+	@abc.abstractproperty
+	def gps_device(self) -> str:
+		pass
+
+	@abc.abstractproperty
+	def gps_interval(self) -> str:
+		pass
+
+	@abc.abstractproperty
+	def thermo_device(self) -> str:
+		pass
+
+	@abc.abstractproperty
+	def thermo_interval(self) -> str:
+		pass
+
+	@abc.abstractproperty
+	def accel_device(self) -> str:
+		pass
+
+	@abc.abstractproperty
+	def accel_interval(self) -> str:
 		pass

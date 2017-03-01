@@ -13,13 +13,13 @@ class Manager():
 	
 	def __init__(self, thermoDevice: IThermoDevice, gpsDevice: IGPSDevice,
 		accelDevice: IAccelDevice, obdDevice: IOBDDevice):
-		self.THERMO_SLEEP_TIME = 0.5
-		self.ACCEL_SLEEP_TIME  = 0.1
-		self.GPS_SLEEP_TIME    = 2
-		self.RPM_SLEEP_TIME    = 0.2
-		self.SPEED_SLEEP_TIME  = 0.3
-		self.PRINT_SLEEP_TIME  = 1
-		self.MAX_LIST_LENGTH   = 3
+		self.THERMO_SLEEP_TIME = TODO
+		self.ACCEL_SLEEP_TIME  = TODO
+		self.GPS_SLEEP_TIME    = TODO
+		self.RPM_SLEEP_TIME    = TODO
+		self.SPEED_SLEEP_TIME  = TODO
+		self.PRINT_SLEEP_TIME  = TODO
+		self.MAX_LIST_LENGTH   = TODO
 
 		assert isinstance(thermoDevice, IThermoDevice)
 		self._thermoDevice = thermoDevice

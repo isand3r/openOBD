@@ -18,12 +18,12 @@ from gps.gps3device import GPS3Device
 
 from accelerometer.iacceldevice import IAccelDevice
 from accelerometer.mockfixedacceldevice import MockFixedAccelDevice
-from accelerometer.mpuacceldevice import MPUAccelDevice
+#from accelerometer.mpuacceldevice import MPUAccelDevice
 
 from thermo.ithermodevice import IThermoDevice
 from thermo.mockfixedthermodevice import MockFixedThermoDevice
 from thermo.mockrisingthermodevice import MockRisingThermoDevice
-from thermo.mputhermodevice import MPUThermoDevice
+#from thermo.mputhermodevice import MPUThermoDevice
 
 from shell.shell import Shell
 
@@ -53,36 +53,36 @@ class App():
 #		self._api = Api()
 
 	def configure_obd(self):
-		if self._config.obd == "obd":
+		if self._config.obd_device == "obd":
 			self._obdDevice = OBDDevice()
-		elif self._config.obd == "mock":
+		elif self._config.obd_device == "mock":
 			self._obdDevice = MockOBDDevice()
 		else:
 			print("incorrect obd config")
 
 	def configure_gps(self):
-		if self._config.gps == "fixed_mock":
+		if self._config.gps_device == "fixed_mock":
 			self._gpsDevice = MockFixedGPSDevice()
-		elif self._config.gps == "gps3":
+		elif self._config.gps_device == "gps3":
 			self._gpsDevice = GPS3Device()
 		else:
 			print("incorrect gps config")
 
 	def configure_thermo(self):
-		if self._config.thermo == 'fixed_mock':
+		if self._config.thermo_device == 'fixed_mock':
 			self._thermoDevice = MockFixedThermoDevice()
-		elif self._config.thermo == 'rising_mock':
+		elif self._config.thermo_device == 'rising_mock':
 			self._thermoDevice = MockRisingThermoDevice()
-		elif self._config.thermo == "mpu":
-			self._thermoDevice = MPUThermoDevice()
+		#elif self._config.thermo_device == "mpu":
+		#	self._thermoDevice = MPUThermoDevice()
 		else:
 			print("incorrect thermo config")
 
 	def configure_acceleromenter(self):
-		if self._config.accel == "fixed_mock":
+		if self._config.accel_device == "fixed_mock":
 			self._accelDevice = MockFixedAccelDevice()
-		elif self._config.accel == "mpu":
-			self._accelDevice = MPUAccelDevice()
+		#elif self._config.accel_device == "mpu":
+		#	self._accelDevice = MPUAccelDevice()
 		else:
 			print("incorrect accel config")
 
