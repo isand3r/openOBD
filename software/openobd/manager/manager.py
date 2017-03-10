@@ -9,11 +9,10 @@ import threading
 import time
 import os
 
-class Manager():
+class Manager():	
 	"""Automates reading from devices"""
 	
-	def __init__(self, config: IConfiguration, thermoDevice: IThermoDevice,
-		gpsDevice: IGPSDevice, accelDevice: IAccelDevice, obdDevice: IOBDDevice):
+	def __init__(self, config: IConfiguration, deviceCollection: IDeviceCollection):
 		assert isinstance(config, IConfiguration)
 		self._config = config
 		assert isinstance(thermoDevice, IThermoDevice)
