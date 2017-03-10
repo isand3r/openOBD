@@ -1,8 +1,5 @@
 from config.iconfiguration import IConfiguration
-from thermo.ithermodevice import IThermoDevice
-from gps.igpsdevice import IGPSDevice
-from accelerometer.iacceldevice import IAccelDevice
-from obd.iobddevice import IOBDDevice
+from devicecollection.idevicecollection import IDeviceCollection
 from measure.measure import Measure
 from location.location import Location
 import threading
@@ -15,18 +12,9 @@ class Manager():
 	def __init__(self, config: IConfiguration, deviceCollection: IDeviceCollection):
 		assert isinstance(config, IConfiguration)
 		self._config = config
-		assert isinstance(thermoDevice, IThermoDevice)
-		self._thermoDevice = thermoDevice
-		self._thermoDevice.initialize()
-		assert isinstance(gpsDevice, IGPSDevice)
-		self._gpsDevice = gpsDevice
-		self._gpsDevice.initialize()
-		assert isinstance(accelDevice, IAccelDevice)
-		self._accelDevice = accelDevice
-		self._accelDevice.initialize()
-		assert isinstance(obdDevice, IOBDDevice)
-		self._obdDevice = obdDevice
-		self._obdDevice.initialize()
+		assert isinstance(deviceCollection, IDeviceCollection)
+		self._deviceCollection = deviceCollection
+		self._deviceCollection.init_devices()
 
 		self.THERMO_INTERVAL = self._config.thermo_interval
 		self.ACCEL_INTERVAL = self._config.accel_interval
