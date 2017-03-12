@@ -1,0 +1,51 @@
+Removed Pin From Net: NetName=GND Pin=Q1-9
+Added Component: Designator=C5(0805)
+Added Component: Designator=C10(0805)
+Added Component: Designator=M2(SOT32-3)
+Added Component: Designator=R5(0805)
+Added Component: Designator=R16(0805)
+Added Component: Designator=R17(0805)
+Added Component: Designator=R18(0805)
+Added Component: Designator=R19(0805)
+Added Component: Designator=R20(0805)
+Added Component: Designator=R21(0805)
+Added Component: Designator=U4(ATtiny13A)
+Added Component: Designator=U10(bmp280_i2c)
+Added Pin To Net: NetName=AT_RST Pin=PCB0-12
+Added Pin To Net: NetName=AT_RST Pin=R16-1
+Added Net: Name=AT_RST
+Added Pin To Net: NetName=AT_SCK Pin=PCB0-40
+Added Pin To Net: NetName=AT_SCK Pin=R17-1
+Added Net: Name=AT_SCK
+Added Pin To Net: NetName=AT_SI Pin=PCB0-38
+Added Pin To Net: NetName=AT_SI Pin=R20-1
+Added Net: Name=AT_SI
+Added Pin To Net: NetName=AT_SO Pin=PCB0-35
+Added Pin To Net: NetName=AT_SO Pin=R18-1
+Added Pin To Net: NetName=AT_SO Pin=R21-1
+Added Net: Name=AT_SO
+Added Pin To Net: NetName=NetM2_1 Pin=M2-1
+Added Pin To Net: NetName=NetM2_1 Pin=U4-3
+Added Net: Name=NetM2_1
+Added Pin To Net: NetName=NetR5_1 Pin=R5-1
+Added Pin To Net: NetName=NetR5_1 Pin=R19-2
+Added Pin To Net: NetName=NetR5_1 Pin=U4-2
+Added Net: Name=NetR5_1
+Added Pin To Net: NetName=NetR16_2 Pin=R16-2
+Added Pin To Net: NetName=NetR16_2 Pin=U4-1
+Added Net: Name=NetR16_2
+Added Pin To Net: NetName=NetR17_2 Pin=R17-2
+Added Pin To Net: NetName=NetR17_2 Pin=U4-7
+Added Net: Name=NetR17_2
+Added Pin To Net: NetName=NetR18_2 Pin=R18-2
+Added Pin To Net: NetName=NetR18_2 Pin=U4-6
+Added Net: Name=NetR18_2
+Added Pin To Net: NetName=NetR20_2 Pin=R20-2
+Added Pin To Net: NetName=NetR20_2 Pin=U4-5
+Added Net: Name=NetR20_2
+Added Pin To Net: NetName=PIRUN Pin=M2-3
+Added Net: Name=PIRUN
+Added Class: Name=ATtiny
+Added Class: Name=bmp280_i2c
+Added Room: Name=ATtiny
+Added Room: Name=bmp280_i2c

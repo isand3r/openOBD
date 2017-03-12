@@ -1,0 +1,14 @@
+Added Component: Designator=C5(0805)
+Added Component: Designator=C10(0805)
+Added Component: Designator=M2(SOT32-3)
+Added Component: Designator=R5(0805)
+Added Component: Designator=R16(0805)
+Added Component: Designator=R17(0805)
+Added Component: Designator=R18(0805)
+Added Component: Designator=R19(0805)
+Added Component: Designator=R20(0805)
+Added Component: Designator=R21(0805)
+Added Component: Designator=U4(ATtiny13A)
+Added Component: Designator=U10(bmp280_i2c)
+Added Room: Name=ATtiny
+Added Room: Name=bmp280_i2c

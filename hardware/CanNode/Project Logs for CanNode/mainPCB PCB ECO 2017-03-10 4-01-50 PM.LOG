@@ -1,0 +1,4 @@
+Added Component: Designator=C5(0805)
+Added Component: Designator=C10(0805)
+Added Component: Designator=U10(bmp280_i2c)
+Added Room: Name=bmp280_i2c
