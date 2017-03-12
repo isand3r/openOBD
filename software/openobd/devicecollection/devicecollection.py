@@ -30,7 +30,7 @@ class DeviceCollection(IDeviceCollection):
 			self.devicelist[DeviceConstants.DEVICE_OBD] = obdDevice
 		
 
-	def init_devices(self, self.devicelist):
+	def init_devices(self):
 		for each in self.devicelist:
 			each.initialize()
 
