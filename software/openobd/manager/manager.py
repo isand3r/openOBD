@@ -2,6 +2,8 @@ from config.iconfiguration import IConfiguration
 from devicecollection.idevicecollection import IDeviceCollection
 from measure.measure import Measure
 from location.location import Location
+import constants.deviceconstants as DeviceConstants
+import constants.measureconstants as MeasureConstants
 import threading
 import time
 import os
@@ -128,26 +130,26 @@ class Manager():
 			time.sleep(self.SPEED_INTERVAL)
 
 	def read_temperature(self):
-		self._temperatures.append(self._thermoDevice.read_temperature())
+		self._temperatures.append(self._deviceCollection.read_current_data(DeviceConstants.DEVICE_THERMO))
 		if (len(self._temperatures) > self.MOVING_AVERAGE_ITEMS):
 			self._temperatures.pop(0)
 
 	def read_acceleration(self):
-		self._accelerations.append(self._accelDevice.read_acceleration())
+		self._accelerations.append(self._deviceCollection.read_current_data(DeviceConstants.DEVICE_ACCEL))
 		if (len(self._accelerations) > self.MOVING_AVERAGE_ITEMS):
 			self._accelerations.pop(0)
 
 	def read_location(self):
-		self._locations.append(self._gpsDevice.read_location())
+		self._locations.append(self._deviceCollection.read_current_data(DeviceConstants.DEVICE_GPS))
 		if (len(self._locations) > self.MOVING_AVERAGE_ITEMS):
 			self._locations.pop(0)
 
 	def read_rpm(self):
-		self._rpms.append(self._obdDevice.read_current_data('rpm'))
+		self._rpms.append(self._deviceCollection.read_current_data(MeasureConstants.RPM))
 		if (len(self._rpms) > self.MOVING_AVERAGE_ITEMS):
 			self._rpms.pop(0)
 
 	def read_speed(self):
-		self._speeds.append(self._obdDevice.read_current_data('speed'))
+		self._speeds.append(self._obdDevice.read_current_data(MeasureConstants.SPEED))
 		if (len(self._speeds) > self.MOVING_AVERAGE_ITEMS):
 			self._speeds.pop(0)

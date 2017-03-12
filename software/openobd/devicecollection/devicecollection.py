@@ -4,8 +4,8 @@ from accelerometer.iacceldevice import IAccelDevice
 from obd.iobddevice import IOBDDevice
 from measure.measure import Measure
 from location.location import Location
-from constants.deviceconstants import DeviceConstants
-from constants.measureconstants import MeasureConstants
+import constants.deviceconstants as DeviceConstants
+import constants.measureconstants as MeasureConstants
 import time
 import os
 
