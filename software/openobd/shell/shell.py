@@ -32,7 +32,7 @@ class Shell(Cmd):
 		self._obdDevice = obdDevice
 		self._obdDevice.initialize()
 
-		self._deviceList = DeviceCollection(thermoDevice = _thermoDevice, gpsDevice = _gpsDevice, accelDevice = _accelDevice, obdDevice = _obdDevice)
+		self._deviceList = DeviceCollection(thermoDevice = self._thermoDevice, gpsDevice = self._gpsDevice, accelDevice = self._accelDevice, obdDevice = self._obdDevice)
 
 	def do_manager_print_moving_averages(self, args):
 		manager = Manager(self._config, self._deviceList)

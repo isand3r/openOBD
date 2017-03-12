@@ -4,6 +4,7 @@ from accelerometer.iacceldevice import IAccelDevice
 from obd.iobddevice import IOBDDevice
 from measure.measure import Measure
 from location.location import Location
+from devicecollection.idevicecollection import IDeviceCollection
 import constants.deviceconstants as DeviceConstants
 import constants.measureconstants as MeasureConstants
 import time
@@ -31,8 +32,8 @@ class DeviceCollection(IDeviceCollection):
 		
 
 	def init_devices(self):
-		for each in self.devicelist:
-			each.initialize()
+		for key in self.devicelist:
+			self.devicelist[key].initialize()
 
 	def read_current_data(self, message: str):
 
@@ -49,9 +50,20 @@ class DeviceCollection(IDeviceCollection):
 			return self.devicelist[DeviceConstants.DEVICE_ACCEL].read_acceleration(message)
 
 		#obd
-		elif(message == for each in MeasureConstants):
-				result  = self.devicelist[DeviceConstants.DEVICE_OBD].read_current_data(message)
+		elif(self.isOBDmsg(message)):
+			return self.devicelist[DeviceConstants.DEVICE_OBD].read_current_data(message)
+
+		else:
+			return None
+
 				
+	def isOBDmsg(self, message) -> bool:
+		for each in MeasureConstants:
+			if(message == each):
+				return True
+
+		return False	
+
 
 
 
