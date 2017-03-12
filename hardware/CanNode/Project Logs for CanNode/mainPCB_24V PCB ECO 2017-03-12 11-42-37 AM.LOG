@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=GND Pin=CONN-*
+Removed Pin From Net: NetName=GND Pin=CONN-*
+Removed Pin From Net: NetName=GND Pin=Q1-9
+Added Component: Designator=U?(LM2673)
+Added Class: Name=PowerCircuit_24V

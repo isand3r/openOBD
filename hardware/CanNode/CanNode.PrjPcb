@@ -277,7 +277,7 @@ GenerateClassCluster=0
 DocumentUniqueId=SSRUEXQG
 
 [Document15]
-DocumentPath=mainPCB.PcbDoc
+DocumentPath=mainPCB_24V.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -329,7 +329,7 @@ DocumentUniqueId=
 
 [Document18]
 DocumentPath=ATtiny.SchDoc
-AnnotationEnabled=1
+AnnotationEnabled=0
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
@@ -414,7 +414,7 @@ DocumentUniqueId=WGYBWAFC
 
 [Document23]
 DocumentPath=bmp280_i2c.SchDoc
-AnnotationEnabled=1
+AnnotationEnabled=0
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
 AnnotateSuffix=
@@ -445,6 +445,40 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=ASKMKNPQ
+
+[Document25]
+DocumentPath=PowerCircuit_24V.SchDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=6
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=NKICADME
+
+[Document26]
+DocumentPath=mainPCB.PcbDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=JGQWNXSW
 
 [GeneratedDocument1]
 DocumentPath=Project Outputs for CanNode\Design Rule Check - mainPCB.html
