@@ -4,6 +4,7 @@ from thermo.ithermodevice import IThermoDevice
 from obd.iobddevice import IOBDDevice
 from accelerometer.iacceldevice import IAccelDevice
 from manager.manager import Manager
+from devicecollection.devicecollection import DeviceCollection
 from cmd import Cmd
 import time
 import os
@@ -31,9 +32,10 @@ class Shell(Cmd):
 		self._obdDevice = obdDevice
 		self._obdDevice.initialize()
 
+		self._deviceList = DeviceCollection(thermoDevice = _thermoDevice, gpsDevice = _gpsDevice, accelDevice = _accelDevice, obdDevice = _obdDevice)
+
 	def do_manager_print_moving_averages(self, args):
-		manager = Manager(self._config, self._thermoDevice,
-			self._gpsDevice, self._accelDevice, self._obdDevice)
+		manager = Manager(self._config, self._deviceList)
 		manager.print_moving_averages()
 
 	def do_multiple_obd_read(self, args):
