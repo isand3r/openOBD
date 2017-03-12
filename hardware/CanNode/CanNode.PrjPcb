@@ -447,50 +447,54 @@ GenerateClassCluster=0
 DocumentUniqueId=ASKMKNPQ
 
 [GeneratedDocument1]
-DocumentPath=Project Outputs for CanNode\mainPCB.DRR
+DocumentPath=Project Outputs for CanNode\Design Rule Check - mainPCB.html
 DItemRevisionGUID=
 
 [GeneratedDocument2]
-DocumentPath=Project Outputs for CanNode\mainPCB.EXTREP
+DocumentPath=Project Outputs for CanNode\mainPCB.DRR
 DItemRevisionGUID=
 
 [GeneratedDocument3]
-DocumentPath=Project Outputs for CanNode\mainPCB.GBL
+DocumentPath=Project Outputs for CanNode\mainPCB.EXTREP
 DItemRevisionGUID=
 
 [GeneratedDocument4]
-DocumentPath=Project Outputs for CanNode\mainPCB.GBO
+DocumentPath=Project Outputs for CanNode\mainPCB.GBL
 DItemRevisionGUID=
 
 [GeneratedDocument5]
-DocumentPath=Project Outputs for CanNode\mainPCB.GBS
+DocumentPath=Project Outputs for CanNode\mainPCB.GBO
 DItemRevisionGUID=
 
 [GeneratedDocument6]
-DocumentPath=Project Outputs for CanNode\mainPCB.GTL
+DocumentPath=Project Outputs for CanNode\mainPCB.GBS
 DItemRevisionGUID=
 
 [GeneratedDocument7]
-DocumentPath=Project Outputs for CanNode\mainPCB.GTO
+DocumentPath=Project Outputs for CanNode\mainPCB.GTL
 DItemRevisionGUID=
 
 [GeneratedDocument8]
-DocumentPath=Project Outputs for CanNode\mainPCB.GTS
+DocumentPath=Project Outputs for CanNode\mainPCB.GTO
 DItemRevisionGUID=
 
 [GeneratedDocument9]
-DocumentPath=Project Outputs for CanNode\mainPCB.LDP
+DocumentPath=Project Outputs for CanNode\mainPCB.GTS
 DItemRevisionGUID=
 
 [GeneratedDocument10]
-DocumentPath=Project Outputs for CanNode\mainPCB.REP
+DocumentPath=Project Outputs for CanNode\mainPCB.LDP
 DItemRevisionGUID=
 
 [GeneratedDocument11]
-DocumentPath=Project Outputs for CanNode\mainPCB.RUL
+DocumentPath=Project Outputs for CanNode\mainPCB.REP
 DItemRevisionGUID=
 
 [GeneratedDocument12]
+DocumentPath=Project Outputs for CanNode\mainPCB.RUL
+DItemRevisionGUID=
+
+[GeneratedDocument13]
 DocumentPath=Project Outputs for CanNode\mainPCB.TXT
 DItemRevisionGUID=
 
@@ -754,12 +758,6 @@ OutputDocumentPath19=
 OutputVariantName19=
 OutputDefault19=0
 PageOptions19=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
-OutputType20=Logic Analyser Print
-OutputName20=Logic Analyser Prints
-OutputDocumentPath20=
-OutputVariantName20=
-OutputDefault20=0
-PageOptions20=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=A4|PaperIndex=9
 
 [OutputGroup4]
 Name=Assembly Outputs
