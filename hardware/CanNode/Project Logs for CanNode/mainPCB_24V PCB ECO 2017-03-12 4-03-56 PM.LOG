@@ -1,0 +1,80 @@
+Added Component: Designator=C13(0603)
+Added Component: Designator=C24(Cap 1210)
+Added Component: Designator=C25(Cap 1210)
+Added Component: Designator=C26(0805)
+Added Component: Designator=C27(0805)
+Added Component: Designator=C28(Cap 1210)
+Added Component: Designator=C29(Cap 1210)
+Added Component: Designator=C30(0603)
+Added Component: Designator=D5(TO277A)
+Added Component: Designator=L2(7447714068)
+Added Component: Designator=R22(0603)
+Added Component: Designator=R23(0603)
+Added Component: Designator=R24(0603)
+Added Component: Designator=R25(0603)
+Added Component: Designator=R26(0603)
+Added Component: Designator=R27(0603)
+Added Component: Designator=U6(LMR16030)
+Added Pin To Net: NetName=+12V Pin=C24-1
+Added Pin To Net: NetName=GND Pin=C24-2
+Added Pin To Net: NetName=+12V Pin=C25-1
+Added Pin To Net: NetName=GND Pin=C25-2
+Added Pin To Net: NetName=+12V Pin=C26-1
+Added Pin To Net: NetName=GND Pin=C26-2
+Added Pin To Net: NetName=+5V Pin=C27-1
+Added Pin To Net: NetName=GND Pin=C27-2
+Added Pin To Net: NetName=+5V Pin=C28-1
+Added Pin To Net: NetName=GND Pin=C28-2
+Added Pin To Net: NetName=+5V Pin=C29-1
+Added Pin To Net: NetName=GND Pin=C29-2
+Added Pin To Net: NetName=+5V Pin=C30-1
+Added Pin To Net: NetName=GND Pin=D5-1
+Added Pin To Net: NetName=GND Pin=D5-2
+Added Pin To Net: NetName=+12V Pin=R23-2
+Added Pin To Net: NetName=+5V Pin=R24-1
+Added Pin To Net: NetName=GND Pin=R25-1
+Added Pin To Net: NetName=GND Pin=R26-1
+Added Pin To Net: NetName=GND Pin=R27-2
+Added Pin To Net: NetName=+12V Pin=U6-2
+Added Pin To Net: NetName=GND Pin=U6-7
+Added Pin To Net: NetName=GND Pin=U6-9
+Added Pin To Net: NetName=NetC13_1 Pin=C13-1
+Added Pin To Net: NetName=NetC13_1 Pin=U6-1
+Added Net: Name=NetC13_1
+Added Pin To Net: NetName=NetC13_2 Pin=C13-2
+Added Pin To Net: NetName=NetC13_2 Pin=R22-2
+Added Net: Name=NetC13_2
+Added Pin To Net: NetName=NetC30_2 Pin=C30-2
+Added Pin To Net: NetName=NetC30_2 Pin=R24-2
+Added Pin To Net: NetName=NetC30_2 Pin=R27-1
+Added Pin To Net: NetName=NetC30_2 Pin=U6-5
+Added Net: Name=NetC30_2
+Added Pin To Net: NetName=NetD5_3 Pin=D5-3
+Added Pin To Net: NetName=NetD5_3 Pin=L2-1
+Added Pin To Net: NetName=NetD5_3 Pin=R22-1
+Added Pin To Net: NetName=NetD5_3 Pin=U6-8
+Added Net: Name=NetD5_3
+Added Pin To Net: NetName=NetR23_1 Pin=R23-1
+Added Pin To Net: NetName=NetR23_1 Pin=R25-2
+Added Pin To Net: NetName=NetR23_1 Pin=U6-3
+Added Net: Name=NetR23_1
+Added Pin To Net: NetName=NetR26_2 Pin=R26-2
+Added Pin To Net: NetName=NetR26_2 Pin=U6-4
+Added Net: Name=NetR26_2
+Added Member To Class: ClassName=PowerCircuit_24V Member=Component C13 Generic Capacitor
+Added Member To Class: ClassName=PowerCircuit_24V Member=Component C24 Generic Capacitor
+Added Member To Class: ClassName=PowerCircuit_24V Member=Component C25 Generic Capacitor
+Added Member To Class: ClassName=PowerCircuit_24V Member=Component C26 Generic Capacitor
+Added Member To Class: ClassName=PowerCircuit_24V Member=Component C27 Generic Capacitor
+Added Member To Class: ClassName=PowerCircuit_24V Member=Component C28 Generic Capacitor
+Added Member To Class: ClassName=PowerCircuit_24V Member=Component C29 Generic Capacitor
+Added Member To Class: ClassName=PowerCircuit_24V Member=Component C30 Generic Capacitor
+Added Member To Class: ClassName=PowerCircuit_24V Member=Component D5 DIODE SCHOTTKY 60V 5A
+Added Member To Class: ClassName=PowerCircuit_24V Member=Component L2 FIXED IND 6.8UH 5.2A
+Added Member To Class: ClassName=PowerCircuit_24V Member=Component R22 Resistor
+Added Member To Class: ClassName=PowerCircuit_24V Member=Component R23 Resistor
+Added Member To Class: ClassName=PowerCircuit_24V Member=Component R24 Resistor
+Added Member To Class: ClassName=PowerCircuit_24V Member=Component R25 Resistor
+Added Member To Class: ClassName=PowerCircuit_24V Member=Component R26 Resistor
+Added Member To Class: ClassName=PowerCircuit_24V Member=Component R27 Resistor
+Added Member To Class: ClassName=PowerCircuit_24V Member=Component U6 LMR16030
