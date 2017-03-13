@@ -464,7 +464,7 @@ GenerateClassCluster=0
 DocumentUniqueId=JGQWNXSW
 
 [Document26]
-DocumentPath=mainpcb2.Cam
+DocumentPath=drill2.Cam
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -481,7 +481,7 @@ GenerateClassCluster=0
 DocumentUniqueId=
 
 [Document27]
-DocumentPath=drill2.Cam
+DocumentPath=mainpcb2.Cam
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -566,30 +566,46 @@ DocumentPath=Project Outputs for CanNode\mainPCB_24V.GBS
 DItemRevisionGUID=
 
 [GeneratedDocument18]
-DocumentPath=Project Outputs for CanNode\mainPCB_24V.GTL
+DocumentPath=Project Outputs for CanNode\mainPCB_24V.GKO
 DItemRevisionGUID=
 
 [GeneratedDocument19]
-DocumentPath=Project Outputs for CanNode\mainPCB_24V.GTO
+DocumentPath=Project Outputs for CanNode\mainPCB_24V.GM1
 DItemRevisionGUID=
 
 [GeneratedDocument20]
-DocumentPath=Project Outputs for CanNode\mainPCB_24V.GTS
+DocumentPath=Project Outputs for CanNode\mainPCB_24V.GM13
 DItemRevisionGUID=
 
 [GeneratedDocument21]
-DocumentPath=Project Outputs for CanNode\mainPCB_24V.LDP
+DocumentPath=Project Outputs for CanNode\mainPCB_24V.GM15
 DItemRevisionGUID=
 
 [GeneratedDocument22]
-DocumentPath=Project Outputs for CanNode\mainPCB_24V.REP
+DocumentPath=Project Outputs for CanNode\mainPCB_24V.GTL
 DItemRevisionGUID=
 
 [GeneratedDocument23]
-DocumentPath=Project Outputs for CanNode\mainPCB_24V.RUL
+DocumentPath=Project Outputs for CanNode\mainPCB_24V.GTO
 DItemRevisionGUID=
 
 [GeneratedDocument24]
+DocumentPath=Project Outputs for CanNode\mainPCB_24V.GTS
+DItemRevisionGUID=
+
+[GeneratedDocument25]
+DocumentPath=Project Outputs for CanNode\mainPCB_24V.LDP
+DItemRevisionGUID=
+
+[GeneratedDocument26]
+DocumentPath=Project Outputs for CanNode\mainPCB_24V.REP
+DItemRevisionGUID=
+
+[GeneratedDocument27]
+DocumentPath=Project Outputs for CanNode\mainPCB_24V.RUL
+DItemRevisionGUID=
+
+[GeneratedDocument28]
 DocumentPath=Project Outputs for CanNode\mainPCB_24V.TXT
 DItemRevisionGUID=
 
@@ -966,6 +982,8 @@ OutputName10=Gerber X2 Files
 OutputDocumentPath10=
 OutputVariantName10=
 OutputDefault10=0
+Configuration10_Name1=OutputConfigurationParameter1
+Configuration10_Item1=FileComment= |FileSubject=Autodetect|GenerateDRCRulesFile=True|GerberUnit=Imperial|MinusApertureTolerance=50|NumberOfDecimals=6|OptimizeChangeLocationCommands=True|PlotBlindViasPairs=False|PlotBoardProfile=False|PlotDrillDrawingPairs=False|PlotDrillGuidePairs=False|PlotNPTHPairs=False|PlotPTHPairs=False|PlotX2.Set=SerializeLayerHash.Version~2,ClassName~TLayerToBoolean|PlusApertureTolerance=50|Record=GerberX2View|Sorted=False
 OutputType11=Final
 OutputName11=Final Artwork Prints
 OutputDocumentPath11=
@@ -978,7 +996,7 @@ OutputDocumentPath12=
 OutputVariantName12=[No Variations]
 OutputDefault12=0
 Configuration12_Name1=OutputConfigurationParameter1
-Configuration12_Item1=AddToAllLayerClasses.Set= |AddToAllPlots.Set=SerializeLayerHash.Version~2,ClassName~TLayerToBoolean|CentrePlots=False|DrillDrawingSymbol=GraphicsSymbol|DrillDrawingSymbolSize=200000|EmbeddedApertures=True|FilmBorderSize=10000000|FilmXSize=200000000|FilmYSize=160000000|FlashAllFills=False|FlashPadShapes=True|G54OnApertureChange=False|GenerateDRCRulesFile=True|GenerateDRCRulesFile=True|GenerateReliefShapes=True|GerberUnit=Metric|GerberUnit=Metric|IncludeUnconnectedMidLayerPads=False|LayerClassesMirror.Set= |LayerClassesPlot.Set= |LeadingAndTrailingZeroesMode=SuppressLeadingZeroes|MaxApertureSize=2500000|MinusApertureTolerance=39|MinusApertureTolerance=39|Mirror.Set=SerializeLayerHash.Version~2,ClassName~TLayerToBoolean|MirrorDrillDrawingPlots=False|MirrorDrillGuidePlots=False|NoRegularPolygons=False|NumberOfDecimals=3|NumberOfDecimals=3|OptimizeChangeLocationCommands=True|OptimizeChangeLocationCommands=True|OriginPosition=Relative|Panelize=False|Plot.Set=SerializeLayerHash.Version~2,ClassName~TLayerToBoolean,16973830~1,16973834~1,16777217~1,16842751~1,16973835~1,16973831~1|PlotPositivePlaneLayers=False|PlotUsedDrillDrawingLayerPairs=False|PlotUsedDrillGuideLayerPairs=False|PlusApertureTolerance=39|PlusApertureTolerance=39|Record=GerberView|SoftwareArcs=False|Sorted=False|Sorted=False
+Configuration12_Item1=AddToAllLayerClasses.Set= |AddToAllPlots.Set=SerializeLayerHash.Version~2,ClassName~TLayerToBoolean,16908289~1,16908301~1,16908303~1|CentrePlots=False|DrillDrawingSymbol=GraphicsSymbol|DrillDrawingSymbolSize=200000|EmbeddedApertures=True|FilmBorderSize=10000000|FilmXSize=200000000|FilmYSize=160000000|FlashAllFills=False|FlashPadShapes=True|G54OnApertureChange=False|GenerateDRCRulesFile=True|GenerateDRCRulesFile=True|GenerateReliefShapes=True|GerberUnit=Metric|GerberUnit=Metric|IncludeUnconnectedMidLayerPads=False|LayerClassesMirror.Set= |LayerClassesPlot.Set= |LeadingAndTrailingZeroesMode=SuppressLeadingZeroes|MaxApertureSize=2500000|MinusApertureTolerance=39|MinusApertureTolerance=39|Mirror.Set=SerializeLayerHash.Version~2,ClassName~TLayerToBoolean|MirrorDrillDrawingPlots=False|MirrorDrillGuidePlots=False|NoRegularPolygons=False|NumberOfDecimals=3|NumberOfDecimals=3|OptimizeChangeLocationCommands=True|OptimizeChangeLocationCommands=True|OriginPosition=Relative|Panelize=False|Plot.Set=SerializeLayerHash.Version~2,ClassName~TLayerToBoolean,16973830~1,16973834~1,16777217~1,16842751~1,16973835~1,16973831~1,16908289~1,16908301~1,16908303~1,16973837~1|PlotPositivePlaneLayers=False|PlotUsedDrillDrawingLayerPairs=False|PlotUsedDrillGuideLayerPairs=False|PlusApertureTolerance=39|PlusApertureTolerance=39|Record=GerberView|SoftwareArcs=False|Sorted=False|Sorted=False
 
 [OutputGroup6]
 Name=Report Outputs
