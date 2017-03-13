@@ -468,50 +468,54 @@ DocumentPath=Project Outputs for CanNode\Design Rule Check - mainPCB.html
 DItemRevisionGUID=
 
 [GeneratedDocument2]
-DocumentPath=Project Outputs for CanNode\mainPCB.DRR
+DocumentPath=Project Outputs for CanNode\Design Rule Check - mainPCB_24V.html
 DItemRevisionGUID=
 
 [GeneratedDocument3]
-DocumentPath=Project Outputs for CanNode\mainPCB.EXTREP
+DocumentPath=Project Outputs for CanNode\mainPCB.DRR
 DItemRevisionGUID=
 
 [GeneratedDocument4]
-DocumentPath=Project Outputs for CanNode\mainPCB.GBL
+DocumentPath=Project Outputs for CanNode\mainPCB.EXTREP
 DItemRevisionGUID=
 
 [GeneratedDocument5]
-DocumentPath=Project Outputs for CanNode\mainPCB.GBO
+DocumentPath=Project Outputs for CanNode\mainPCB.GBL
 DItemRevisionGUID=
 
 [GeneratedDocument6]
-DocumentPath=Project Outputs for CanNode\mainPCB.GBS
+DocumentPath=Project Outputs for CanNode\mainPCB.GBO
 DItemRevisionGUID=
 
 [GeneratedDocument7]
-DocumentPath=Project Outputs for CanNode\mainPCB.GTL
+DocumentPath=Project Outputs for CanNode\mainPCB.GBS
 DItemRevisionGUID=
 
 [GeneratedDocument8]
-DocumentPath=Project Outputs for CanNode\mainPCB.GTO
+DocumentPath=Project Outputs for CanNode\mainPCB.GTL
 DItemRevisionGUID=
 
 [GeneratedDocument9]
-DocumentPath=Project Outputs for CanNode\mainPCB.GTS
+DocumentPath=Project Outputs for CanNode\mainPCB.GTO
 DItemRevisionGUID=
 
 [GeneratedDocument10]
-DocumentPath=Project Outputs for CanNode\mainPCB.LDP
+DocumentPath=Project Outputs for CanNode\mainPCB.GTS
 DItemRevisionGUID=
 
 [GeneratedDocument11]
-DocumentPath=Project Outputs for CanNode\mainPCB.REP
+DocumentPath=Project Outputs for CanNode\mainPCB.LDP
 DItemRevisionGUID=
 
 [GeneratedDocument12]
-DocumentPath=Project Outputs for CanNode\mainPCB.RUL
+DocumentPath=Project Outputs for CanNode\mainPCB.REP
 DItemRevisionGUID=
 
 [GeneratedDocument13]
+DocumentPath=Project Outputs for CanNode\mainPCB.RUL
+DItemRevisionGUID=
+
+[GeneratedDocument14]
 DocumentPath=Project Outputs for CanNode\mainPCB.TXT
 DItemRevisionGUID=
 
