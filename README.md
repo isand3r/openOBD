@@ -1,5 +1,5 @@
 # openOBD
-An open source (Hardware+software) OBD reader and sensor device based on the [raspberrypi 0](https://www.raspberrypi.org/blog/raspberry-pi-zero) for vehicle telemtry.
+An open source (Hardware+software) OBD reader and sensor device based on the [raspberrypi 0](https://www.raspberrypi.org/blog/raspberry-pi-zero) for vehicle telemetry.
 
 ## Tests
 Tests can be run with `python3 -m pytest`
