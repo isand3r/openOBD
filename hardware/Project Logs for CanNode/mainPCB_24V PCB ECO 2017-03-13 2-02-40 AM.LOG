@@ -1,4 +1,0 @@
-Added Component: Designator=L2(7447714068)
-Added Pin To Net: NetName=+5V Pin=L2-0
-Added Pin To Net: NetName=NetD5_3 Pin=L2-1
-Added Member To Class: ClassName=PowerCircuit_24V Member=Component L2 FIXED IND 6.8UH 5.2A

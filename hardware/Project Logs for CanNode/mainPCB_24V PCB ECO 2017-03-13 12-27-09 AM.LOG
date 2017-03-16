@@ -1,8 +1,0 @@
-Added Component: Designator=C6(Cap 6.3mm dia 5.4mm Height)
-Added Component: Designator=C7(Cap 6.3mm dia 5.4mm Height)
-Added Pin To Net: NetName=+12V Pin=C6-1
-Added Pin To Net: NetName=GND Pin=C6-2
-Added Pin To Net: NetName=+5V Pin=C7-1
-Added Pin To Net: NetName=GND Pin=C7-2
-Added Member To Class: ClassName=PowerCircuit_24V Member=Component C6 47uF, 25V
-Added Member To Class: ClassName=PowerCircuit_24V Member=Component C7 47uF, 25V

@@ -1,4 +1,0 @@
-Remove Pin=U10-CSB From Net=CS
-Remove Pin=U10-SCK From Net=SCK
-Remove Pin=U10-SDI From Net=SI
-Remove Pin=U10-SDO From Net=SO
