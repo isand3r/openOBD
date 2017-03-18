@@ -3,3 +3,7 @@
 *.cache
 *.pyc
 
+#Ignore NDA files
+software/openobd/devicecollection/devicecollection.py
+software/openobd/udp/udp.py
+software/openobd/constants/udpconstants.py

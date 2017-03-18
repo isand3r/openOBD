@@ -1,6 +1,0 @@
-Added Component: Designator=OBD-II(OBD_II)
-Added Pin To Net: NetName=BAT_UR Pin=OBD-II-1
-Added Pin To Net: NetName=NetOBD-II_2 Pin=OBD-II-2
-Added Pin To Net: NetName=NetOBD-II_3 Pin=OBD-II-3
-Added Pin To Net: NetName=GND Pin=OBD-II-4
-Added Member To Class: ClassName=CanNode Member=Component OBD-II

@@ -4,6 +4,7 @@ from thermo.ithermodevice import IThermoDevice
 from obd.iobddevice import IOBDDevice
 from accelerometer.iacceldevice import IAccelDevice
 from manager.manager import Manager
+from devicecollection.devicecollection import DeviceCollection
 from cmd import Cmd
 import time
 import os
@@ -28,13 +29,17 @@ class Shell(Cmd):
 		self._accelDevice = accelDevice
 		self._accelDevice.initialize()
 		assert isinstance(obdDevice, IOBDDevice)
-		self._obdDevice = obdDevice
+		self._obdDevice = obdDevice 
 		self._obdDevice.initialize()
 
+		self._deviceList = DeviceCollection(thermoDevice = self._thermoDevice, gpsDevice = self._gpsDevice, accelDevice = self._accelDevice, obdDevice = self._obdDevice)
+
 	def do_manager_print_moving_averages(self, args):
-		manager = Manager(self._config, self._thermoDevice,
-			self._gpsDevice, self._accelDevice, self._obdDevice)
-		manager.print_moving_averages()
+		try:
+			manager = Manager(self._config, self._deviceList)
+			manager.print_moving_averages()
+		except KeyboardInterrupt:
+			manager.stop_workers()
 
 	def do_multiple_obd_read(self, args):
 		"""Multiple reads once obd device, Usage: <pid request> <mode of pid>"""
