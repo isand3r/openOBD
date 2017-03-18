@@ -26,6 +26,8 @@ class Manager():
 		self.PRINT_INTERVAL = self._config.manager_print_interval
 		self.MOVING_AVERAGE_ITEMS = self._config.manager_moving_average_items
 
+		self.workerlist = list()
+
 		# lists for calculating moving averages
 		self._temperatures = list()
 		self._locations = list()
@@ -35,19 +37,21 @@ class Manager():
 
 		self.start_workers()
 
+	def stop_workers(self):
+		for each in self.workerlist:
+			each.join()
+
 	def print_moving_averages(self):
-			try:
-				while(True):
-					os.system('clear')
-					print("MEASURE      | VALUE | UNITS | TIME")
-					self.print_moving_average_temperature()
-					self.print_moving_average_acceleration()
-					self.print_moving_average_location()
-					self.print_moving_average_rpm()
-					self.print_moving_average_speed()
-					time.sleep(self.PRINT_INTERVAL)
-			except KeyboardInterrupt:
-				pass
+		while(True):
+			os.system('clear')
+			print("MEASURE      | VALUE | UNITS | TIME")
+			self.print_moving_average_temperature()
+			self.print_moving_average_acceleration()
+			self.print_moving_average_location()
+			self.print_moving_average_rpm()
+			self.print_moving_average_speed()
+			time.sleep(self.PRINT_INTERVAL)
+				
 
 	def print_moving_average_temperature(self):
 		temperature = Measure.average_measure(self._temperatures)
@@ -93,16 +97,19 @@ class Manager():
 		print(speed_string)
 
 	def start_workers(self):
-		thermo_thread = threading.Thread(target=self.thermo_worker, daemon=True)
-		accel_thread = threading.Thread(target=self.accel_worker, daemon=True)
-		gps_thread = threading.Thread(target=self.gps_worker, daemon=True)
+		thermo_thread = threading.Thread(name = DeviceConstants.DEVICE_THERMO, target=self.thermo_worker, daemon=True)
+		self.workerlist.append(thermo_thread)
+		accel_thread = threading.Thread(name = DeviceConstants.DEVICE_ACCEL, target=self.accel_worker, daemon=True)
+		self.workerlist.append(accel_thread)
+		gps_thread = threading.Thread(name = DeviceConstants.DEVICE_GPS, target=self.gps_worker, daemon=True)
+		self.workerlist.append(gps_thread)
 		rpm_thread = threading.Thread(target=self.rpm_worker, daemon=True)
+		self.workerlist.append(rpm_thread)
 		speed_thread = threading.Thread(target=self.speed_worker, daemon=True)
-		thermo_thread.start()
-		accel_thread.start()
-		gps_thread.start()
-		rpm_thread.start()
-		speed_thread.start()
+		self.workerlist.append(speed_thread)
+
+		for each in self.workerlist:
+			each.start()
 
 	def thermo_worker(self):
 		while(True):
@@ -150,6 +157,6 @@ class Manager():
 			self._rpms.pop(0)
 
 	def read_speed(self):
-		self._speeds.append(self._obdDevice.read_current_data(MeasureConstants.SPEED))
+		self._speeds.append(self._deviceCollection.read_current_data(MeasureConstants.SPEED))
 		if (len(self._speeds) > self.MOVING_AVERAGE_ITEMS):
 			self._speeds.pop(0)

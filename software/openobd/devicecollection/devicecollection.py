@@ -38,28 +38,33 @@ class DeviceCollection(IDeviceCollection):
 	def read_current_data(self, message: str):
 
 		#gps
-		if(message == "location"):
-			return self.devicelist[DeviceConstants.DEVICE_GPS].read_location(message)
+		if(message == DeviceConstants.DEVICE_GPS):
+			assert isinstance(self.devicelist[DeviceConstants.DEVICE_GPS], IGPSDevice)
+			return self.devicelist[DeviceConstants.DEVICE_GPS].read_location()
 
 		#thermo
-		elif(message == "temperature"):
-			return self.devicelist[DeviceConstants.DEVICE_THERMO].read_temperature(message)
+		elif(message == DeviceConstants.DEVICE_THERMO):
+			assert isinstance(self.devicelist[DeviceConstants.DEVICE_THERMO], IThermoDevice)
+			return self.devicelist[DeviceConstants.DEVICE_THERMO].read_temperature()
 
 		#accel
-		elif(message == "acceleration"):		
-			return self.devicelist[DeviceConstants.DEVICE_ACCEL].read_acceleration(message)
+		elif(message == DeviceConstants.DEVICE_ACCEL):		
+			assert isinstance(self.devicelist[DeviceConstants.DEVICE_ACCEL], IAccelDevice)
+			return self.devicelist[DeviceConstants.DEVICE_ACCEL].read_acceleration()
 
 		#obd
 		elif(self.isOBDmsg(message)):
+			assert isinstance(self.devicelist[DeviceConstants.DEVICE_OBD], IOBDDevice)
 			return self.devicelist[DeviceConstants.DEVICE_OBD].read_current_data(message)
 
 		else:
+			print("Warning: Message Type Not Found")
 			return None
 
 				
 	def isOBDmsg(self, message) -> bool:
-		for each in MeasureConstants:
-			if(message == each):
+		for attr, value in MeasureConstants.__dict__.items():
+			if(message == value):
 				return True
 
 		return False	
