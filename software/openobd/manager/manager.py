@@ -47,13 +47,19 @@ class Manager():
 
 	def print_moving_averages(self):
 		while(True):
+
 			os.system('clear')
 			print("MEASURE      | VALUE | UNITS | TIME")
-			self.print_moving_average_temperature()
-			self.print_moving_average_acceleration()
-			self.print_moving_average_location()
-			self.print_moving_average_rpm()
-			self.print_moving_average_speed()
+			for key in self._deviceCollection.get_all_devices():
+				if(key == DeviceConstants.DEVICE_THERMO):
+					self.print_moving_average_temperature()
+				elif(key == DeviceConstants.DEVICE_GPS):
+					self.print_moving_average_location()
+				elif(key == DeviceConstants.DEVICE_ACCEL):
+					self.print_moving_average_acceleration()
+				elif(key == DeviceConstants.DEVICE_OBD):
+					self.print_moving_average_rpm()
+					self.print_moving_average_speed()
 			time.sleep(self.PRINT_INTERVAL)
 				
 
@@ -103,16 +109,25 @@ class Manager():
 		print(speed_string)
 
 	def start_workers(self):
-		thermo_thread = threading.Thread(name = DeviceConstants.DEVICE_THERMO, target=self.thermo_worker, daemon=True)
-		self.workerlist.append(thermo_thread)
-		accel_thread = threading.Thread(name = DeviceConstants.DEVICE_ACCEL, target=self.accel_worker, daemon=True)
-		self.workerlist.append(accel_thread)
-		gps_thread = threading.Thread(name = DeviceConstants.DEVICE_GPS, target=self.gps_worker, daemon=True)
-		self.workerlist.append(gps_thread)
-		rpm_thread = threading.Thread(target=self.rpm_worker, daemon=True)
-		self.workerlist.append(rpm_thread)
-		speed_thread = threading.Thread(target=self.speed_worker, daemon=True)
-		self.workerlist.append(speed_thread)
+
+		for key in self._deviceCollection.get_all_devices():
+			if(key == DeviceConstants.DEVICE_THERMO):
+				thermo_thread = threading.Thread(name = DeviceConstants.DEVICE_THERMO, target=self.thermo_worker, daemon=True)
+				self.workerlist.append(thermo_thread)
+
+			elif(key == DeviceConstants.DEVICE_ACCEL):
+				accel_thread = threading.Thread(name = DeviceConstants.DEVICE_ACCEL, target=self.accel_worker, daemon=True)
+				self.workerlist.append(accel_thread)
+
+			elif(key == DeviceConstants.DEVICE_GPS):
+				gps_thread = threading.Thread(name = DeviceConstants.DEVICE_GPS, target=self.gps_worker, daemon=True)
+				self.workerlist.append(gps_thread)
+
+			elif(key == DeviceConstants.DEVICE_OBD):
+				rpm_thread = threading.Thread(name = MeasureConstants.RPM, target=self.rpm_worker, daemon=True)
+				self.workerlist.append(rpm_thread)
+				speed_thread = threading.Thread(name = MeasureConstants.SPEED, target=self.speed_worker, daemon=True)
+				self.workerlist.append(speed_thread)
 
 		for each in self.workerlist:
 			each.start()

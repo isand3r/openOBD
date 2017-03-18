@@ -14,7 +14,15 @@ class IDeviceCollection(abc.ABC):
 		pass
 
 	@abc.abstractmethod
-	def read_current_data(self, message: str) -> Measure:
+	def read_current_data(self, message: str):
+		pass
+
+	@abc.abstractmethod
+	def get_device(self, message):
+		pass
+
+	@abc.abstractmethod
+	def get_all_devices(self, message):
 		pass
 
 	@abc.abstractmethod

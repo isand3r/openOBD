@@ -61,6 +61,11 @@ class DeviceCollection(IDeviceCollection):
 			print("Warning: Message Type Not Found")
 			return None
 
+	def get_device(self, key):
+		return self.devicelist[key]
+
+	def get_all_devices(self):
+		return self.devicelist
 				
 	def isOBDmsg(self, message) -> bool:
 		for attr, value in MeasureConstants.__dict__.items():
