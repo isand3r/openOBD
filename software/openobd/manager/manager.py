@@ -1,4 +1,6 @@
 from config.iconfiguration import IConfiguration
+from location.location import Location
+from accumulator.accumulator import Accumulator #TODO should instead depend on IAccumulator
 from devicecollection.idevicecollection import IDeviceCollection
 from measure.measure import Measure
 from location.location import Location
@@ -29,11 +31,13 @@ class Manager():
 		self.workerlist = list()
 
 		# lists for calculating moving averages
-		self._temperatures = list()
-		self._locations = list()
-		self._accelerations = list()
-		self._rpms = list()
-		self._speeds = list()
+		self._temperatures = Accumulator("temperature", self.MOVING_AVERAGE_ITEMS)
+		self._longtitudes = Accumulator("longtitudes", self.MOVING_AVERAGE_ITEMS)
+		self._latitudes = Accumulator("latitudes", self.MOVING_AVERAGE_ITEMS)
+		self._altitudes = Accumulator("altitudes", self.MOVING_AVERAGE_ITEMS)
+		self._accelerations = Accumulator("acceleration", self.MOVING_AVERAGE_ITEMS)
+		self._rpms = Accumulator("rpm", self.MOVING_AVERAGE_ITEMS)
+		self._speeds = Accumulator("speed", self.MOVING_AVERAGE_ITEMS)
 
 		self.start_workers()
 
@@ -54,43 +58,45 @@ class Manager():
 				
 
 	def print_moving_average_temperature(self):
-		temperature = Measure.average_measure(self._temperatures)
+		temperature = self._temperatures.mean()
 		temperature_string = "Temperature     {}  {}  {}".format(
 			round(temperature.value,2), temperature.units,
 			temperature.time.time())
 		print(temperature_string)
 
 	def print_moving_average_acceleration(self):
-		acceleration = Measure.average_measure(self._accelerations)
+		acceleration = self._accelerations.mean()
 		acceleration_string = "Acceleration    {}  {}  {}".format(
 			round(acceleration.value,2), acceleration.units,
 			acceleration.time.time())
 		print(acceleration_string)
 
 	def print_moving_average_location(self):
-		location = Location.average_location(self._locations)
+		longitude = self._longtitudes.mean()
+		latitude = self._latitudes.mean()
+		altitude = self._altitudes.mean()
 		latitude_string = "Latitude        {}  {}  {}".format(
-			round(location.latitude.value, 4), location.latitude.units,
-			location.latitude.time.time())
+			round(latitude.value, 4), latitude.units,
+			latitude.time.time())
 		longitude_string = "Longitude     {}  {}  {}".format(
-			round(location.longitude.value,4), location.longitude.units,
-			location.longitude.time.time())
+			round(longitude.value,4), longitude.units,
+			longitude.time.time())
 		altitude_string = "Altitude        {}  {}  {}".format(
-			round(location.altitude.value,2), location.altitude.units,
-			location.altitude.time.time())
+			round(altitude.value,2), altitude.units,
+			altitude.time.time())
 		print(latitude_string)
 		print(longitude_string)
 		print(altitude_string)
 
 	def print_moving_average_rpm(self):
-		rpm = Measure.average_measure(self._rpms)
+		rpm = self._rpms.mean()
 		rpm_string = "RPM     {}  {}  {}".format(
 			round(rpm.value,2), rpm.units,
 			rpm.time.time())
 		print(rpm_string)
 
 	def print_moving_average_speed(self):
-		speed = Measure.average_measure(self._speeds)
+		speed = self._speeds.mean()
 		speed_string = "Speed     {}  {}  {}".format(
 			round(speed.value,2), speed.units,
 			speed.time.time())
@@ -137,26 +143,21 @@ class Manager():
 			time.sleep(self.SPEED_INTERVAL)
 
 	def read_temperature(self):
-		self._temperatures.append(self._deviceCollection.read_current_data(DeviceConstants.DEVICE_THERMO))
-		if (len(self._temperatures) > self.MOVING_AVERAGE_ITEMS):
-			self._temperatures.pop(0)
+		self._temperatures.push(self._deviceCollection.read_current_data(DeviceConstants.DEVICE_THERMO))
 
 	def read_acceleration(self):
-		self._accelerations.append(self._deviceCollection.read_current_data(DeviceConstants.DEVICE_ACCEL))
-		if (len(self._accelerations) > self.MOVING_AVERAGE_ITEMS):
-			self._accelerations.pop(0)
+		self._accelerations.push(self._deviceCollection.read_current_data(DeviceConstants.DEVICE_ACCEL))
 
 	def read_location(self):
-		self._locations.append(self._deviceCollection.read_current_data(DeviceConstants.DEVICE_GPS))
-		if (len(self._locations) > self.MOVING_AVERAGE_ITEMS):
-			self._locations.pop(0)
+		location = self._deviceCollection.read_current_data(DeviceConstants.DEVICE_GPS)
+		self._latitudes.push(location.latitude)
+		self._longtitudes.push(location.longitude)
+		self._altitudes.push(location.altitude)
+
 
 	def read_rpm(self):
-		self._rpms.append(self._deviceCollection.read_current_data(MeasureConstants.RPM))
-		if (len(self._rpms) > self.MOVING_AVERAGE_ITEMS):
-			self._rpms.pop(0)
+		self._rpms.push(self._deviceCollection.read_current_data(MeasureConstants.RPM))
 
 	def read_speed(self):
-		self._speeds.append(self._deviceCollection.read_current_data(MeasureConstants.SPEED))
-		if (len(self._speeds) > self.MOVING_AVERAGE_ITEMS):
-			self._speeds.pop(0)
+		self._speeds.push(self._deviceCollection.read_current_data(MeasureConstants.SPEED))
+
