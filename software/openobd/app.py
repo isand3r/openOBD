@@ -26,7 +26,6 @@ from thermo.mockrisingthermodevice import MockRisingThermoDevice
 from manager.manager import Manager
 from devicecollection.devicecollection import DeviceCollection
 
-from shell.shell import Shell
 
 class App():
 	def __init__(self):
