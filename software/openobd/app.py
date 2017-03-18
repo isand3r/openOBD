@@ -23,7 +23,9 @@ from thermo.mockfixedthermodevice import MockFixedThermoDevice
 from thermo.mockrisingthermodevice import MockRisingThermoDevice
 #from thermo.mputhermodevice import MPUThermoDevice
 
-from shell.shell import Shell
+from manager.manager import Manager
+from devicecollection.devicecollection import DeviceCollection
+
 
 class App():
 	def __init__(self):
@@ -34,13 +36,14 @@ class App():
 		self._accelDevice = None
 		self._thermoDevice = None
 		self._obdDevice = None
-		self._shell = None
 		self.read_configuration_file()
 		self.configure_obd()
 		self.configure_gps()
 		self.configure_thermo()
 		self.configure_acceleromenter()
-		self.configure_shell()
+
+		self._deviceList = DeviceCollection(thermoDevice = self._thermoDevice, gpsDevice = self._gpsDevice, accelDevice = self._accelDevice, obdDevice = self._obdDevice)
+		self._manager = Manager(self._config, self._deviceList)
 
 	def read_configuration_file(self):
 		self._config = Configuration()
@@ -80,12 +83,11 @@ class App():
 		else:
 			print("incorrect accel config")
 
-	def configure_shell(self):
-		self._shell = Shell(self._config, self._gpsDevice, self._thermoDevice,
-			self._accelDevice, self._obdDevice)
-
 	def run(self):
-		self._shell.cmdloop()
+		try:
+			self._manager.print_moving_averages()
+		except KeyboardInterrupt:
+			manager.stop_workers()
 
 if __name__ == '__main__':
 	app = App()
