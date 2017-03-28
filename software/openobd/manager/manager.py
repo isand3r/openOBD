@@ -4,6 +4,9 @@ from accumulator.accumulator import Accumulator #TODO should instead depend on I
 from devicecollection.idevicecollection import IDeviceCollection
 from measure.measure import Measure
 from location.location import Location
+from udp.udp import UDP
+from datetime import datetime, timezone
+
 import constants.deviceconstants as DeviceConstants
 import constants.measureconstants as MeasureConstants
 import threading
@@ -39,6 +42,9 @@ class Manager():
 		self._rpms = Accumulator("rpm", self.MOVING_AVERAGE_ITEMS)
 		self._speeds = Accumulator("speed", self.MOVING_AVERAGE_ITEMS)
 
+		self._udp = UDP('staging-tcu.moj.io', 9001)
+		self._udp.connect()
+		
 		self.start_workers()
 
 	def stop_workers(self):
@@ -110,6 +116,9 @@ class Manager():
 
 	def start_workers(self):
 
+		udp_thread = threading.Thread(name = "UDP", target = self.udp_worker, daemon = True)
+		self.workerlist.append(udp_thread)
+
 		for key in self._deviceCollection.get_all_devices():
 			if(key == DeviceConstants.DEVICE_THERMO):
 				thermo_thread = threading.Thread(name = DeviceConstants.DEVICE_THERMO, target=self.thermo_worker, daemon=True)
@@ -157,6 +166,26 @@ class Manager():
 			self.read_speed()
 			time.sleep(self.SPEED_INTERVAL)
 
+	def udp_worker(self):
+		while(True):
+
+			self._udp.update_info('D', datetime.now(timezone.utc).strftime("%Y%m%d"))
+			self._udp.update_info('T', datetime.now(timezone.utc).strftime("%H%M%S"))
+			self._udp.update_info('AX', 1.2)
+			self._udp.update_info('AY', 1.2)
+			self._udp.update_info('AZ', 1.2)
+			self._udp.update_info('LT', 49.27884)
+			self._udp.update_info('LN', -123.12586)
+			self._udp.update_info('AL', 64)
+			self._udp.update_info('SP', 0)
+			self._udp.update_info('RP', 0)
+			self._udp.update_info('SP', 0)
+			self._udp.update_info('BV', 12)
+			self._udp.update_info('IG', 1)
+
+			self._udp.send(6011)
+			time.sleep(2)
+
 	def read_temperature(self):
 		self._temperatures.push(self._deviceCollection.read_current_data(DeviceConstants.DEVICE_THERMO))
 
@@ -175,4 +204,6 @@ class Manager():
 
 	def read_speed(self):
 		self._speeds.push(self._deviceCollection.read_current_data(MeasureConstants.SPEED))
+
+
 

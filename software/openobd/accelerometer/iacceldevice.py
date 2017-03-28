@@ -14,3 +14,16 @@ class IAccelDevice(abc.ABC):
 	@abc.abstractmethod
 	def read_acceleration(self) -> Measure:
 		pass
+	
+	@abc.abstractmethod
+	def getX(self):
+		pass
+
+	@abc.abstractmethod
+	def getY(self):
+		pass
+
+	@abc.abstractmethod
+	def getZ(self):
+		pass
+

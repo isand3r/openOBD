@@ -34,3 +34,12 @@ class MockFixedAccelDevice(IAccelDevice):
 		"""Calculates the magnitude of a vector with 3 dimensions"""
 		accel_array = math.sqrt(X**2 + Y**2 + Z**2)
 		return accel_array
+	
+	def getX(self):
+		return self.accel['x']
+
+	def getY(self):
+		return self.accel['y']
+
+	def getZ(self):
+		return self.accel['z']
