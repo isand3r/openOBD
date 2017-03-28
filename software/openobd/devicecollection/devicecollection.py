@@ -52,6 +52,19 @@ class DeviceCollection(IDeviceCollection):
 			assert isinstance(self.devicelist[DeviceConstants.DEVICE_ACCEL], IAccelDevice)
 			return self.devicelist[DeviceConstants.DEVICE_ACCEL].read_acceleration()
 
+		#accelx
+		elif(message == DeviceConstants.DEVICE_ACCELX):		
+			assert isinstance(self.devicelist[DeviceConstants.DEVICE_ACCEL], IAccelDevice)
+			return self.devicelist[DeviceConstants.DEVICE_ACCEL].getX()
+		#accely
+		elif(message == DeviceConstants.DEVICE_ACCELY):		
+			assert isinstance(self.devicelist[DeviceConstants.DEVICE_ACCEL], IAccelDevice)
+			return self.devicelist[DeviceConstants.DEVICE_ACCEL].getY()
+		#accelz
+		elif(message == DeviceConstants.DEVICE_ACCELZ):		
+			assert isinstance(self.devicelist[DeviceConstants.DEVICE_ACCEL], IAccelDevice)
+			return self.devicelist[DeviceConstants.DEVICE_ACCEL].getZ()
+
 		#obd
 		elif(self.isOBDmsg(message)):
 			assert isinstance(self.devicelist[DeviceConstants.DEVICE_OBD], IOBDDevice)

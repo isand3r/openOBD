@@ -7,17 +7,15 @@ class MockFixedAccelDevice(IAccelDevice):
 	"""Mock Thermometer that always gives the same reading"""
 
 	def __init__(self):
-		self.MOCK_X = 2.2
-		self.MOCK_Y = -3.1
-		self.MOCK_Z = -0.2
+		self.accel  = {'x' : 2.2, 'y' : -3.1, 'z' : -0.2}
 		self.MOCK_UNITS = "m/s^2"
 		self.MOCK_VALUE = None
 		self._ready = False
 
 	def initialize(self):
 		self._ready = True
-		self.MOCK_VALUE = self.calculate_magnitude(self.MOCK_X, self.MOCK_Y,
-			self.MOCK_Z)
+		self.MOCK_VALUE = self.calculate_magnitude(self.accel['x'], self.accel['y'],
+			self.accel['z'])
 
 	@property
 	def ready(self) -> bool:
@@ -36,10 +34,13 @@ class MockFixedAccelDevice(IAccelDevice):
 		return accel_array
 	
 	def getX(self):
-		return self.accel['x']
+		time = datetime.datetime.now()
+		return Measure(self.accel['x'],self.MOCK_UNITS, time)
 
 	def getY(self):
-		return self.accel['y']
+		time = datetime.datetime.now()
+		return Measure(self.accel['y'],self.MOCK_UNITS, time)
 
 	def getZ(self):
-		return self.accel['z']
+		time = datetime.datetime.now()
+		return Measure(self.accel['z'],self.MOCK_UNITS, time)

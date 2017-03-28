@@ -41,6 +41,10 @@ class Manager():
 		self._accelerations = Accumulator("acceleration", self.MOVING_AVERAGE_ITEMS)
 		self._rpms = Accumulator("rpm", self.MOVING_AVERAGE_ITEMS)
 		self._speeds = Accumulator("speed", self.MOVING_AVERAGE_ITEMS)
+		self._accelx = Accumulator("accelx", self.MOVING_AVERAGE_ITEMS)
+		self._accely = Accumulator("accely", self.MOVING_AVERAGE_ITEMS)
+		self._accelz = Accumulator("accelz", self.MOVING_AVERAGE_ITEMS)
+
 
 		self._udp = UDP('staging-tcu.moj.io', 9001)
 		self._udp.connect()
@@ -168,29 +172,31 @@ class Manager():
 
 	def udp_worker(self):
 		while(True):
-
+			time.sleep(2)
 			self._udp.update_info('D', datetime.now(timezone.utc).strftime("%Y%m%d"))
 			self._udp.update_info('T', datetime.now(timezone.utc).strftime("%H%M%S"))
-			self._udp.update_info('AX', 1.2)
-			self._udp.update_info('AY', 1.2)
-			self._udp.update_info('AZ', 1.2)
-			self._udp.update_info('LT', 49.27884)
-			self._udp.update_info('LN', -123.12586)
-			self._udp.update_info('AL', 64)
-			self._udp.update_info('SP', 0)
-			self._udp.update_info('RP', 0)
-			self._udp.update_info('SP', 0)
+			self._udp.update_info('AX', self._accelx.mean().value)
+			self._udp.update_info('AY', self._accely.mean().value)
+			self._udp.update_info('AZ', self._accelz.mean().value)
+			self._udp.update_info('LT', self._latitudes.mean().value)
+			self._udp.update_info('LN', self._longtitudes.mean().value)
+			self._udp.update_info('AL', self._altitudes.mean().value)
+			self._udp.update_info('SP', self._speeds.mean().value)
+			self._udp.update_info('RP', self._rpms.mean().value)
 			self._udp.update_info('BV', 12)
 			self._udp.update_info('IG', 1)
 
 			self._udp.send(6011)
-			time.sleep(2)
 
 	def read_temperature(self):
 		self._temperatures.push(self._deviceCollection.read_current_data(DeviceConstants.DEVICE_THERMO))
 
 	def read_acceleration(self):
 		self._accelerations.push(self._deviceCollection.read_current_data(DeviceConstants.DEVICE_ACCEL))
+		self._accelx.push(self._deviceCollection.read_current_data(DeviceConstants.DEVICE_ACCELX))
+		self._accely.push(self._deviceCollection.read_current_data(DeviceConstants.DEVICE_ACCELY))
+		self._accelz.push(self._deviceCollection.read_current_data(DeviceConstants.DEVICE_ACCELZ))
+
 
 	def read_location(self):
 		location = self._deviceCollection.read_current_data(DeviceConstants.DEVICE_GPS)

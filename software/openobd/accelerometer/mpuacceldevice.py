@@ -8,7 +8,7 @@ from mpu6050 import mpu6050
 class MPUAccelDevice(IAccelDevice):
     """Accelerometer using MPU6050"""
     def __init__(self):
-        self.accel  = 0
+        self.accel  = {}
         self.gyro = 0
         self.accel_mag = 0
         self.init = None
@@ -18,6 +18,7 @@ class MPUAccelDevice(IAccelDevice):
     def initialize(self):
         self._ready = True
         self.init = mpu6050(0x68)
+        self.accel = mpu6050.get_accel_data(self.init)
 
     @property
     def ready(self) -> bool:
@@ -26,10 +27,10 @@ class MPUAccelDevice(IAccelDevice):
     def read_acceleration(self) -> Measure:
         assert self._ready
         time = datetime.datetime.now()
-        self.accel = mpu6050.get_accel_data(self.init)
-        x = self.accel['x']
-        y = self.accel['y']
-        z = self.accel['z']
+        accel = mpu6050.get_accel_data(self.init)
+        x = accel['x'] - self.accel['x']
+        y = accel['y'] - self.accel['y'] 
+        z = accel['z'] - self.accel['z']
         self.accel_mag = self.calculate_magnitude(x, y, z)
         magnitude_measure = Measure(self.accel_mag,self.units, time)
         return magnitude_measure
@@ -40,10 +41,13 @@ class MPUAccelDevice(IAccelDevice):
         return accel_array
 
     def getX(self):
-        return self.accel['x']
+        time = datetime.datetime.now()
+        return Measure(self.accel['x'],self.MOCK_UNITS, time)
 
     def getY(self):
-        return self.accel['y']
+        time = datetime.datetime.now()
+        return Measure(self.accel['y'],self.MOCK_UNITS, time)
 
     def getZ(self):
-        return self.accel['z']
+        time = datetime.datetime.now()
+        return Measure(self.accel['z'],self.MOCK_UNITS, time)
