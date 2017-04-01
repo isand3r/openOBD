@@ -1,4 +1,4 @@
-from measure.measure import measure
+from measure.measure import Measure
 import abc
 
 class IVoltDevice(abc.ABC):
