@@ -15,6 +15,7 @@ class IDeviceCollection(abc.ABC):
 
 	@abc.abstractmethod
 	def read_current_data(self, message: str) -> Measure:
+		"""message must be a string from DeviceConstants or MeasureConstants"""
 		pass
 
 	@abc.abstractmethod
