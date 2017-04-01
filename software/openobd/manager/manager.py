@@ -44,10 +44,6 @@ class Manager():
 		self._workerList = list()
 		self.start_workers()
 
-	def stop_workers(self):
-		for each in self._workerList:
-			each.join()
-
 	def print_moving_averages(self):
 		while(True):
 			os.system('clear')

@@ -109,10 +109,7 @@ class App():
 			print("incorrect baro config")
 
 	def run(self):
-		try:
-			self._manager.print_moving_averages()
-		except KeyboardInterrupt:
-			manager.stop_workers()
+		self._manager.print_moving_averages()
 
 if __name__ == '__main__':
 	app = App()
