@@ -18,7 +18,12 @@ class Accumulator(IAccumulator):
 	@property
 	def empty(self) -> bool:
 		with self._lock:
-			return (len(self._measures) == 0)
+			return self._isempty()
+
+	def _isempty(self) -> bool:
+		"""Given that the caller holds the lock,
+		returns true if _measures is empty"""
+		return (len(self._measures) == 0)
 
 	def push(self, measure: Measure):
 		with self._lock:
@@ -33,14 +38,18 @@ class Accumulator(IAccumulator):
 	def newest(self) -> Measure:
 		"""Return the measure that was most recently pushed"""
 		with self._lock:
+			if (self._isempty()):
+				return None
 			return self._measures[len(self._measures)-1]
 
 	def mean(self) -> Measure:
 		with self._lock:
+			if (self._isempty()):
+				return None
 			return Accumulator.mean_measure(self._measures)
 
-	def mean_measure(measures):
-		"""Given a non-empty list of Measures,
+	def mean_measure(measures) -> Measure:
+		"""Given a non-empty list of Measures and given that the caller holds the lock,
 		Return a Measure with the mean value and the units & time from the 0th entry"""
 		sum_value = 0
 		count = 0
@@ -54,6 +63,8 @@ class Accumulator(IAccumulator):
 		"""Returns the median (the upper middle measure if there are an 
 		even number of measures)"""
 		with self._lock:
+			if (self._isempty()):
+				return None
 			median_list = sorted(self._measures, key=lambda x: x.value)
 			middle_index = int(len(median_list)/2)
 			return median_list[middle_index]
@@ -61,6 +72,8 @@ class Accumulator(IAccumulator):
 	def minimum(self) -> Measure:
 		minimum = None
 		with self._lock:
+			if (self._isempty()):
+				return None
 			minimum = self._measures[0]
 			for measure in self._measures:
 				if (minimum.value > measure.value):
@@ -70,6 +83,8 @@ class Accumulator(IAccumulator):
 	def maximum(self) -> Measure:
 		minimum = None
 		with self._lock:
+			if (self._isempty()):
+				return None
 			minimum = self._measures[0]
 			for measure in self._measures:
 				if (minimum.value < measure.value):

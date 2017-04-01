@@ -23,6 +23,12 @@ from thermo.mockfixedthermodevice import MockFixedThermoDevice
 from thermo.mockrisingthermodevice import MockRisingThermoDevice
 #from thermo.mputhermodevice import MPUThermoDevice
 
+from volt.ivoltdevice import IVoltDevice
+from volt.mockvoltdevice import MockVoltDevice
+
+from baro.ibarodevice import IBaroDevice
+from baro.mockbarodevice import MockBaroDevice
+
 from manager.manager import Manager
 from devicecollection.devicecollection import DeviceCollection
 
@@ -35,14 +41,21 @@ class App():
 		self._gpsDevice = None
 		self._accelDevice = None
 		self._thermoDevice = None
+		self._voltDevice = None
+		self._baroDevice = None
 		self._obdDevice = None
 		self.read_configuration_file()
 		self.configure_obd()
 		self.configure_gps()
 		self.configure_thermo()
 		self.configure_acceleromenter()
+		self.configure_volt()
+		self.configure_baro()
 
-		self._deviceList = DeviceCollection(thermoDevice = self._thermoDevice, gpsDevice = self._gpsDevice, accelDevice = self._accelDevice, obdDevice = self._obdDevice)
+		self._deviceList = DeviceCollection(thermoDevice = self._thermoDevice,
+			gpsDevice = self._gpsDevice, accelDevice = self._accelDevice,
+			voltDevice = self._voltDevice, baroDevice = self._baroDevice,
+			obdDevice = self._obdDevice)
 		self._manager = Manager(self._config, self._deviceList)
 
 	def read_configuration_file(self):
@@ -82,6 +95,18 @@ class App():
 			self._accelDevice = MPUAccelDevice()
 		else:
 			print("incorrect accel config")
+
+	def configure_volt(self):
+		if self._config.volt_device == 'mock':
+			self._voltDevice = MockVoltDevice()
+		else:
+			print("incorrect volt config")
+
+	def configure_baro(self):
+		if self._config.baro_device == 'mock':
+			self._baroDevice = MockBaroDevice()
+		else:
+			print("incorrect baro config")
 
 	def run(self):
 		try:

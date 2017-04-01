@@ -12,7 +12,6 @@ class MockRisingThermoDevice(IThermoDevice):
 		self._ready = False
 		self._value = self.INITIAL_VALUE
 
-
 	def initialize(self):
 		self._ready = True
 

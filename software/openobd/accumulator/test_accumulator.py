@@ -31,6 +31,7 @@ def test_newest():
 	name = "distance"
 	capacity = 5
 	accumulator = Accumulator(name, capacity)
+	assert accumulator.newest() == None
 	accumulator.push(distance0)
 	accumulator.push(distance1)
 	assert accumulator.newest().value == distance1.value
@@ -47,6 +48,7 @@ def test_mean():
 	name = "distance"
 	capacity = 5
 	accumulator = Accumulator(name, capacity)
+	assert accumulator.mean() == None
 	accumulator.push(distance0)
 	accumulator.push(distance1)
 	accumulator.push(distance2)
@@ -76,6 +78,7 @@ def test_median():
 	name = "distance"
 	capacity = 5
 	accumulator = Accumulator(name, capacity)
+	assert accumulator.median() == None
 	accumulator.push(distance0)
 	accumulator.push(distance1)
 	accumulator.push(distance2)
@@ -93,6 +96,8 @@ def test_minimum_maximum():
 	name = "distance"
 	capacity = 5
 	accumulator = Accumulator(name, capacity)
+	assert accumulator.minimum() == None
+	assert accumulator.maximum() == None
 	accumulator.push(distance0)
 	accumulator.push(distance1)
 	accumulator.push(distance2)

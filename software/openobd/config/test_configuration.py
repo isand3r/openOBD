@@ -1,4 +1,4 @@
-from ..config.configuration import Configuration
+from config.configuration import Configuration
 
 def test_manager():
 	config = Configuration()
@@ -30,3 +30,15 @@ def test_accel():
 	config.read('config/test_config.ini')
 	assert config.accel_device == 'test_accel_device'
 	assert config.accel_interval == 1.3
+
+def test_baro():
+	config = Configuration()
+	config.read('config/test_config.ini')
+	assert config.baro_device == 'test_baro_device'
+	assert config.baro_interval == 1.4
+
+def test_volt():
+	config = Configuration()
+	config.read('config/test_config.ini')
+	assert config.volt_device == 'test_volt_device'
+	assert config.volt_interval == 1.5

@@ -51,3 +51,19 @@ class IConfiguration(abc.ABC):
 	@abc.abstractproperty
 	def accel_interval(self) -> str:
 		pass
+
+	@abc.abstractproperty
+	def baro_device(self) -> str:
+		pass
+
+	@abc.abstractproperty
+	def baro_interval(self) -> str:
+		pass
+
+	@abc.abstractproperty
+	def volt_device(self) -> str:
+		pass
+
+	@abc.abstractproperty
+	def volt_interval(self) -> str:
+		pass
