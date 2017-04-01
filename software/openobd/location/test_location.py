@@ -1,4 +1,4 @@
-from ..location.location import Location
+from location.location import Location
 import datetime
 
 def test_location():
