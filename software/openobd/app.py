@@ -109,7 +109,7 @@ class App():
 			print("incorrect baro config")
 
 	def run(self):
-		self._manager.print_moving_averages()
+		self._manager.print_all_accumulator_means()
 
 if __name__ == '__main__':
 	app = App()

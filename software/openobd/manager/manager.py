@@ -1,6 +1,6 @@
 from config.iconfiguration import IConfiguration
 from location.location import Location
-from accumulator.accumulator import Accumulator #TODO should instead depend on IAccumulator
+from accumulator.accumulator import Accumulator
 from devicecollection.idevicecollection import IDeviceCollection
 from measure.measure import Measure
 from location.location import Location
@@ -20,9 +20,9 @@ class Manager():
 		self._deviceCollection = deviceCollection
 		self._deviceCollection.init_devices()
 
+		self.GPS_INTERVAL = self._config.gps_interval
 		self.THERMO_INTERVAL = self._config.thermo_interval
 		self.ACCEL_INTERVAL = self._config.accel_interval
-		self.GPS_INTERVAL = self._config.gps_interval
 		self.VOLT_INTERVAL = self._config.volt_interval
 		self.BARO_INTERVAL = self._config.baro_interval
 		self.RPM_INTERVAL = self._config.rpm_interval
@@ -30,84 +30,78 @@ class Manager():
 		self.PRINT_INTERVAL = self._config.manager_print_interval
 		self.MOVING_AVERAGE_ITEMS = self._config.manager_moving_average_items
 
-		# lists for calculating moving averages
-		self._temperatures = Accumulator("Temperature", self.MOVING_AVERAGE_ITEMS)
 		self._longtitudes = Accumulator("Longitude", self.MOVING_AVERAGE_ITEMS)
 		self._latitudes = Accumulator("Latitude", self.MOVING_AVERAGE_ITEMS)
 		self._altitudes = Accumulator("Altitude", self.MOVING_AVERAGE_ITEMS)
+		self._temperatures = Accumulator("Temperature", self.MOVING_AVERAGE_ITEMS)
 		self._accelerations = Accumulator("Acceleration", self.MOVING_AVERAGE_ITEMS)
 		self._voltages = Accumulator("Voltage", self.MOVING_AVERAGE_ITEMS)
 		self._pressures = Accumulator("Pressure", self.MOVING_AVERAGE_ITEMS)
 		self._rpms = Accumulator("RPM", self.MOVING_AVERAGE_ITEMS)
 		self._speeds = Accumulator("Speed", self.MOVING_AVERAGE_ITEMS)
 
+		self.DEFAULT_ROUNDING_DIGITS = 2
+		self.LATITUDE_ROUNDING_DIGITS = 4
+
 		self._workerList = list()
+		self.create_workers()
 		self.start_workers()
 
-	def print_moving_averages(self):
+	def print_all_accumulator_means(self):
 		while(True):
 			os.system('clear')
 			print("MEASURE | VALUE | UNITS | TIME")
-			self.print_accumulator_mean(self._longtitudes, 2)
-			self.print_accumulator_mean(self._latitudes, 4)
-			self.print_accumulator_mean(self._altitudes, 2)
-			self.print_accumulator_mean(self._temperatures, 2)
-			self.print_accumulator_mean(self._accelerations, 2)
-			self.print_accumulator_mean(self._voltages, 2)
-			self.print_accumulator_mean(self._pressures, 2)
-			self.print_accumulator_mean(self._rpms, 2)
-			self.print_accumulator_mean(self._speeds, 2)
+			self.print_accumulator_mean(self._longtitudes)
+			self.print_accumulator_mean(self._latitudes, self.LATITUDE_ROUNDING_DIGITS)
+			self.print_accumulator_mean(self._altitudes)
+			self.print_accumulator_mean(self._temperatures)
+			self.print_accumulator_mean(self._accelerations)
+			self.print_accumulator_mean(self._voltages)
+			self.print_accumulator_mean(self._pressures)
+			self.print_accumulator_mean(self._rpms)
+			self.print_accumulator_mean(self._speeds)
 			time.sleep(self.PRINT_INTERVAL)
 
-	def print_accumulator_mean(self, accumulator, roundDigits):
+	def print_accumulator_mean(self, accumulator, roundDigits = None):
+		if (roundDigits == None):
+			roundDigits = self.DEFAULT_ROUNDING_DIGITS
 		mean = accumulator.mean()
 		if (mean != None):
 			string = accumulator.name + " {} {} {}".format(
 				round(mean.value, roundDigits), mean.units, mean.time.time())
 			print(string)
 
-	def start_workers(self):
-		thermo_thread = threading.Thread(name = DeviceConstants.DEVICE_THERMO, target=self.worker,
-			args=(self.read_temperature, self.THERMO_INTERVAL), daemon=True)
-		self._workerList.append(thermo_thread)
+	def create_workers(self):
+		self.create_gps_worker_thread()
+		self.create_worker_thread(self._temperatures, DeviceConstants.DEVICE_THERMO, self.THERMO_INTERVAL)
+		self.create_worker_thread(self._accelerations, DeviceConstants.DEVICE_ACCEL, self.ACCEL_INTERVAL)
+		self.create_worker_thread(self._voltages, DeviceConstants.DEVICE_VOLT, self.VOLT_INTERVAL)
+		self.create_worker_thread(self._pressures, DeviceConstants.DEVICE_BARO, self.BARO_INTERVAL)
+		self.create_worker_thread(self._rpms, MeasureConstants.RPM, self.RPM_INTERVAL)
+		self.create_worker_thread(self._speeds, MeasureConstants.SPEED, self.SPEED_INTERVAL)
 
-		accel_thread = threading.Thread(name = DeviceConstants.DEVICE_ACCEL, target=self.worker,
-			args=(self.read_acceleration, self.ACCEL_INTERVAL), daemon=True)
-		self._workerList.append(accel_thread)
+	def create_worker_thread(self, accumulator, measureString, interval):
+		thread = threading.Thread(name = measureString, target=self.measure_worker,
+			args=(accumulator, measureString, interval), daemon=True)
+		self._workerList.append(thread)
 
-		gps_thread = threading.Thread(name = DeviceConstants.DEVICE_GPS, target=self.worker,
-			args=(self.read_location, self.GPS_INTERVAL), daemon=True)
-		self._workerList.append(gps_thread)
-
-		volt_thread = threading.Thread(name = DeviceConstants.DEVICE_VOLT, target=self.worker,
-			args=(self.read_voltage, self.VOLT_INTERVAL), daemon=True)
-		self._workerList.append(volt_thread)
-
-		baro_thread = threading.Thread(name = DeviceConstants.DEVICE_BARO, target=self.worker,
-			args=(self.read_pressure, self.BARO_INTERVAL), daemon=True)
-		self._workerList.append(baro_thread)
-
-		rpm_thread = threading.Thread(name = MeasureConstants.RPM, target=self.worker,
-			args=(self.read_rpm, self.RPM_INTERVAL), daemon=True)
-		self._workerList.append(rpm_thread)
-
-		speed_thread = threading.Thread(name = MeasureConstants.SPEED, target=self.worker,
-			args=(self.read_speed, self.SPEED_INTERVAL), daemon=True)
-		self._workerList.append(speed_thread)
-
-		for each in self._workerList:
-			each.start()
-
-	def worker(self, read_method, interval):
+	def measure_worker(self, accumulator, measureString, interval):
 		while(True):
-			read_method()
+			self.read_measure(accumulator, measureString)
 			time.sleep(interval)
 
-	def read_temperature(self):
-		self._temperatures.push(self._deviceCollection.read_current_data(DeviceConstants.DEVICE_THERMO))
+	def read_measure(self, accumulator, measureString):
+		accumulator.push(self._deviceCollection.read_current_data(measureString))
 
-	def read_acceleration(self):
-		self._accelerations.push(self._deviceCollection.read_current_data(DeviceConstants.DEVICE_ACCEL))
+	def create_gps_worker_thread(self):
+		# gps is a special case because location consists of three measures
+		gps_thread = threading.Thread(name = DeviceConstants.DEVICE_GPS, target=self.location_worker, daemon=True)
+		self._workerList.append(gps_thread)
+
+	def location_worker(self):
+		while(True):
+			self.read_location()
+			time.sleep(self.GPS_INTERVAL)
 
 	def read_location(self):
 		location = self._deviceCollection.read_current_data(DeviceConstants.DEVICE_GPS)
@@ -115,14 +109,6 @@ class Manager():
 		self._longtitudes.push(location.longitude)
 		self._altitudes.push(location.altitude)
 
-	def read_voltage(self):
-		self._voltages.push(self._deviceCollection.read_current_data(DeviceConstants.DEVICE_VOLT))
-
-	def read_pressure(self):
-		self._pressures.push(self._deviceCollection.read_current_data(DeviceConstants.DEVICE_BARO))
-
-	def read_rpm(self):
-		self._rpms.push(self._deviceCollection.read_current_data(MeasureConstants.RPM))
-
-	def read_speed(self):
-		self._speeds.push(self._deviceCollection.read_current_data(MeasureConstants.SPEED))
+	def start_workers(self):
+		for each in self._workerList:
+			each.start()
