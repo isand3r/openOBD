@@ -124,58 +124,41 @@ class Manager():
 			print(speed_string)
 
 	def start_workers(self):
-		thermo_thread = threading.Thread(name = DeviceConstants.DEVICE_THERMO, target=self.thermo_worker, daemon=True)
+		thermo_thread = threading.Thread(name = DeviceConstants.DEVICE_THERMO, target=self.worker,
+			args=(self.read_temperature, self.THERMO_INTERVAL), daemon=True)
 		self._workerList.append(thermo_thread)
-		accel_thread = threading.Thread(name = DeviceConstants.DEVICE_ACCEL, target=self.accel_worker, daemon=True)
+
+		accel_thread = threading.Thread(name = DeviceConstants.DEVICE_ACCEL, target=self.worker,
+			args=(self.read_acceleration, self.ACCEL_INTERVAL), daemon=True)
 		self._workerList.append(accel_thread)
-		gps_thread = threading.Thread(name = DeviceConstants.DEVICE_GPS, target=self.gps_worker, daemon=True)
+
+		gps_thread = threading.Thread(name = DeviceConstants.DEVICE_GPS, target=self.worker,
+			args=(self.read_location, self.GPS_INTERVAL), daemon=True)
 		self._workerList.append(gps_thread)
-		volt_thread = threading.Thread(name = DeviceConstants.DEVICE_VOLT, target=self.volt_worker, daemon=True)
+
+		volt_thread = threading.Thread(name = DeviceConstants.DEVICE_VOLT, target=self.worker,
+			args=(self.read_voltage, self.VOLT_INTERVAL), daemon=True)
 		self._workerList.append(volt_thread)
-		baro_thread = threading.Thread(name = DeviceConstants.DEVICE_BARO, target=self.baro_worker, daemon=True)
+
+		baro_thread = threading.Thread(name = DeviceConstants.DEVICE_BARO, target=self.worker,
+			args=(self.read_pressure, self.BARO_INTERVAL), daemon=True)
 		self._workerList.append(baro_thread)
-		rpm_thread = threading.Thread(name = MeasureConstants.RPM, target=self.rpm_worker, daemon=True)
+
+		rpm_thread = threading.Thread(name = MeasureConstants.RPM, target=self.worker,
+			args=(self.read_rpm, self.RPM_INTERVAL), daemon=True)
 		self._workerList.append(rpm_thread)
-		speed_thread = threading.Thread(name = MeasureConstants.SPEED, target=self.speed_worker, daemon=True)
+
+		speed_thread = threading.Thread(name = MeasureConstants.SPEED, target=self.worker,
+			args=(self.read_speed, self.SPEED_INTERVAL), daemon=True)
 		self._workerList.append(speed_thread)
 
 		for each in self._workerList:
 			each.start()
 
-	def thermo_worker(self):
+	def worker(self, read_method, interval):
 		while(True):
-			self.read_temperature()
-			time.sleep(self.THERMO_INTERVAL)
-
-	def accel_worker(self):
-		while(True):
-			self.read_acceleration()
-			time.sleep(self.ACCEL_INTERVAL)
-
-	def gps_worker(self):
-		while(True):
-			self.read_location()
-			time.sleep(self.GPS_INTERVAL)
-
-	def volt_worker(self):
-		while(True):
-			self.read_voltage()
-			time.sleep(self.VOLT_INTERVAL)
-
-	def baro_worker(self):
-		while(True):
-			self.read_pressure()
-			time.sleep(self.BARO_INTERVAL)
-
-	def rpm_worker(self):
-		while(True):
-			self.read_rpm()
-			time.sleep(self.RPM_INTERVAL)
-
-	def speed_worker(self):
-		while(True):
-			self.read_speed()
-			time.sleep(self.SPEED_INTERVAL)
+			read_method()
+			time.sleep(interval)
 
 	def read_temperature(self):
 		self._temperatures.push(self._deviceCollection.read_current_data(DeviceConstants.DEVICE_THERMO))
