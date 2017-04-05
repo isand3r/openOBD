@@ -40,6 +40,10 @@ class Manager():
 		self._rpms = Accumulator("RPM", self.MOVING_AVERAGE_ITEMS)
 		self._speeds = Accumulator("Speed", self.MOVING_AVERAGE_ITEMS)
 
+		self.NAME_WIDTH = 14
+		self.VALUE_WIDTH = 7
+		self.UNITS_WIDTH = 8
+
 		self.DEFAULT_ROUNDING_DIGITS = 2
 		self.LATITUDE_ROUNDING_DIGITS = 4
 
@@ -50,7 +54,7 @@ class Manager():
 	def print_all_accumulator_means(self):
 		while(True):
 			os.system('clear')
-			print("MEASURE | VALUE | UNITS | TIME")
+			print("MEASURE      | VALUE | UNITS | TIME")
 			self.print_accumulator_mean(self._longtitudes)
 			self.print_accumulator_mean(self._latitudes, self.LATITUDE_ROUNDING_DIGITS)
 			self.print_accumulator_mean(self._altitudes)
@@ -67,8 +71,11 @@ class Manager():
 			roundDigits = self.DEFAULT_ROUNDING_DIGITS
 		mean = accumulator.mean()
 		if (mean != None):
-			string = accumulator.name + " {} {} {}".format(
-				round(mean.value, roundDigits), mean.units, mean.time.time())
+			nameString = accumulator.name.ljust(self.NAME_WIDTH)
+			valueString = str(round(mean.value, roundDigits)).rjust(self.VALUE_WIDTH)
+			unitsString = mean.units.rjust(self.UNITS_WIDTH)
+			timeString = " " + str(mean.time.time())
+			string = nameString + valueString + unitsString + timeString
 			print(string)
 
 	def create_workers(self):
