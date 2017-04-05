@@ -31,15 +31,15 @@ class Manager():
 		self.MOVING_AVERAGE_ITEMS = self._config.manager_moving_average_items
 
 		# lists for calculating moving averages
-		self._temperatures = Accumulator("temperature", self.MOVING_AVERAGE_ITEMS)
-		self._longtitudes = Accumulator("longtitudes", self.MOVING_AVERAGE_ITEMS)
-		self._latitudes = Accumulator("latitudes", self.MOVING_AVERAGE_ITEMS)
-		self._altitudes = Accumulator("altitudes", self.MOVING_AVERAGE_ITEMS)
-		self._accelerations = Accumulator("acceleration", self.MOVING_AVERAGE_ITEMS)
-		self._voltages = Accumulator("voltage", self.MOVING_AVERAGE_ITEMS)
-		self._pressures = Accumulator("pressure", self.MOVING_AVERAGE_ITEMS)
-		self._rpms = Accumulator("rpm", self.MOVING_AVERAGE_ITEMS)
-		self._speeds = Accumulator("speed", self.MOVING_AVERAGE_ITEMS)
+		self._temperatures = Accumulator("Temperature", self.MOVING_AVERAGE_ITEMS)
+		self._longtitudes = Accumulator("Longitude", self.MOVING_AVERAGE_ITEMS)
+		self._latitudes = Accumulator("Latitude", self.MOVING_AVERAGE_ITEMS)
+		self._altitudes = Accumulator("Altitude", self.MOVING_AVERAGE_ITEMS)
+		self._accelerations = Accumulator("Acceleration", self.MOVING_AVERAGE_ITEMS)
+		self._voltages = Accumulator("Voltage", self.MOVING_AVERAGE_ITEMS)
+		self._pressures = Accumulator("Pressure", self.MOVING_AVERAGE_ITEMS)
+		self._rpms = Accumulator("RPM", self.MOVING_AVERAGE_ITEMS)
+		self._speeds = Accumulator("Speed", self.MOVING_AVERAGE_ITEMS)
 
 		self._workerList = list()
 		self.start_workers()
@@ -47,81 +47,24 @@ class Manager():
 	def print_moving_averages(self):
 		while(True):
 			os.system('clear')
-			print("MEASURE      | VALUE | UNITS | TIME")
-			self.print_moving_average_temperature()
-			self.print_moving_average_acceleration()
-			self.print_moving_average_location()
-			self.print_moving_average_voltage()
-			self.print_moving_average_pressure()
-			self.print_moving_average_rpm()
-			self.print_moving_average_speed()
+			print("MEASURE | VALUE | UNITS | TIME")
+			self.print_accumulator_mean(self._longtitudes, 2)
+			self.print_accumulator_mean(self._latitudes, 4)
+			self.print_accumulator_mean(self._altitudes, 2)
+			self.print_accumulator_mean(self._temperatures, 2)
+			self.print_accumulator_mean(self._accelerations, 2)
+			self.print_accumulator_mean(self._voltages, 2)
+			self.print_accumulator_mean(self._pressures, 2)
+			self.print_accumulator_mean(self._rpms, 2)
+			self.print_accumulator_mean(self._speeds, 2)
 			time.sleep(self.PRINT_INTERVAL)
 
-	def print_moving_average_temperature(self):
-		temperature = self._temperatures.mean()
-		if (temperature != None):
-			temperature_string = "Temperature     {}  {}  {}".format(
-				round(temperature.value,2), temperature.units,
-				temperature.time.time())
-			print(temperature_string)
-
-	def print_moving_average_acceleration(self):
-		acceleration = self._accelerations.mean()
-		if (acceleration != None):
-			acceleration_string = "Acceleration    {}  {}  {}".format(
-				round(acceleration.value,2), acceleration.units,
-				acceleration.time.time())
-			print(acceleration_string)
-
-	def print_moving_average_location(self):
-		longitude = self._longtitudes.mean()
-		latitude = self._latitudes.mean()
-		altitude = self._altitudes.mean()
-		if (longitude != None and latitude != None and altitude != None):
-			latitude_string = "Latitude        {}  {}  {}".format(
-				round(latitude.value, 4), latitude.units,
-				latitude.time.time())
-			longitude_string = "Longitude     {}  {}  {}".format(
-				round(longitude.value,4), longitude.units,
-				longitude.time.time())
-			altitude_string = "Altitude        {}  {}  {}".format(
-				round(altitude.value,2), altitude.units,
-				altitude.time.time())
-			print(latitude_string)
-			print(longitude_string)
-			print(altitude_string)
-
-	def print_moving_average_voltage(self):
-		voltage = self._voltages.mean()
-		if (voltage != None):
-			voltage_string = "Voltage         {}  {}  {}".format(
-				round(voltage.value,2), voltage.units,
-				voltage.time.time())
-			print(voltage_string)
-
-	def print_moving_average_pressure(self):
-		pressure = self._pressures.mean()
-		if (pressure != None):
-			pressure_string = "Pressure       {}  {}  {}".format(
-				round(pressure.value,2), pressure.units,
-				pressure.time.time())
-			print(pressure_string)
-
-	def print_moving_average_rpm(self):
-		rpm = self._rpms.mean()
-		if (rpm != None):
-			rpm_string = "RPM           {}  {}  {}".format(
-				round(rpm.value,2), rpm.units,
-				rpm.time.time())
-			print(rpm_string)
-
-	def print_moving_average_speed(self):
-		speed = self._speeds.mean()
-		if (speed != None):
-			speed_string = "Speed          {}  {}  {}".format(
-				round(speed.value,2), speed.units,
-				speed.time.time())
-			print(speed_string)
+	def print_accumulator_mean(self, accumulator, roundDigits):
+		mean = accumulator.mean()
+		if (mean != None):
+			string = accumulator.name + " {} {} {}".format(
+				round(mean.value, roundDigits), mean.units, mean.time.time())
+			print(string)
 
 	def start_workers(self):
 		thermo_thread = threading.Thread(name = DeviceConstants.DEVICE_THERMO, target=self.worker,
