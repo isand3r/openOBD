@@ -17,7 +17,7 @@ class MPUAccelDevice(IAccelDevice):
 
     def initialize(self):
         self._ready = True
-        self.init = mpu6050(0x68)
+        self.init = mpu6050(0x69)
 
     @property
     def ready(self) -> bool:

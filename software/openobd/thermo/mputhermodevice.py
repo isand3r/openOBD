@@ -15,7 +15,7 @@ class MPUThermoDevice(IThermoDevice):
 
 
     def initialize(self):
-        self.init = mpu6050(0x68)
+        self.init = mpu6050(0x69)
         self._ready = True
 
     @property
