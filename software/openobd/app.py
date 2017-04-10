@@ -16,12 +16,12 @@ from gps.gps3device import GPS3Device
 
 from accelerometer.iacceldevice import IAccelDevice
 from accelerometer.mockfixedacceldevice import MockFixedAccelDevice
-#from accelerometer.mpuacceldevice import MPUAccelDevice
+from accelerometer.mpuacceldevice import MPUAccelDevice
 
 from thermo.ithermodevice import IThermoDevice
 from thermo.mockfixedthermodevice import MockFixedThermoDevice
 from thermo.mockrisingthermodevice import MockRisingThermoDevice
-#from thermo.mputhermodevice import MPUThermoDevice
+from thermo.mputhermodevice import MPUThermoDevice
 
 from volt.ivoltdevice import IVoltDevice
 from volt.mockvoltdevice import MockVoltDevice
