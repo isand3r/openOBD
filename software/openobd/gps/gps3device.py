@@ -51,11 +51,11 @@ class GPS3Device(IGPSDevice):
             
         else:
             #Latitude ±dd.dddddd [-90.000000,90.000000]
-            self.latitude = float(data[3])
+            self.latitude = data[3].strip()
             #Longitude ±ddd.dddddd [-180.000000,180.000000]
-            self.longitude = float(data[4])
+            self.longitude = data[4].strip()
             #Altitude 0-120m
-            self.altitude = float(data[5])
+            self.altitude = data[5].strip()
 
     def read_location(self) -> Location:
         """Return the same location each time"""
@@ -63,5 +63,5 @@ class GPS3Device(IGPSDevice):
         while(self.longitude == None):
             self.getDataStream()
         time = datetime.datetime.now()
-        self.location = Location(self.latitude, self.longitude, self.altitude, time)
+        self.location = Location(float(self.latitude), float(self.longitude), float(self.altitude), time)
         return self.location
