@@ -24,7 +24,7 @@ class GPS3Device(IGPSDevice):
         powerup = "AT+CGNSPWR=1\r"
         self.modem.write(powerup.encode())
         self.modem.readline()
-        self.GPSStatus = modem.readline()
+        self.GPSStatus = self.modem.readline()
         time.sleep(2)
         #os.system('sudo gpsd /dev/ttyAMA0 -F /var/run/gpsd.sock')
         #self.gps_socket = gps3.GPSDSocket()
