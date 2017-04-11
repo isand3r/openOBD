@@ -47,7 +47,12 @@ class GPS3Device(IGPSDevice):
             data = data.split(",")
             #print(data)
             if data[1]=='0':
-                print ("GPS No Fix")
+                #Latitude ±dd.dddddd [-90.000000,90.000000]
+                self.latitude = 0.0
+                #Longitude ±ddd.dddddd [-180.000000,180.000000]
+                self.longitude = 0.0
+                #Altitude 0-120m
+                self.altitude = 0.0
             else:
                 #Latitude ±dd.dddddd [-90.000000,90.000000]
                 self.latitude = data[3].strip()
