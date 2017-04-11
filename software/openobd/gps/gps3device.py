@@ -21,7 +21,7 @@ class GPS3Device(IGPSDevice):
         self._ready = False
 
     def initialize(self):
-        self.modem = serial.Serial("/dev/ttyAMA0", baudrate=115200, timeout=3.0)
+        self.modem = serial.Serial("/dev/ttyAMA0", baudrate=115200)
         powerup = "AT+CGNSPWR=1\r"
         self.modem.write(powerup.encode())
         self.modem.readline()
@@ -41,13 +41,13 @@ class GPS3Device(IGPSDevice):
     def getDataStream(self):
         request = "AT+CGNSINF\r"
         self.modem.write(request.encode())
-        self.modem.readline()
+        print(self.modem.readline())
         data = self.modem.readline()
         print (data)
-        #if data.startswith("+CGNSINF"):
-        data = data.split(",")
-        if data[3]=='':
-            print ("GPS Error")
+        if data.startswith("+CGNSINF"):
+            data = data.split(",")
+            if data[3]=='':
+                print ("GPS Error")
             
         else:
             #Latitude ±dd.dddddd [-90.000000,90.000000]
