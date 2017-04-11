@@ -18,6 +18,7 @@ class MPUAccelDevice(IAccelDevice):
     def initialize(self):
         self._ready = True
         self.init = mpu6050(0x69)
+        self.accel = mpu6050.get_accel_data(self.init)
 
     @property
     def ready(self) -> bool:
@@ -26,10 +27,10 @@ class MPUAccelDevice(IAccelDevice):
     def read_acceleration(self) -> Measure:
         assert self._ready
         time = datetime.datetime.now()
-        self.accel = mpu6050.get_accel_data(self.init)
-        x = self.accel['x']
-        y = self.accel['y']
-        z = self.accel['z']
+        accel = mpu6050.get_accel_data(self.init)
+        x = accel['x'] - self.accel['x']
+        y = accel['y'] - self.accel['x']
+        z = accel['z'] - self.accel['x']
         self.accel_mag = self.calculate_magnitude(x, y, z)
         magnitude_measure = Measure(self.accel_mag,self.units, time)
         return magnitude_measure
