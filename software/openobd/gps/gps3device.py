@@ -48,14 +48,13 @@ class GPS3Device(IGPSDevice):
             print(data)
             if data[3]=='':
                 print ("GPS Error")
-            
-        else:
-            #Latitude ±dd.dddddd [-90.000000,90.000000]
-            self.latitude = data[3].strip()
-            #Longitude ±ddd.dddddd [-180.000000,180.000000]
-            self.longitude = data[4].strip()
-            #Altitude 0-120m
-            self.altitude = data[5].strip()
+            else:
+                #Latitude ±dd.dddddd [-90.000000,90.000000]
+                self.latitude = data[3].strip()
+                #Longitude ±ddd.dddddd [-180.000000,180.000000]
+                self.longitude = data[4].strip()
+                #Altitude 0-120m
+                self.altitude = data[5].strip()
 
     def read_location(self) -> Location:
         """Return the same location each time"""
