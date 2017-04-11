@@ -3,6 +3,7 @@ from gps.igpsdevice import IGPSDevice
 from gps3 import gps3
 import os
 import datetime
+import serial
 
 class GPS3Device(IGPSDevice):
     """Concrete GPS device using gps3"""
@@ -17,6 +18,13 @@ class GPS3Device(IGPSDevice):
         self._ready = False
 
     def initialize(self):
+        port = serial.Serial("/dev/ttyAMA0", baudrate=115200, timeout=3.0)
+        port.write('AT')
+        print(port.readline())
+        port.write('AT+CGPSOUT')
+        print(port.readline())
+        port.write('AT+CGPSOUT=1')
+        port.close()
         os.system('sudo gpsd /dev/ttyAMA0 -F /var/run/gpsd.sock')
         self.gps_socket = gps3.GPSDSocket()
         self.data_stream = gps3.DataStream()
