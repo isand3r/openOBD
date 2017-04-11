@@ -1,6 +1,6 @@
 from location.location import Location
 from gps.igpsdevice import IGPSDevice
-from gps3 import gps3
+#from gps3 import gps3
 import os
 import datetime
 import serial
@@ -13,16 +13,23 @@ class GPS3Device(IGPSDevice):
         self.longitude = None
         self.latitude = None
         self.altitude = None
-        self.gps_socket = None
-        self.data_stream = None
+        self.modem = None
+        self.GPSStatus = None
+        #self.gps_socket = None
+        #self.data_stream = None
         self._ready = False
 
     def initialize(self):
-        os.system('sudo gpsd /dev/ttyAMA0 -F /var/run/gpsd.sock')
-        self.gps_socket = gps3.GPSDSocket()
-        self.data_stream = gps3.DataStream()
-        self.gps_socket.connect()
-        self.gps_socket.watch()
+        self.modem = serial.Serial("/dev/ttyAMA0", baudrate=115200, timeout=3.0)
+        self.modem.write("AT+CGNSPWR=1\r")
+        self.modem.readline()
+        self.GPSStatus = modem.readline()
+        time.sleep(2)
+        #os.system('sudo gpsd /dev/ttyAMA0 -F /var/run/gpsd.sock')
+        #self.gps_socket = gps3.GPSDSocket()
+        #self.data_stream = gps3.DataStream()
+        #self.gps_socket.connect()
+        #self.gps_socket.watch()
         self._ready = True
 
     @property
@@ -30,19 +37,28 @@ class GPS3Device(IGPSDevice):
         return self._ready
 
     def getDataStream(self):
-        for new_data in self.gps_socket:
-            if(new_data):
-                self.data_stream.unpack(new_data)
-                self.longitude = self.data_stream.TPV['lon']
-                self.latitude = self.data_stream.TPV['lat']
-                self.altitude = self.data_stream.TPV['alt']
-                return
+        self.modem.write("AT+CGNSINF\r")
+        self.modem.readline()
+        data = self.modem.readline()
+        print data
+        if data.startswith("+CGNSINF"):
+            data = data.split(",")
+            if data[3]=='':
+                print "GPS Error"
+            
+        else:
+            #Latitude ±dd.dddddd [-90.000000,90.000000]
+            self.latitude = float(data[3])
+            #Longitude ±ddd.dddddd [-180.000000,180.000000]
+            self.longitude = float(data[4])
+            #Altitude 0-120m
+            self.altitude = float(data[5])
 
     def read_location(self) -> Location:
         """Return the same location each time"""
         self.getDataStream()
-        while(self.longitude == 'n/a'):
+        while(self.longitude == None):
             self.getDataStream()
         time = datetime.datetime.now()
-        self.location = Location(float(self.latitude), float(self.longitude), float(self.altitude), time)
+        self.location = Location(self.latitude, self.longitude, self.altitude, time)
         return self.location
