@@ -43,9 +43,9 @@ class GPS3Device(IGPSDevice):
         self.modem.write(request.encode())
         self.modem.readline()
         data = self.modem.readline().decode()
-        print(data)
         if data.startswith("+CGNSINF"):
             data = data.split(",")
+            print(data)
             if data[3]=='':
                 print ("GPS Error")
             
