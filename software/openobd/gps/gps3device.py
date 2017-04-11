@@ -4,6 +4,7 @@ from gps.igpsdevice import IGPSDevice
 import os
 import datetime
 import serial
+import time
 
 class GPS3Device(IGPSDevice):
     """Concrete GPS device using gps3"""
