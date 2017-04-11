@@ -29,8 +29,8 @@ class MPUAccelDevice(IAccelDevice):
         time = datetime.datetime.now()
         accel = mpu6050.get_accel_data(self.init)
         x = accel['x'] - self.accel['x']
-        y = accel['y'] - self.accel['x']
-        z = accel['z'] - self.accel['x']
+        y = accel['y'] - self.accel['y']
+        z = accel['z'] - self.accel['z']
         self.accel_mag = self.calculate_magnitude(x, y, z)
         magnitude_measure = Measure(self.accel_mag,self.units, time)
         return magnitude_measure
