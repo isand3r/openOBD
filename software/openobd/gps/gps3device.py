@@ -21,7 +21,8 @@ class GPS3Device(IGPSDevice):
 
     def initialize(self):
         self.modem = serial.Serial("/dev/ttyAMA0", baudrate=115200, timeout=3.0)
-        self.modem.write("AT+CGNSPWR=1\r")
+        powerup = "AT+CGNSPWR=1\r"
+        self.modem.write(powerup.encode())
         self.modem.readline()
         self.GPSStatus = modem.readline()
         time.sleep(2)
@@ -37,7 +38,8 @@ class GPS3Device(IGPSDevice):
         return self._ready
 
     def getDataStream(self):
-        self.modem.write("AT+CGNSINF\r")
+        request = "AT+CGNSINF\r"
+        self.modem.write(request.encode())
         self.modem.readline()
         data = self.modem.readline()
         print data
