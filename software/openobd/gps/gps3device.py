@@ -44,10 +44,10 @@ class GPS3Device(IGPSDevice):
         self.modem.readline()
         data = self.modem.readline()
         print (data)
-        if data.startswith("+CGNSINF"):
-            data = data.split(",")
-            if data[3]=='':
-                print ("GPS Error")
+        #if data.startswith("+CGNSINF"):
+        data = data.split(",")
+        if data[3]=='':
+            print ("GPS Error")
             
         else:
             #Latitude ±dd.dddddd [-90.000000,90.000000]
