@@ -41,9 +41,9 @@ class GPS3Device(IGPSDevice):
     def getDataStream(self):
         request = "AT+CGNSINF\r"
         self.modem.write(request.encode())
-        print(self.modem.readline())
-        data = self.modem.readline()
-        print (data)
+        self.modem.readline()
+        data = self.modem.readline().decode()
+        print(data)
         if data.startswith("+CGNSINF"):
             data = data.split(",")
             if data[3]=='':
