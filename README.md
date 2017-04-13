@@ -1,8 +1,25 @@
 # openOBD
-An open source (Hardware+software) OBD reader and sensor device based on the [raspberrypi 0](https://www.raspberrypi.org/blog/raspberry-pi-zero) for vehicle telemetry.
+An open-source vehicle telemetry system based on the [Raspberry Pi 0](https://www.raspberrypi.org/blog/raspberry-pi-zero) that supports OBD-2 and includes several sensors.
 
-## Tests
-Tests can be run with `python3 -m pytest`
+![photo](https://raw.githubusercontent.com/isand3r/openOBD/master/docs/photo.jpg)
+
+## Usage
+
+### Command Line Application
+```
+python3 software/openobd/app.py
+```
+
+![screenshot](https://raw.githubusercontent.com/isand3r/openOBD/master/docs/screenshot.png)
+
+### Configuration File
+The configuration file `software/openobd/configuration/config.ini` (parsed using [configparser](https://docs.python.org/3/library/configparser.html)) is used to select the class that will be used for each sensor device (GPS, thermometer, etc). If mock devices are used (and if a few lines are commented out in `software/openobd/app.py`), the command line application can be run on a regular PC without requiring the openOBD hardware.
+
+### Tests
+```
+cd software/openobd/
+python3 -m pytest
+```
 
 ## Dependencies
 Python packages (`pip3 install package-name`):
@@ -11,7 +28,7 @@ Python packages (`pip3 install package-name`):
 * `PySerial` (https://pythonhosted.org/pyserial/)
 * `python-can` (https://python-can.readthedocs.io)
 
-## Contributors:
+## Contributors
 * Nicholas Mulvenna
 * Isaiah Thiessen
 * Ehsan Ahmadi
