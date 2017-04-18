@@ -1,5 +1,6 @@
 # openOBD
-An open-source vehicle telemetry system based on the [Raspberry Pi 0](https://www.raspberrypi.org/blog/raspberry-pi-zero) that supports OBD-2 and includes several sensors.
+An open-source vehicle telemetry system based on the [Raspberry Pi 0](https://www.raspberrypi.org/blog/raspberry-pi-zero) that supports OBD-2 and includes several sensors
+Originally developed as a UBC Electrical & Computer Engineering [Capstone Project](https://www.ece.ubc.ca/courses/capstones) for [Mojio](https://www.moj.io/)
 
 ![photo](https://raw.githubusercontent.com/isand3r/openOBD/master/docs/photo.jpg)
 
