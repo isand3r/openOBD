@@ -4,6 +4,13 @@ Originally developed as a UBC Electrical & Computer Engineering [Capstone Projec
 
 ![photo](https://raw.githubusercontent.com/isand3r/openOBD/master/docs/photo.jpg)
 
+### Setup
+
+Setup walkthrough coming soon:
+* How to setup the Raspberry Pi to work with openOBD (ssh, libraries needed, etc)
+* How to use with a vehicle
+* How to setup the GSM chip to communicate with the internet
+
 ## Usage
 
 ### Command Line Application
