@@ -1,0 +1,406 @@
+P-CAD Schematic ASCII File Export Log :
+      Information : Start export of symbol definitions for parts
+      Warning :     Symbol name [ATtiny13A], mode [Normal], part [1] changed to [ATtiny13A_1_N]
+      Warning :     Rectangle [3858.267mil : 4133.858mil]-[4409.449mil : 4763.78mil] exported as lines.
+      Warning :     Symbol name [Resistor], mode [Normal], part [1] changed to [Resistor_1_N]
+      Warning :     Symbol name [BSH105,215], mode [Normal], part [1] changed to [BSH105,215_1_N]
+      Warning :     Elliptical arc at position [4177.008mil : 5581.811mil] approximated with circular arc
+      Warning :     Symbol name [MCP2515], mode [Normal], part [1] changed to [MCP2515_1_N]
+      Warning :     Rectangle [6100mil : 2700mil]-[7300mil : 4700mil] exported as lines.
+      Warning :     Symbol name [Capacitor], mode [Normal], part [1] changed to [Capacitor_1_N]
+      Warning :     Symbol name [TCAN332], mode [Normal], part [1] changed to [TCAN332_1_N]
+      Warning :     Rectangle [9100mil : 3300mil]-[9800mil : 4100mil] exported as lines.
+      Warning :     Symbol name [Rasberry Pi], mode [Normal], part [1] changed to [Rasberry_Pi_1_N]
+      Warning :     Rectangle [1900mil : 2600mil]-[3500mil : 5300mil] exported as lines.
+      Warning :     Symbol name [XTAL-16.000], mode [Normal], part [1] changed to [XTAL-16.000_1_N]
+      Warning :     Symbol name [OBD-II], mode [Normal], part [1] changed to [OBD-II_1_N]
+      Warning :     Rectangle [10700mil : 3350mil]-[11050mil : 4050mil] exported as lines.
+      Warning :     Symbol name [SS5P6-M3/86A], mode [Normal], part [1] changed to [SS5P6-M3/86A_1_N]
+      Warning :     Symbol name [MPU6050], mode [Normal], part [1] changed to [MPU6050_1_N]
+      Warning :     Rectangle [4800mil : 2900mil]-[6000mil : 5300mil] exported as lines.
+      Warning :     Symbol name [LMR16030], mode [Normal], part [1] changed to [LMR16030_1_N]
+      Warning :     Rectangle [3840.158mil : 4024.41mil]-[4440.158mil : 4824.41mil] exported as lines.
+      Warning :     Symbol name [7447714068], mode [Normal], part [1] changed to [7447714068_1_N]
+      Warning :     Symbol name [865080443007], mode [Normal], part [1] changed to [865080443007_1_N]
+      Warning :     Elliptical arc at position [1574.804mil : 4282.601mil] approximated with circular arc
+      Warning :     Symbol name [SIM808], mode [Normal], part [1] changed to [SIM808_1_N]
+      Warning :     Rectangle [6800mil : 3000mil]-[10000mil : 6200mil] exported as lines.
+      Warning :     Symbol name [LD39100PUR], mode [Normal], part [1] changed to [LD39100PUR_1_N]
+      Warning :     Rectangle [2850mil : 5650mil]-[3450mil : 6450mil] exported as lines.
+      Warning :     Symbol name [SMF05CT2G], mode [Normal], part [1] changed to [SMF05CT2G_1_N]
+      Warning :     Rectangle [1450mil : 3050mil]-[1950mil : 3450mil] exported as lines.
+      Warning :     Symbol name [CONN SMART CARD], mode [Normal], part [1] changed to [CONN_SMART_CARD_1_N]
+      Warning :     Symbol name [LTST-C170GKT], mode [Normal], part [1] changed to [LTST-C170GKT_1_N]
+      Warning :     Symbol name [LTST-C171EKT], mode [Normal], part [1] changed to [LTST-C171EKT_1_N]
+      Warning :     Symbol name [MMSZ5231BT1G], mode [Normal], part [1] changed to [MMSZ5231BT1G_1_N]
+      Warning :     Symbol name [LMK325ABJ107MM-P], mode [Normal], part [1] changed to [LMK325ABJ107MM-P_1_N]
+      Warning :     Symbol name [antenna], mode [Normal], part [1] changed to [antenna_1_N]
+      Warning :     Rectangle [10748.425mil : 3006.299mil]-[11338.976mil : 3596.85mil] exported as lines.
+      Information : End export of symbol definitions for part
+      Information : Start exporting the symbol definitions for power ports
+      Warning :     End exporting the symbol defintions for power ports
+      Information : Start exporting component definitions
+      Warning :     No schematic library found in current project
+      Warning :     Component [U4] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [R5] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [R19] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [R17] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [R18] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [R21] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [R20] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [R16] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [M2] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [U0] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [C16] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [U1] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [PCB0] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [C23] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [R3] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [Y1] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [OBD-II] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [D3] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [U5] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [C3] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [C4] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [C1] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [C2] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [R1] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [R2] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [U6] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [R23] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [R25] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [R26] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [R22] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [C13] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [D5] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [C27] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [C28] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [C29] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [R27] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [R24] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [C30] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [C24] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [C25] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [C26] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [L2] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [C6] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [C7] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [SIM808] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [R7] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [R10] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [C19] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [C20] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [LD39100PUR] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [C22] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [R11] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [U3] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [CONN] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [R8] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [R9] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [LED2] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [LED1] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [C17] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [C18] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [C21] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [M1] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [D2] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [C15] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [R12] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [R13] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [R14] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [R15] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [ANT2] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Warning :     No schematic library found in current project
+      Warning :     Component [ANT1] in sheet [C:\Users\zaya1\AppData\Local\Temp\Pro223C.tmp] doesn't have a library reference
+      Information : End exporting component definitions
+      Information : Start exporting component definitions for power ports
+      Warning :     End exporting component definitions for powerports
+      Information : Start export of netlist
+      Information : Start export of component instances
+      Information : End export of component instances
+      Information : Start export of nets
+      Information : End export of nets
+      Information : End export of netlist
+      Information : Start exporting the objects for sheet [ATtiny]
+      Information : Start WIRES export
+      Information : End WIRES export
+      Information : Start BUSES export
+      Information : End BUSES export
+      Information : Start PORTS export
+      Information : End PORTS export
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     Exporting powerport at [3346.457mil : 5511.811mil] as component with designator [GND]
+      Warning :     Exporting powerport at [3346.457mil : 3838.583mil] as component with designator [GND]
+      Warning :     Exporting powerport at [4724.41mil : 5314.961mil] as component with designator [GND]
+      Warning :     Exporting powerport at [5511.811mil : 3641.732mil] as component with designator [GND]
+      Warning :     Exporting powerport at [4157.008mil : 5311.811mil] as component with designator [GND]
+      Information : End exporting the objects for sheet [ATtiny]
+      Information : Start exporting the objects for sheet [CanNode]
+      Information : Start WIRES export
+      Information : End WIRES export
+      Information : Start BUSES export
+      Information : End BUSES export
+      Information : Start PORTS export
+      Information : End PORTS export
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     Exporting powerport at [1600mil : 2800mil] as component with designator [GND]
+      Warning :     Exporting powerport at [1300mil : 4900mil] as component with designator [GND]
+      Warning :     Exporting powerport at [1600mil : 5200mil] as component with designator [GND]
+      Warning :     Exporting powerport at [8900mil : 3000mil] as component with designator [GND]
+      Warning :     Exporting powerport at [8500mil : 5200mil] as component with designator [GND]
+      Warning :     Exporting powerport at [5800mil : 3200mil] as component with designator [GND]
+      Warning :     Exporting powerport at [10500mil : 3000mil] as component with designator [GND]
+      Warning :     Exporting powerport at [5600mil : 6700mil] as component with designator [GND]
+      Information : End exporting the objects for sheet [CanNode]
+      Information : Start exporting the objects for sheet [MPU6050]
+      Information : Start WIRES export
+      Information : End WIRES export
+      Information : Start BUSES export
+      Information : End BUSES export
+      Information : Start PORTS export
+      Information : End PORTS export
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     Exporting powerport at [3600mil : 5800mil] as component with designator [GND]
+      Warning :     Exporting powerport at [4300mil : 2400mil] as component with designator [GND]
+      Information : End exporting the objects for sheet [MPU6050]
+      Information : Start exporting the objects for sheet [PowerCircuit_24V]
+      Information : Start WIRES export
+      Information : End WIRES export
+      Information : Start BUSES export
+      Information : End BUSES export
+      Information : Start PORTS export
+      Information : End PORTS export
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     Exporting powerport at [1574.803mil : 4960.63mil] as component with designator [GND]
+      Warning :     Exporting powerport at [2795.276mil : 3346.457mil] as component with designator [GND]
+      Warning :     Exporting powerport at [4645.672mil : 3937.01mil] as component with designator [GND]
+      Warning :     Exporting powerport at [7125.988mil : 3700.789mil] as component with designator [GND]
+      Warning :     Exporting powerport at [7795.28mil : 4921.262mil] as component with designator [GND]
+      Warning :     Exporting powerport at [7795.28mil : 3149.608mil] as component with designator [GND]
+      Warning :     Exporting powerport at [1574.804mil : 3740.16mil] as component with designator [GND]
+      Information : End exporting the objects for sheet [PowerCircuit_24V]
+      Information : Start exporting the objects for sheet [SIM808]
+      Information : Start WIRES export
+      Information : End WIRES export
+      Information : Start BUSES export
+      Information : End BUSES export
+      Information : Start PORTS export
+      Information : End PORTS export
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     P-CAD doesn't support object type [Parameter]
+      Warning :     Exporting powerport at [6200mil : 5650mil] as component with designator [GND]
+      Warning :     Exporting powerport at [6200mil : 5200mil] as component with designator [GND]
+      Warning :     Exporting powerport at [6200mil : 4900mil] as component with designator [GND]
+      Warning :     Exporting powerport at [6200mil : 2800mil] as component with designator [GND]
+      Warning :     Exporting powerport at [8850mil : 2600mil] as component with designator [GND]
+      Warning :     Exporting powerport at [10200mil : 3200mil] as component with designator [GND]
+      Warning :     Exporting powerport at [4250mil : 6450mil] as component with designator [GND]
+      Warning :     Exporting powerport at [4250mil : 4700mil] as component with designator [GND]
+      Warning :     Exporting powerport at [800mil : 2950mil] as component with designator [GND]
+      Warning :     Exporting powerport at [3850mil : 6450mil] as component with designator [GND]
+      Warning :     Exporting powerport at [2650mil : 3450mil] as component with designator [GND]
+      Warning :     Exporting powerport at [10730mil : 4450mil] as component with designator [GND]
+      Warning :     Exporting powerport at [1200mil : 5950mil] as component with designator [GND]
+      Warning :     Exporting powerport at [1200mil : 5250mil] as component with designator [GND]
+      Warning :     Exporting powerport at [5470mil : 4320mil] as component with designator [GND]
+      Warning :     Exporting powerport at [4910mil : 3100mil] as component with designator [GND]
+      Warning :     Exporting powerport at [5250mil : 3100mil] as component with designator [GND]
+      Information : End exporting the objects for sheet [SIM808]
+EndLog
