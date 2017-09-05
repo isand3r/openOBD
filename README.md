@@ -6,10 +6,29 @@ Originally developed as a UBC Electrical & Computer Engineering [Capstone Projec
 
 ### Setup
 
-Setup walkthrough coming soon:
+~~Setup walkthrough coming soon:
 * How to setup the Raspberry Pi to work with openOBD (ssh, libraries needed, etc)
 * How to use with a vehicle
-* How to setup the GSM chip to communicate with the internet
+* How to setup the GSM chip to communicate with the internet~~
+
+1. Setup the raspberry pi
+
+Follow this guide: https://www.raspberrypi.org/documentation/installation/installing-images/
+
+The software requires a linux-based operating system such as ubuntu or raspbian.
+
+2. Attach the board
+
+Should be straightforward - attach the board using the GPIO socket with the board hanging overtop of your rpi.
+
+3. Clone this repository
+On your raspberry pi, using the command line, run `git clone https://github.com/isand3r/openOBD`.
+
+The Command line interface to get values from the sensors can be run using the file `app.py`
+
+4. Instructions for GSM coming soon
+
+Data can also be saved to a file and uploaded later using wi-fi. 
 
 ## Usage
 
