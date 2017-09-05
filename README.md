@@ -30,9 +30,10 @@ The Command line interface to get values from the sensors can be run using the f
 
 See the dependencies list at the bottom.
 
-#### 5. Instructions for GSM coming soon
+#### 5. GSM Setup (Optional)
 
-Data can also be saved to a file and uploaded later using wi-fi. 
+Data readings can be saved to a file and uploaded via wifi, or for constant connectivity, there is a GSM module included.
+All info on the GSM module can be found here: https://learn.adafruit.com/adafruit-fona-808-cellular-plus-gps-breakout/downloads#datasheets-and-app-notes
 
 ## Usage
 
