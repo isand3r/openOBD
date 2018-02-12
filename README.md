@@ -7,11 +7,11 @@
 ### Setup
 
 
-#### 1. Setup the raspberry pi
+#### 1. Set up the Raspberry Pi
 
 Follow this guide: https://www.raspberrypi.org/documentation/installation/installing-images/
 
-The software requires a linux-based operating system such as ubuntu or raspbian.
+The software requires a Linux-based operating system such as Ubuntu or Raspbian.
 
 #### 2. Attach the board
 
@@ -26,7 +26,7 @@ The Command line interface to get values from the sensors can be run using the f
 
 See the dependencies list at the bottom.
 
-#### 5. GSM Setup (Optional)
+#### 5. Set up GSM (Optional)
 
 Data readings can be saved to a file and uploaded via wifi, or for constant connectivity, there is a GSM module included.
 All info on the GSM module can be found here: https://learn.adafruit.com/adafruit-fona-808-cellular-plus-gps-breakout/downloads#datasheets-and-app-notes
@@ -35,13 +35,14 @@ All info on the GSM module can be found here: https://learn.adafruit.com/adafrui
 
 ### Command Line Application
 ```
-python3 software/openobd/app.py
+cd software/openobd/
+python3 app.py
 ```
 
 ![screenshot](https://raw.githubusercontent.com/isand3r/openOBD/master/docs/screenshot.png)
 
 ### Configuration File
-The configuration file `software/openobd/configuration/config.ini` (parsed using [configparser](https://docs.python.org/3/library/configparser.html)) is used to select the class that will be used for each sensor device (GPS, thermometer, etc). If mock devices are used (and if a few lines are commented out in `software/openobd/app.py`), the command line application can be run on a regular PC without requiring the openOBD hardware.
+The configuration file `software/openobd/configuration/config.ini` (parsed using [configparser](https://docs.python.org/3/library/configparser.html)) is used to select the class that will be used for each sensor device (GPS, thermometer, etc). If mock devices are used (and if a few `import` lines are commented out in `software/openobd/app.py`), the command line application can be run on a regular PC without requiring the openOBD hardware.
 
 ### Tests
 ```

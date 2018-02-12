@@ -52,11 +52,9 @@ class Accumulator(IAccumulator):
 		"""Given a non-empty list of Measures and given that the caller holds the lock,
 		Return a Measure with the mean value and the units & time from the 0th entry"""
 		sum_value = 0
-		count = 0
 		for measure in measures:
 			sum_value += measure.value
-			count += 1
-		average_value = sum_value / count
+		average_value = sum_value / len(measures)
 		return Measure(average_value, measures[0].units, measures[0].time)
 
 	def median(self) -> Measure:
